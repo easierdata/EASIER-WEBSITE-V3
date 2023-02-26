@@ -58,6 +58,23 @@ html_theme_options = {
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink"],
     "footer_items": ["copyright"],
     "show_toc_level": 2,
+    "favicons": [
+        {
+            "rel": "icon",
+            "sizes": "16x16",
+            "href": "favicon.png"
+        },
+        {
+            "rel": "icon",
+            "sizes": "32x32",
+            "href": "favicon.png"
+        },
+        {
+            "rel": "icon",
+            "sizes": "180x180",
+            "href": "favicon.png"
+        }
+    ]
 }
 
 html_context = {
