@@ -52,9 +52,6 @@ html_sidebars = {
 }
 
 html_theme_options = {
-    "github_url": "https://github.com/easierdata",
-    "twitter_url": "https://twitter.com/easierdataorg",
-    "navbar_end": ["navbar-icon-links"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink"],
     "footer_items": ["copyright"],
     "show_toc_level": 2,
