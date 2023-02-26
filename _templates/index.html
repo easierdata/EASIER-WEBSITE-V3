@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Side bar -->
+
+<form class="bd-search d-flex align-items-center" action="{{ pathto('search') }}" method="get">
+    <i class="icon fas fa-search"></i>
+    <input type="search" class="form-control" name="q" id="search-input" placeholder="Search EASIER" aria-label="Search EASIER" autocomplete="off">
+</form>
+
+<div class="logo">
+    <img src="{{ pathto('_static/' + logo, 1) }}" alt='logo'/>
+</div>
+
+<div class="nav-container">
+    <center>
+        <div class="title">
+            EASIER Data Initiative
+        </div>
+        <br />
+        <div class="subtitle">
+            A collaboration between the University of Maryland and the Filecoin Foundation for the Decentralized Web
+        </div>
+        <br />
+        <div class="subtext">
+            Efficient, Accessible, and Sustainable Infrastructure for Extracting Reliable Data for the World's Location-Based Assets
+        </div>
+        <hr />
+        <div>
+            <p>Contact Information</p>
+            <a href = "mailto: toshan@umd.com">toshan@umd.edu</a>
+            <p>University of Maryland College Park, MD, US</p>
+        </div>
+    </center>
+</div>
