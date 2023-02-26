@@ -37,3 +37,7 @@ html {
 html .search-button {
     opacity: 0 !important;
 }
+
+.bd-footer {
+    display: inline-block;
+}
