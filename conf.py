@@ -82,3 +82,5 @@ blog_feed_fulltext = False
 
 blog_post_pattern = "news/*/*"
 blog_path = "news"
+
+suppress_warnings = ["myst.header"]
