@@ -20,7 +20,10 @@ The Team
 
 Taylor M. Oshan
 ******************
-Project Lead
+.. image:: _img/people/taylor.jpg
+    :height: 300
+
+| **Project Lead**
 | Taylor is trained broadly as a geographic information scientist with interest in the full consumption lifecycle of geographic information from data creation, storage, dissemination, analysis, and decision-making. He obtained his PhD in Geographical Science from Arizona State University and is currently assistant professor at Department of Geographical Sciences at the University of Maryland, College Park.
 
 Contact
@@ -31,7 +34,10 @@ Contact
 
 John Solly
 ******************
-Faculty Specialist; Geospatial Developer
+.. image:: _img/people/john.JPG
+    :height: 300
+
+| **Faculty Specialist; Geospatial Developer**
 | As a Geospatial Developer, John combines GIS domain knowledge and full stack web development to create beautiful (and fast) applications. He studied GIS under thought leaders (Michael Goodchild, Waldo Tobler, Krzysztof Janowicz, and Dan Montello) while completing a B.A. in Geography at UC Santa Barbara and an M.S. in Geoinformatics and Geospatial Intelligence at George Mason University.
 
 Contact
@@ -42,7 +48,10 @@ Contact
 
 Zheng Liu
 ******************
-Research Assistant; Developer
+.. image:: _img/people/zheng.jpg
+    :height: 300
+
+| **Research Assistant; Developer**
 | Zheng is a Graduate Research Assistant in the project who is expanding his knowledge and experiences in the data ETL process. He obtained his BSc in Geographical Information Science from Peking University and is currently a doctoral student at the Department of Geographical Science at the University of Maryland, College Park.
 
 Contact
@@ -52,12 +61,14 @@ Contact
 
 Zack Rickley
 ******************
-Faculty Specialist
+| **Faculty Specialist**
 | Zach is a Master of Quantitative Finance student with a bachelor’s degree in Mathematics from the University of Maryland. He runs a consulting business for web3 startups and companies, providing guidance on token economics structures and incentives. He is also the co-founder and Chief Operating Officer of Feta Market, a digital asset derivatives trading platform.
 
 Matthew Nanas
 ******************
-Research Assistant; Developer
+.. image:: _img/people/matthew.jpg
+    :height: 300
+| **Research Assistant; Developer**
 | Matthew is a first year undergraduate at the University of Maryland studying computer and information science. As a research assistant, he aims to explore decentralized storage and bring Web3 to cold data workflows. 
 
 Contact
