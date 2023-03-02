@@ -14,7 +14,7 @@ $ pip install -r requirements.txt
 
 ## Running locally
 
-To view the website locally, run the following command (it should automatically open up localhost in a browser)
+To view the website locally, run the following command in the root directory (it should automatically open up localhost in a browser)
 
 ```bash
 $ ablog clean && ablog build && ablog serve
