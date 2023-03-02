@@ -59,10 +59,16 @@ Contact
 `zliu1208@umd.edu <mailto:zliu1208@umd.edu>`_
 | `GitHub <https://github.com/leonardzh>`_
 
-Zack Rickley
+Jack Rickley
 ******************
+.. image:: _img/people/jack.jpg
+    :height: 300
 | **Faculty Specialist**
-| Zach is a Master of Quantitative Finance student with a bachelor’s degree in Mathematics from the University of Maryland. He runs a consulting business for web3 startups and companies, providing guidance on token economics structures and incentives. He is also the co-founder and Chief Operating Officer of Feta Market, a digital asset derivatives trading platform.
+| Jack is a Master of Quantitative Finance student with a bachelor’s degree in Mathematics from the University of Maryland. He runs a consulting business for web3 startups and companies, providing guidance on token economics structures and incentives. He is also the co-founder and Chief Operating Officer of Feta Market, a digital asset derivatives trading platform.
+
+Contact
+~~~~~~~~
+`jrickey@umd.edu <mailto:jrickey@umd.edu >`_
 
 Matthew Nanas
 ******************
