@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'EASIER Website'
-copyright = '2023, EASIER Data Initiative'
+copyright = '2023, The EASIER Data Initiative'
 author = 'EASIER Data Initiative'
 release = '1.0'
 

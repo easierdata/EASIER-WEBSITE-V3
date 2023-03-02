@@ -1,5 +1,5 @@
 ---
-title: EASIER Data Initiative Launch
+title: The EASIER Data Initiative Launch
 layout: post
 date: 9, September 2022
 sub_heading: ''

@@ -4,7 +4,7 @@ About
 
 .. post:: 25, February 2023
     :tags: UMD
-    :author: EASIER Data Initiative
+    :author: The EASIER Data Initiative
 
 .. image:: _img/umdbuildings.jpeg
     :alt: Banner
