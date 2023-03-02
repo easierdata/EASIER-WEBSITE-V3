@@ -13,6 +13,7 @@ Recent Posts
 
    about
    news
+   W3GWG
 
 .. postlist:: 10
    :date: %Y-%m-%d
