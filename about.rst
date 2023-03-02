@@ -68,7 +68,7 @@ Jack Rickley
 
 Contact
 ~~~~~~~~
-`jrickey@umd.edu <mailto:jrickey@umd.edu >`_
+`jrickey@umd.edu <mailto:jrickey@umd.edu>`_
 
 Matthew Nanas
 ******************
