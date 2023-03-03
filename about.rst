@@ -15,6 +15,8 @@ We aim to facilitate data analysis and extraction to create a streamlined proces
 
 We anticipate the development of a unified web-access portal for querying and extracting heterogeneous data products and a Quantum Geographic Information System (QGIS) plugin for in-program data retrieval, which will better integrate, consult, and serve a larger community of partners and users across industry, academia, and government.
 
+-----
+
 The Team
 =========
 
@@ -32,6 +34,8 @@ Contact
 | `Twitter <https://twitter.com/TaylorOshan>`_
 | `GitHub <https://github.com/TaylorOshan>`_
 
+-----
+
 John Solly
 ******************
 .. image:: _img/people/john.JPG
@@ -46,6 +50,8 @@ Contact
 | `Twitter <https://twitter.com/_jsolly>`_
 | `GitHub <https://github.com/jsolly>`_
 
+-----
+
 Zheng Liu
 ******************
 .. image:: _img/people/zheng.jpg
@@ -59,6 +65,8 @@ Contact
 `zliu1208@umd.edu <mailto:zliu1208@umd.edu>`_
 | `GitHub <https://github.com/leonardzh>`_
 
+-----
+
 Jack Rickley
 ******************
 .. image:: _img/people/jack.jpg
@@ -69,6 +77,8 @@ Jack Rickley
 Contact
 ~~~~~~~~
 `jrickey@umd.edu <mailto:jrickey@umd.edu>`_
+
+-----
 
 Matthew Nanas
 ******************

@@ -10,6 +10,8 @@ W3GWG
 
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+-----
+
 Events
 =========
 
@@ -29,4 +31,4 @@ First Web3 + Geospatial Working Group Meeting
 | John is a co-founder at Astral and Head of Ecosystem at Toucan and will be sharing his insights on recent developments in web3 and geospatial technology, and how these can be used to create innovative applications.
 | 
 | Don't miss this opportunity to connect with other professionals in the field and learn from one of the leading experts in the area!
-`Join us! <https://bit.ly/W3GWG-HOOPES>`_
+`Join us! <https://bit.ly/W3GWG-Hoopes>`_
