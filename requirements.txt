@@ -1,5 +1,5 @@
 ablog==0.9.5
-pydata-sphinx-theme==0.12.0
-Sphinx==0.1.0
+pydata-sphinx-theme==0.1.0
+Sphinx==0.3.0
 sphinx-panels==0.4.1
 myst-parser==0.18.1
