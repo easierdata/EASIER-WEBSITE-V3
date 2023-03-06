@@ -85,7 +85,7 @@ Matthew Nanas
 .. image:: _img/people/matthew.jpg
     :height: 300
 | **Research Assistant; Developer**
-| Matthew is a first year undergraduate at the University of Maryland studying computer and information science. As a research assistant, he aims to explore decentralized storage and bring Web3 to cold data workflows. 
+| Matthew is a undergraduate at the University of Maryland studying computer and information science. He has experience in developing client-side apps in both the Ethereum and Solana ecosystem. As a developer for the EASIER Data Initiative, he aims to explore decentralized storage and compute and how they can be used for data-intensive geospatial workflows.
 
 Contact
 ~~~~~~~~
