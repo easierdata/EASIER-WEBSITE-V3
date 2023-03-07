@@ -5,15 +5,15 @@ div.logo {
 
 div.logo img {
     border-radius: 500px;
-    width: 80%;
-    max-width: 190px;
+    width: 120%;
+    max-width: 300px;
     margin: 0 auto;
     display: block;
 }
 
 .nav-container {
     margin: 1em auto;
-    max-width: 220px;
+    max-width: 250px;
 }
 
 .title {
@@ -44,4 +44,22 @@ html .search-button {
 
 html .theme-switch-button {
     opacity: 0 !important;
+}
+
+@media screen and (min-width: 992px) {
+    html #navbar-main {
+        display: none !important;
+        height: 0px !important;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .bd-sidebar-primary {
+        overflow-y: hidden !important;
+    }
+}
+
+.links a {
+    font-size: 1.25em;
+    margin-bottom: 25px !important;
 }

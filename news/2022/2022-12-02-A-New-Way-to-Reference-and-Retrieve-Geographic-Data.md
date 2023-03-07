@@ -2,6 +2,7 @@
 title: A New Way to Reference and Retrieve Geographic Data
 layout: post
 date: 2, December 2022
+author: John Solly
 sub_heading: ''
 tags:
 - STAC
