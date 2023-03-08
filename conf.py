@@ -8,7 +8,7 @@
 
 project = 'EASIER Website'
 copyright = '2023, The EASIER Data Initiative'
-author = 'EASIER Data Initiative'
+author = 'The EASIER Data Initiative'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
@@ -39,6 +39,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'pydata_sphinx_theme'
+html_title = 'The EASIER Data Initiative'
 
 html_show_sourcelink = False
 html_static_path = ['_static']
