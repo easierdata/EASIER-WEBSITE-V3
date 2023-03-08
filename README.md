@@ -20,6 +20,10 @@ To view the website locally, run the following command in the root directory (it
 $ ablog clean && ablog build && ablog serve
 ```
 
+## Deploying to Netlify
+
+Edit Netlify project settings to point to this repository, and set the build command to `make html`. Set the build directory to `_build/html`.
+
 ### Notes
 
-1.  Built with Python 3 (3.9.13)
+1.  Built with Python 3
