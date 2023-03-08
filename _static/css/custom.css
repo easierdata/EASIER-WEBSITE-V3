@@ -5,9 +5,8 @@ div.logo {
 
 div.logo img {
     border-radius: 500px;
-    width: 120%;
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: auto;
     display: block;
 }
 
@@ -58,6 +57,7 @@ html .theme-switch-button {
 @media screen and (min-width: 960px) {
     .bd-sidebar-primary {
         overflow-y: hidden !important;
+        overflow-x: hidden !important;
     }
 }
 
