@@ -81,7 +81,7 @@ html_context = {
 
 blog_feed_fulltext = False
 
-blog_post_pattern = "news/*/*"
-blog_path = "news"
+blog_post_pattern = "updates/*/*"
+blog_path = "updates"
 
 suppress_warnings = ["myst.header"]

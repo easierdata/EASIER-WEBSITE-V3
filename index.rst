@@ -7,13 +7,13 @@
 
    <link rel="stylesheet" type="text/css" href="/_static/css/images.css">
 
-***************************
-The EASIER Data Initiative
-***************************
+*****************************
+*The EASIER Data Initiative*
+*****************************
 
 Efficient, Accessible, and Sustainable Infrastructure for Extracting Reliable Data for the World's Location-Based Assets
 
-| **A collaboration between the University of Maryland and the Filecoin Foundation for the Decentralized Web**
+| A collaboration between the University of Maryland and the Filecoin Foundation for the Decentralized Web, with support from Textile.
 
 Partners
 =============
@@ -42,8 +42,8 @@ Updates
    :hidden:
 
    about
-   news
-   dGWG
+   updates
+   dGWWG
 
 .. postlist:: 10
    :date: %Y-%m-%d

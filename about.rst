@@ -13,8 +13,6 @@ About
 
 We aim to facilitate data analysis and extraction to create a streamlined process to bring data off the Filecoin/IPFS network in an actionable and useful capacity. The goal is to design and optimize offloading techniques that are compatible with existing geospatial workflows, integrating with existing standards such as Cloud Optimized GeoTIFFs (COGs), and SpatioTemporal Asset Catalogs (STACs). To solidify the accessible offloading experience, we are creating several approachable client programs in common languages such as JavaScript, Python, and Go.
 
-We anticipate the development of a unified web-access portal for querying and extracting heterogeneous data products and a Quantum Geographic Information System (QGIS) plugin for in-program data retrieval, which will better integrate, consult, and serve a larger community of partners and users across industry, academia, and government.
-
 -----
 
 The Team
@@ -41,7 +39,7 @@ John Solly
 .. image:: _img/people/john.JPG
     :height: 300
 
-| **Faculty Specialist; Geospatial Developer**
+| **Senior Geospatial Developer**
 | As a Geospatial Developer, John combines GIS domain knowledge and full stack web development to create beautiful (and fast) applications. He studied GIS under thought leaders (Michael Goodchild, Waldo Tobler, Krzysztof Janowicz, and Dan Montello) while completing a B.A. in Geography at UC Santa Barbara and an M.S. in Geoinformatics and Geospatial Intelligence at George Mason University.
 
 Contact
@@ -57,7 +55,7 @@ Zheng Liu
 .. image:: _img/people/zheng.jpg
     :height: 300
 
-| **Research Assistant; Developer**
+| **Geospatial Developer**
 | Zheng is a Graduate Research Assistant in the project who is expanding his knowledge and experiences in the data ETL process. He obtained his BSc in Geographical Information Science from Peking University and is currently a doctoral student at the Department of Geographical Science at the University of Maryland, College Park.
 
 Contact
@@ -67,12 +65,12 @@ Contact
 
 -----
 
-Jack Rickley
+Jack Rickey
 ******************
 .. image:: _img/people/jack.jpg
     :height: 300
-| **Faculty Specialist**
-| Jack is a Master of Quantitative Finance student with a bachelor’s degree in Mathematics from the University of Maryland. He runs a consulting business for web3 startups and companies, providing guidance on token economics structures and incentives. He is also the co-founder and Chief Operating Officer of Feta Market, a digital asset derivatives trading platform.
+| **Web3 Consultant**
+| Jack is a Master of Quantitative Finance student at the Robert H. Smith School of Business and he graduated in 2021 from the University of Maryland with a Bachelor's Degree in Mathematics. He is interested in exploring the economic and organizational implications of decentralized web technology on the geospatial data ecosystem. He also runs a consulting business, providing modeling and analytics services in token economics for web3 startups and companies.
 
 Contact
 ~~~~~~~~
@@ -82,9 +80,9 @@ Contact
 
 Matthew Nanas
 ******************
-.. image:: _img/people/matthew.jpg
+.. image:: _img/people/Matthew.jpg
     :height: 300
-| **Research Assistant; Developer**
+| **Web3 Developer**
 | Matthew is a undergraduate at the University of Maryland studying computer and information science. He has experience in developing client-side apps in both the Ethereum and Solana ecosystem. As a developer for the EASIER Data Initiative, he aims to explore decentralized storage and compute and how they can be used for data-intensive geospatial workflows.
 
 Contact
