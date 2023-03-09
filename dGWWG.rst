@@ -8,25 +8,25 @@ dGWWG
 
 **The Decentralized Geospatial Web Working Group**
 
-| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+| The working group aims to bring together folks interested in decentralized applications of geospatial data and technology. It will convene to highlight opportunities and challenges towards a decentralized geospatial web ecosystem. It will feature a series of speakers, updates from projects, and open discussions. The meetings are open to all so please join us and feel free to reach out if you would like to contribute.
 
 -----
 
 Events
 =========
 
-First Web3 + Geospatial Working Group Meeting
+First Decentralized Geospatial Web Working Group Meeting
 *********************************************
 **Featuring Guest Speaker John Hoopes**
 
 .. image:: _img/w3gwg/w3gwg-hoopes.jpeg
     :width: 300
 
-| Please join us for the inaugural Web3 + Geospatial Working Group (W3GWG) meeting!
+| Please join us for the inaugural Decentralized Geospatial Web Working Group (dGWWG) meeting!
 | 
 | The meeting will be hosted by The EASIER Data Initiative - a collaborative project between the University of Maryland Department of Geographical Science and the Filecoin Foundation for the Decentralized Web.
 | 
-| After introducing the W3GWG and The EASIER Data Initiative, the meeting agenda will consist of a brief presentation by guest speaker John Hoopes, followed by Q&A and open discussion about opportunities and challenges of the nexus of web3 and geospatial data and technology.
+| After introducing the dGWWG and The EASIER Data Initiative, the meeting agenda will consist of a brief presentation by guest speaker John Hoopes, followed by Q&A and open discussion about opportunities and challenges of the nexus of web3 and geospatial data and technology.
 | 
 | John is a co-founder at Astral and Head of Ecosystem at Toucan and will be sharing his insights on recent developments in web3 and geospatial technology, and how these can be used to create innovative applications.
 | 
