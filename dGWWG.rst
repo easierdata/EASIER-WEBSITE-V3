@@ -16,7 +16,7 @@ Events
 =========
 
 First Decentralized Geospatial Web Working Group Meeting
-*********************************************
+*********************************************************
 **Featuring Guest Speaker John Hoopes**
 
 .. image:: _img/w3gwg/w3gwg-hoopes.jpeg
@@ -31,4 +31,9 @@ First Decentralized Geospatial Web Working Group Meeting
 | John is a co-founder at Astral and Head of Ecosystem at Toucan and will be sharing his insights on recent developments in web3 and geospatial technology, and how these can be used to create innovative applications.
 | 
 | Don't miss this opportunity to connect with other professionals in the field and learn from one of the leading experts in the area!
-`Join us! <https://bit.ly/W3GWG-Hoopes>`_
+
+.. raw:: html
+
+    <strong><a target="_blank" rel="noopener noreferrer" href="https://umd.zoom.us/rec/play/_LgoiCnQoVGmJofoapjGEtw0aM2uKRf0ixxD-aF7fsnvobJbjK4s8OGTzOBONVWrHOjWSHkpr4PhR80n.yVGk0tucyHSQBzwt">Meeting Recording</a></strong>
+    <br />
+    <iframe width="100%" height="315" src="https://umd.zoom.us/rec/play/_LgoiCnQoVGmJofoapjGEtw0aM2uKRf0ixxD-aF7fsnvobJbjK4s8OGTzOBONVWrHOjWSHkpr4PhR80n.yVGk0tucyHSQBzwt" frameborder="0" allowfullscreen></iframe>
