@@ -61,3 +61,57 @@ from pystac_client import Client
 from IPython.display import Image
 from PIL import Image as pil_image
 ```
+Next, we will connect to the STAC API and search for Landsat 9 imagery from the Washington D.C. area:
+```
+catalog = Client.open("http://ec2-54-172-212-55.compute-1.amazonaws.com/api/v1/pgstac/")
+bbox = [-76.964657, 38.978967, -76.928008, 39.002783]
+
+search = catalog.search(
+    collections=["landsat-c2l1"],
+    bbox=bbox,
+)
+
+items = search.get_all_items()
+len(items)
+1
+```
+After connecting to the STAC API and searching for the Landsat 9 imagery, the JSON response for the item will include links to the assets using traditional storage (S3) and IPFS. Here is a snippet of the JSON that includes the S3 and IPFS CID:
+
+In this example, we have manually modified the JSON response from the STAC API to include the IPFS CID for the Landsat 9 imagery. This modification demonstrates how IPFS can be integrated into a geospatial workflow, alongside traditional storage systems like S3. Please note that this alteration is for demonstration purposes only, and the actual STAC API response might not include the IPFS CID by default.
+```json
+{
+  "assets": {
+    "red": {
+      "href": "s3://usgs-landsat/collection02/.../LC08_L1TP_014033_20210905_20210917_02_T1_sr_band4.tif",
+      "alternate": {
+        "IPFS": {
+          "href": "ipfs://QmTgttqUf7PvZgdSoe71j3njeEKk1hC3h22n2sQmety3To"
+        }
+      }
+    },
+    "nir08": {
+      "href": "s3://usgs-landsat/collection02/.../LC08_L1TP_014033_20210905_20210917_02_T1_sr_band5.tif",
+      "alternate": {
+        "IPFS": {
+          "href": "ipfs://QmZkWaKSuVhFKtAwNbxSogcT6hXHMksXjhgqLu6AXHSUKq"
+        }
+      }
+    }
+  }
+}
+```
+In a traditional workflow, you would fetch the data from the S3 bucket using the href value. However, in this tutorial, we are going to fetch the data using IPFS.
+
+We will fetch bands 4 and 5 from the scene (Red and NIR):
+```py
+item = items[0]
+red_band_cid = item.assets["red"].extra_fields["alternate"]["IPFS"]["href"].split("/")[-1]
+nir_band_cid = item.assets["nir08"].extra_fields["alternate"]["IPFS"]["href"].split("/")[-1]
+
+print(f"Red band CID: {red_band_cid}")
+print(f"NIR band CID: {nir_band_cid}")
+```
+
+Now, we will define the helper functions to load the Landsat bands and save the plot to a buffer:
+
+
