@@ -42,7 +42,7 @@ Now that we understand the advantages of using IPFS for geospatial workflows, le
 ## Step-by-Step Guide
 First, we need to import the required libraries. I reccomend using a virtual environment to install the libraries. You can use the following command to install the libraries:
 
-```py
+```shell
 which python3
 python3 -m venv venv
 source venv/bin/activate
@@ -73,7 +73,7 @@ search = catalog.search(
 
 items = search.get_all_items()
 len(items)
-1
+> 1
 ```
 After connecting to the STAC API and searching for the Landsat 9 imagery, the JSON response for the item will include links to the assets using traditional storage (S3) and IPFS. Here is a snippet of the JSON that includes the S3 and IPFS CID:
 
@@ -114,4 +114,76 @@ print(f"NIR band CID: {nir_band_cid}")
 
 Now, we will define the helper functions to load the Landsat bands and save the plot to a buffer:
 
+```py
+def load_landsat_band(band: bytes) -> np.ndarray:
+    with rasterio.MemoryFile(band) as memfile:
+        with memfile.open() as dataset:
+            return dataset.read(1)
 
+def save_plot_to_buffer(plot: plt.Figure) -> bytes:
+    buffer = BytesIO()
+    plot.savefig(buffer, format='png')
+    buffer.seek(0)
+    return buffer.getvalue()
+```
+Next, we will fetch the bands from IPFS using the CIDs we extracted from the JSON:
+
+```py
+red_band = subprocess.check_output(["ipfs", "cat", red_band_cid])
+nir_band = subprocess.check_output(["ipfs", "cat", nir_band_cid])
+```
+
+After fetching the bands, we will load them into numpy arrays using the load_landsat_band helper function:
+
+```py
+red_band_4 = load_landsat_band(red_band)
+nir_band_5 = load_landsat_band(nir_band)
+```
+Now, we can calculate the NDVI using the loaded numpy arrays:
+
+
+```py
+eps = 0.0001  # Avoid divide by zero errors
+ndvi = (nir_band_5 - red_band_4) / (nir_band_5 + red_band_4 + eps)
+```
+
+With the NDVI calculated, we can plot the NDVI image:
+
+```py
+# Set min and max values for better color differentiation
+ndvi_min, ndvi_max = -1, 1
+
+# Create a custom color map
+cmap = plt.cm.RdYlGn
+norm = mcolors.Normalize(vmin=ndvi_min, vmax=ndvi_max)
+
+# Plot the NDVI image
+fig, ax = plt.subplots()
+im = ax.imshow(ndvi, cmap=cmap, norm=norm)
+cbar = fig.colorbar(im, ax=ax, label='NDVI', cmap=cmap, norm=norm)
+ax.set_title('Normalized Difference Vegetation Index (NDVI)')
+```
+
+We will then save the plot to an image (png) buffer using the save_plot_to_buffer helper function:
+
+```py
+plot_buffer = save_plot_to_buffer(fig)
+```
+
+Now, we can add the plot image to IPFS:
+
+```
+ipfs_hash = subprocess.check_output(["ipfs", "add", "-q"], input=plot_buffer).decode().strip()
+ipfs_hash
+> 'QmZasRR5ath2hAXApYKwy4droFhiHAPpk4yvBDuKvKRYGE'
+```
+
+Finally, we will fetch the plot image from IPFS using the returned hash and display it:
+
+```
+ipfs_plot_png = subprocess.check_output(["ipfs", "cat", ipfs_hash])
+img = pil_image.open(BytesIO(ipfs_plot_png))
+display(img)
+```
+
+In this blog post, we demonstrated how to calculate NDVI on Landsat 9 imagery using IPFS in a Jupyter notebook. By using IPFS instead of traditional storage systems, we can take advantage of content-addressing and decentralization, leading to faster data access, better data persistence, and more efficient storage.
