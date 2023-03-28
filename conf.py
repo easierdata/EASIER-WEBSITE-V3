@@ -6,6 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import ablog
+
 project = 'EASIER Website'
 copyright = '2023, The EASIER Data Initiative'
 author = 'The EASIER Data Initiative'
@@ -19,6 +21,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_panels",
     "myst_parser",
+    "nbsphinx",
 ]
 
 # Markdown support
@@ -86,3 +89,6 @@ blog_post_pattern = "updates/*/*"
 blog_path = "updates"
 
 suppress_warnings = ["myst.header"]
+
+exclude_patterns = []
+jupyter_execute_notebooks = "off"
