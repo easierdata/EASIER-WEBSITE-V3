@@ -27,9 +27,9 @@ In addition, IPFS is a peer-to-peer network, meaning that data is stored and sha
 ## Advantages of Using IPFS for Geospatial Workflows
 
 Traditionally, geospatial workflows have relied on centralized storage systems such as cloud storage providers or local file systems. However, these systems have limitations in terms of scalability, security, and availability. By contrast, IPFS provides several advantages for geospatial workflows:
-1 - Content-addressing
-2 - Decentralization
-3 - Efficiency
+1. Content-addressing
+2. Decentralization
+3. Censorship Resistance
 
 ### Content-addressing: 
 IPFS uses content-addressing, which means that the content itself is used to derive its address. This ensures that the data is tamper-proof and verifiable, and also allows for highly efficient data retrieval.
@@ -37,11 +37,11 @@ IPFS uses content-addressing, which means that the content itself is used to der
 ### Decentralization: 
 IPFS is a peer-to-peer network, which means that data is stored and shared across multiple nodes in the network. This ensures that the data is highly available and resilient to data loss or censorship.
 
-### Efficiency:
-IPFS uses content-based addressing and data deduplication to ensure that data is stored and shared efficiently. This means that multiple copies of the same data are stored only once, and data is retrieved from the node that is closest to the requester.
+### Censorship Resistance:
+IPFS is a peer-to-peer network, which means that data is stored and shared across multiple nodes in the network. This ensures that the data is highly available and resilient to data loss or censorship.
 
 ## How to Calculate NDVI on Landsat 9 Imagery Using IPFS
-Now that we understand the advantages of using IPFS for geospatial workflows, let's see how we can calculate NDVI on Landsat 9 imagery using IPFS in a Jupyter notebook. We will be using Python and several libraries such as rasterio, matplotlib, and pystac_client.
+Now that we understand the advantages of using IPFS, let's see how we can calculate NDVI on Landsat 9 imagery using IPFS in a Jupyter notebook. We will be using several libraries such as rasterio, matplotlib, and pystac_client.
 
 ## Step-by-Step Guide
 First, we need to import the required libraries. I reccomend using a virtual environment to install the Python libraries. Here is the [requirements.txt](https://github.com/easierdata/stac-fastapi/blob/master/samples/requirements.txt) file I used for this tutorial:
@@ -53,7 +53,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 As of this writing, the repo that houses the Python bindings for IPFS is out of date and is [looking for a maintainer](https://github.com/ipfs-shipyard/py-ipfs-http-client/issues/316). Instead, we will install the IPFS CLI and use the subprocess library to run the CLI commands. We will also need to install the IPFS daemon, which will run in the background and allow us to access the IPFS network.
-```
+
 1 - [Install IPFS Kubo](https://docs.ipfs.tech/install/command-line/#install-ipfs-kubo) this will allow you to interact with the IPFS network from the command line.
 
 2 - [Install IPFS Desktop](https://docs.ipfs.tech/install/ipfs-desktop/), which will run the IPFS daemon in the background as long as the application is running. I've found this to be the easiest way to run the IPFS daemon on my Macbook. Plus you get a nice GUI to manage your IPFS node.
@@ -70,11 +70,11 @@ from pystac_client import Client
 from IPython.display import Image
 from PIL import Image as pil_image
 ```
-Before we continue with the steps to connect to the STAC API and search for Landsat 9 imagery from the Washington D.C. area, it's worth mentioning that we have set up a STAC server ourselves and populated it with IPFS CIDs for the Landsat 9 dataset. To learn more about the technique we used for this process, you can refer to this blog post: A New Way to Reference and Retrieve Geographic Data.
+Before we continue with the steps to connect to the STAC API and search for Landsat 9 imagery from the Washington D.C. area, it's worth mentioning that we have set up a STAC server ourselves and populated it with IPFS CIDs for the Landsat 9 dataset. To learn more about the technique we used for this process, you can refer to this blog post: [A New Way to Reference and Retrieve Geographic Data](https://easierdata.org/updates/2022/2022-12-02-a-new-way-to-reference-and-retrieve-geographic-data).
 
-If you're interested in setting up your own STAC server and populating it with IPFS CIDs, you can follow the steps outlined in the stac-fastapi GitHub repository.
+If you're interested in setting up your own STAC server and populating it with IPFS CIDs, you can follow the steps outlined in our [stac-fastapi GitHub repository fork](https://github.com/easierdata/stac-fastapi).
 
-With that background, let's continue with connecting to the STAC API and searching for Landsat 9 imagery from the Washington D.C. area:
+With that background, let's continue with connecting to our STAC API and searching for Landsat 9 imagery from the Washington D.C. area:
 ```
 catalog = Client.open("http://ec2-54-172-212-55.compute-1.amazonaws.com/api/v1/pgstac/")
 bbox = [-76.964657, 38.978967, -76.928008, 39.002783]
@@ -98,6 +98,9 @@ In this example, you can see how we injected the CID into the STAC json. This mo
     "red": {
       "href": "s3://usgs-landsat/collection02/.../LC08_L1TP_014033_20210905_20210917_02_T1_sr_band4.tif",
       "alternate": {
+        "S3": {
+          "href": "s3://usgs-landsat/collection02/.../LC08_L1TP_014033_20210905_20210917_02_T1_sr_band4.tif"
+          },
         "IPFS": {
           "href": "ipfs://QmTgttqUf7PvZgdSoe71j3njeEKk1hC3h22n2sQmety3To"
         }
@@ -106,6 +109,9 @@ In this example, you can see how we injected the CID into the STAC json. This mo
     "nir08": {
       "href": "s3://usgs-landsat/collection02/.../LC08_L1TP_014033_20210905_20210917_02_T1_sr_band5.tif",
       "alternate": {
+        "S3": {
+          "href": "s3://usgs-landsat/collection02/.../LC08_L1TP_014033_20210905_20210917_02_T1_sr_band5.tif"
+          },
         "IPFS": {
           "href": "ipfs://QmZkWaKSuVhFKtAwNbxSogcT6hXHMksXjhgqLu6AXHSUKq"
         }
@@ -123,6 +129,8 @@ nir_band_cid = item.assets["nir08"].extra_fields["alternate"]["IPFS"]["href"].sp
 
 print(f"Red band CID: {red_band_cid}")
 print(f"NIR band CID: {nir_band_cid}")
+> Red band CID: QmTgttqUf7PvZgdSoe71j3njeEKk1hC3h22n2sQmety3To
+> NIR band CID: QmZkWaKSuVhFKtAwNbxSogcT6hXHMksXjhgqLu6AXHSUKq
 ```
 Next, we will fetch the bands from IPFS using the CIDs we extracted from the STAC server earlier. Because we aren't using a native Python library to interact with IPFS, we will use the subprocess library to run the IPFS CLI commands. The [check_output](https://docs.python.org/3/library/subprocess.html#subprocess.check_output) function will return the output of the command as a byte string. We will use this output to load the Landsat bands into numpy arrays.
 
@@ -175,7 +183,7 @@ cbar = fig.colorbar(im, ax=ax, label='NDVI', cmap=cmap, norm=norm)
 ax.set_title('Normalized Difference Vegetation Index (NDVI)')
 ```
 
-That last pieve of code should have generated a plot of the NDVI image. However, we want to save the plot to a buffer so we can upload it to IPFS. We can do this by using the helper function we defined earlier. Essentially we are just 'saving' the png into memory instead of writing it to a file. That way we can upload it to IPFS without having to write it to disk.
+That last pieve of code should have generated a plot of the NDVI image. However, we want to save the plot to a buffer so we can add it to IPFS. We can do this by using the helper function we defined earlier. Essentially we are just 'saving' the png into memory instead of writing it to a file. That way we can upload it to IPFS without having to write it to disk.
 
 ```py
 plot_buffer = save_plot_to_buffer(fig)
@@ -195,6 +203,7 @@ Now that we have the plot saved to IPFS, we can fetch it from our local node usi
 ipfs_plot_png = subprocess.check_output(["ipfs", "cat", ipfs_hash])
 img = pil_image.open(BytesIO(ipfs_plot_png))
 display(img)
+> NDVI image is shown
 ```
 It's the same plot we generated earlier, but this time it's stored on IPFS! 
 
@@ -202,8 +211,9 @@ It's important to note that the IPFS node we just wrote to and fetched from are 
 ```py
 subprocess.check_output(["ipfs", "pin", "add", ipfs_hash])
 ```
-After pinning the data to our local IPFS node, we can fetch it from any IPFS node worldwide using the same IPFS get command as before. However, keep in mind that download speeds will be influenced by the distance between your computer and the requester's location, as well as the internet connection speeds for both parties. To make your data more accessible, you can consider using a pinning service like Pinata or managing the pinning yourself by setting up your own IPFS nodes.
+After pinning the data to our local IPFS node, we can fetch it from any IPFS node worldwide using the same IPFS get command as before. However, keep in mind that download speeds will be influenced by the distance between your computer and the requester's location, as well as the internet connection speeds for both parties. To make your data more accessible, you can consider using a pinning service like [Pinata](https://www.pinata.cloud/) or managing the pinning yourself by setting up your own IPFS nodes.
 
+## Conclusion
 In this blog post, we demonstrated how to calculate NDVI on Landsat 9 imagery using IPFS in a Jupyter notebook. By leveraging IPFS in place of traditional storage systems, we can benefit from content-addressing and decentralization. These features lead to faster data access, improved data persistence, and more efficient storage, highlighting the potential of IPFS in geospatial workflows.
 
 ## Footnotes
