@@ -181,6 +181,7 @@ fig, ax = plt.subplots()
 im = ax.imshow(ndvi, cmap=cmap, norm=norm)
 cbar = fig.colorbar(im, ax=ax, label='NDVI', cmap=cmap, norm=norm)
 ax.set_title('Normalized Difference Vegetation Index (NDVI)')
+# NDVI image plot is shown here
 ```
 
 That last pieve of code should have generated a plot of the NDVI image. However, we want to save the plot to a buffer so we can add it to IPFS. We can do this by using the helper function we defined earlier. Essentially we are just 'saving' the png into memory instead of writing it to a file. That way we can upload it to IPFS without having to write it to disk.
