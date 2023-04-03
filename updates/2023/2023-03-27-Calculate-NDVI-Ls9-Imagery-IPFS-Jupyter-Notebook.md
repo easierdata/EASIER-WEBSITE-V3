@@ -1,7 +1,7 @@
 ---
-title: Calculate NDVI Ls9 Imagery IPFS Jupyter Notebook
+title: NDVI on Landsat 9 imagery with data using IPFS
 layout: post
-date: 27, March 2023
+date: 03, April 2023
 author: John Solly
 sub_heading: ''
 tags:
