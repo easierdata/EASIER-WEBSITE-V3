@@ -2,7 +2,7 @@ Second Decentralized Geospatial Web Working Group Meeting
 *********************************************************
 **Featuring Guest Speaker John Hoopes**
 
-.. image:: _img/w3gwg/w3gwg-hoopes.jpeg
+.. image:: _img/dgwwg/w3gwg-hoopes.jpeg
     :width: 300
 
 | Please join us for the inaugural Decentralized Geospatial Web Working Group (dGWWG) meeting!
