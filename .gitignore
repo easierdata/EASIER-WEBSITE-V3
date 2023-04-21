@@ -156,3 +156,6 @@ _website/
 
 # MacOS
 .DS_Store
+
+# VSCode
+.vscode/
