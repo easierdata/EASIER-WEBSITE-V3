@@ -1,5 +1,5 @@
 ---
-title: NDVI on Landsat 9 imagery with data using IPFS
+title: Seamlessly Fetching Files from IPFS － A Proof of Concept for Building a Flexible Local Client
 layout: post
 date: 24, April 2023
 author: John Solly
