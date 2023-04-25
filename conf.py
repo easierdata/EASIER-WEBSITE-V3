@@ -79,6 +79,16 @@ html_theme_options = {
     ]
 }
 
+html_meta = {
+    'description': 'The EASIER Data Initiative develops decentralized cyberinfrastructure for efficiently, accessibly, and sustainably onloading, analyzing, and extracting large amounts of geospatial data. Concerning onloading, we are building a generalizable pipeline for heterogeneous geospatial data ingress into the Filecoin and IPFS environment.',
+    'og:title': 'The EASIER Data Initiative',
+    'og:description': 'The EASIER Data Initiative develops decentralized cyberinfrastructure for efficiently, accessibly, and sustainably onloading, analyzing, and extracting large amounts of geospatial data. Concerning onloading, we are building a generalizable pipeline for heterogeneous geospatial data ingress into the Filecoin and IPFS environment.',
+    'og:image': 'https://pbs.twimg.com/profile_images/1574844893817491457/sWuj_YTp_400x400.jpg',
+    'twitter:title': 'The EASIER Data Initiative',
+    'twitter:description': 'The EASIER Data Initiative develops decentralized cyberinfrastructure for efficiently, accessibly, and sustainably onloading, analyzing, and extracting large amounts of geospatial data. Concerning onloading, we are building a generalizable pipeline for heterogeneous geospatial data ingress into the Filecoin and IPFS environment.',
+    'twitter:image': 'https://pbs.twimg.com/profile_images/1574844893817491457/sWuj_YTp_400x400.jpg',
+}
+
 html_context = {
     "default_mode": "light"
 }
