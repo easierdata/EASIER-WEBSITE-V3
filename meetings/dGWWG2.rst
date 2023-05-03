@@ -9,9 +9,9 @@ Second Decentralized Geospatial Web Working Group Meeting
 | 
 | The working group aims to bring together folks interested in decentralized applications of geospatial data and technology. It will convene to highlight opportunities and challenges towards a decentralized geospatial web ecosystem. It will feature a series of speakers, updates from projects, and open discussions. The meetings are open to all so please join us and feel free to reach out if you would like to contribute.
 | 
-| Meeting are hosted by The EASIER Data Initiative - a collaborative project between the University of Maryland Department of Geographical Science and the Filecoin Foundation for the Decentralized Web.
+| Meetings are hosted by The EASIER Data Initiative - a collaborative project between the University of Maryland Department of Geographical Science and the Filecoin Foundation for the Decentralized Web.
 | 
-| This meeting will feature guest speaker Ryan King. Ryan is a is a co-founder and CEO of Foamspace Corp and will be sharing his insights on recent developments in proof of location.
+| This meeting will feature guest speaker Ryan King. Ryan is a co-founder and CEO of Foamspace Corp and will be sharing his insights on recent developments in proof of location.
 | The tentative meeting agenda will consist of:
 | 
 | 1. Lightning talks - project introductions or updates (~10m)
