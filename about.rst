@@ -2,7 +2,7 @@
 About
 ******
 
-.. post:: 25, February 2023
+.. post:: 08, September 2022
     :tags: UMD
     :author: The EASIER Data Initiative
 
@@ -62,19 +62,6 @@ Contact
 ~~~~~~~~
 `zliu1208@umd.edu <mailto:zliu1208@umd.edu>`_
 | `GitHub <https://github.com/leonardzh>`_
-
------
-
-Nneoma Kanu
-******************
-.. image:: _img/people/nneoma.jpeg
-    :height: 300
-| **Web3 Consultant**
-| Nneoma is a multifaceted professional and creator who aspires to advance the accessibility and impact of technology through technical education, experience design, community building, and product development. With a keen eye for the latest technological innovations and their potential to create a more equitable and open society, Nneoma brings a wealth of expertise honed over years of working across various industries, especially in the realm of emerging technologies. She possesses a remarkable ability to simplify highly complex technical concepts and engage with diverse audiences of developers and users to drive innovation and collaboration
-
-Contact
-~~~~~~~~
-`nneoma@coldscollective.io <mailto:nneoma@coldscollective.io>`_
 
 -----
 
