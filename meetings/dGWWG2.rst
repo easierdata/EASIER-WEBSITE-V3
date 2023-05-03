@@ -5,15 +5,21 @@ Second Decentralized Geospatial Web Working Group Meeting
 .. image:: _img/dgwwg/dGWWG_king.png
     :width: 300
 
-| Please join us for the second Decentralized Geospatial Web Working Group (dGWWG) meeting!
+| Please join us for the next Decentralized Geospatial Web Working Group (dGWWG) meeting!
 | 
-| The meeting will be hosted by The EASIER Data Initiative - a collaborative project between the University of Maryland Department of Geographical Science and the Filecoin Foundation for the Decentralized Web.
+| The working group aims to bring together folks interested in decentralized applications of geospatial data and technology. It will convene to highlight opportunities and challenges towards a decentralized geospatial web ecosystem. It will feature a series of speakers, updates from projects, and open discussions. The meetings are open to all so please join us and feel free to reach out if you would like to contribute.
 | 
-| After introducing the dGWWG and The EASIER Data Initiative, the meeting agenda will consist of a brief presentation by guest speaker Ryan King, followed by Q&A and open discussion about opportunities and challenges of the nexus of web3 and geospatial data and technology.
+| Meeting are hosted by The EASIER Data Initiative - a collaborative project between the University of Maryland Department of Geographical Science and the Filecoin Foundation for the Decentralized Web.
 | 
-| Ryan is a co-founder and CEO at Foamspace Corp and will be sharing his insights on recent developments in web3 and geospatial technology, and how these can be used to create innovative applications.
+| This meeting will feature guest speaker Ryan King. Ryan is a is a co-founder and CEO of Foamspace Corp and will be sharing his insights on recent developments in proof of location.
+| The tentative meeting agenda will consist of:
 | 
-| Don't miss this opportunity to connect with other professionals in the field and learn from one of the leading experts in the area!
+| 1. Lightning talks - project introductions or updates (~10m)
+| 2. Presentation by guest speaker Ryan King (20m)
+| 3. Q&A and open discussion (20m)
+| 4. Wrap-up (5m)
+|
+| We still have slots left for lightning talks for anyone who would like to introduce themselves or their project or provide any updates from their organization. Please reach out to Taylor Oshan (`toshan@umd.edu <mailto:toshan@umd.edu>`_)
 
 .. raw:: html
 
