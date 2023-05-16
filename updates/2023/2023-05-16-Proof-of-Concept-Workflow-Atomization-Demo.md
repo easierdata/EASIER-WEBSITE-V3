@@ -29,7 +29,7 @@ Next, clone the following Github repository: [Python-Atomizer](https://github.co
 
 In the root directory of our project, create a `.env` file and ensure it has the following content (replace the filler with your own API key):
 
-```
+```shell
 WEB3_STORAGE_KEY="<API KEY GOES HERE>"
 ```
 
@@ -39,7 +39,7 @@ The first step to this process as highlighted in the introduction is workflow ex
 
 To generate this code profile, execute the following (in a terminal) in the repositories' root directory:
 
-```
+```shell
 $ python -m cProfile -o inputs/profile inputs/morans_example.py
 ```
 
@@ -53,7 +53,7 @@ Next, the workflow needs to be extracted and atomized. The Typescript program of
 
 To achieve this, execute the following in a terminal within the root directory of the repository:
 
-```
+```shell
 $ ts-node index.ts
 ```
 
