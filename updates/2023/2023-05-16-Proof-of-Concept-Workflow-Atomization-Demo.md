@@ -27,6 +27,12 @@ To begin and follow this demo, create a Web3.Storage account if you have not alr
 
 Next, clone the following Github repository: [Python-Atomizer](https://github.com/easierdata/Python-Atomizer).
 
+Install necessary python libraries by executing the following in a terminal:
+
+```shell
+$ python3 -m pip install esda libpysal matplotlib numpy splot
+```
+
 In the root directory of our project, create a `.env` file and ensure it has the following content (replace the filler with your own API key):
 
 ```shell
