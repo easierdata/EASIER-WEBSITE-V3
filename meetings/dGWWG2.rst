@@ -23,4 +23,6 @@ Second Decentralized Geospatial Web Working Group Meeting
 
 .. raw:: html
 
-    <strong><a target="_blank" rel="noopener noreferrer" href="https://bit.ly/dGWWG-King">Register For Meeting</a></strong>
+    <strong><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1LQzpt1q5Ktt248HnU0aD4oP7llW_EHh_/view">Meeting Recording</a></strong>
+    <br />
+    <iframe height="315" width="100%" src="https://drive.google.com/file/d/1LQzpt1q5Ktt248HnU0aD4oP7llW_EHh_/preview" allow="autoplay"></iframe>
