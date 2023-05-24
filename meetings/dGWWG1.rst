@@ -17,6 +17,6 @@ First Decentralized Geospatial Web Working Group Meeting
 
 .. raw:: html
 
-    <strong><a target="_blank" rel="noopener noreferrer" href="https://umd.zoom.us/rec/play/_LgoiCnQoVGmJofoapjGEtw0aM2uKRf0ixxD-aF7fsnvobJbjK4s8OGTzOBONVWrHOjWSHkpr4PhR80n.yVGk0tucyHSQBzwt">Meeting Recording</a></strong>
+    <strong><a target="_blank" rel="noopener noreferrer" href="https://youtu.be/uNi708xNuTE">Meeting Recording</a></strong>
     <br />
-    <iframe width="100%" height="315" src="https://umd.zoom.us/rec/play/_LgoiCnQoVGmJofoapjGEtw0aM2uKRf0ixxD-aF7fsnvobJbjK4s8OGTzOBONVWrHOjWSHkpr4PhR80n.yVGk0tucyHSQBzwt" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uNi708xNuTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
