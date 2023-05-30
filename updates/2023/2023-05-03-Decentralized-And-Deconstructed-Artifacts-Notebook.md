@@ -11,7 +11,7 @@ tags:
 - Publications
 related_posts: []
 ---
-# Introduction
+# A New Method to Code Citation
 
 As it pertains to publications, being able to share artifacts such as code is imperative to illustrate a methodology in practice and support the validity of findings through replicability.
 
