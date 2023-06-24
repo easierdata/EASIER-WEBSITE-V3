@@ -25,7 +25,7 @@ extensions = [
 ]
 
 # Syntax highlighting
-pygments_style = 'default'
+pygments_style = 'friendly'
 
 # Markdown support
 myst_update_mathjax = False
