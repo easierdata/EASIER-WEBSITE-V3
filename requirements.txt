@@ -5,3 +5,4 @@ sphinx-panels==0.4.1
 myst-parser==0.18.1
 nbsphinx==0.9.1
 pygments==2.13.0
+ipython==8.11.0
