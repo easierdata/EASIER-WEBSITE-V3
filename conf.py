@@ -24,6 +24,9 @@ extensions = [
     "nbsphinx",
 ]
 
+# Syntax highlighting
+pygments_style = 'default'
+
 # Markdown support
 myst_update_mathjax = False
 exclude_patterns = [
