@@ -9,7 +9,7 @@ About
 .. image:: _img/umdbuildings.jpeg
     :alt: Banner
 
-Where open geospatial science meets the decentralized geospatial web!
+| Where open geospatial science meets the decentralized geospatial web!
 
 | The EASIER Data Initiative develops decentralized cyberinfrastructure for efficiently, accessibly, and sustainably onloading, analyzing, and extracting large amounts of geospatial data. Concerning onloading, we are building a generalizable pipeline for heterogeneous geospatial data ingress into the Filecoin and IPFS environment.
 
