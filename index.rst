@@ -11,7 +11,7 @@
 *The EASIER Data Initiative*
 *****************************
 
-Efficient, Accessible, and Sustainable Infrastructure for Extracting Reliable Data for the World's Location-Based Assets
+Efficient, Accessible, and Sustainable Infrastructure for Extracting Reliable (EASIER) Data for the World's Location-Based Assets
 
 | A collaboration between the University of Maryland and the Filecoin Foundation for the Decentralized Web, with support from Textile.
 
