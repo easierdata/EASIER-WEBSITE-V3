@@ -80,6 +80,19 @@ Contact
 
 -----
 
+Victor Irekponor
+******************
+.. image:: _img/people/victor.jpeg
+    :height: 300
+| **Geospatial Developer**
+| Victor is a Ph.D. student at the Center for Geospatial Information Science, University of Maryland. He has a broad interest in spatial data science, smart cities, artificial intelligence, and decentralized ecosystems. With a strong background as a machine learning software engineer and data scientist, he possesses expertise in Python and JavaScript programming languages. Committed to making a meaningful impact, Victor aims to advance knowledge and drive positive change through cutting-edge research and the application of emerging technologies in our interconnected world.
+
+Contact
+~~~~~~~~
+`vireks@umd.edu <mailto:vireks@umd.edu>`_
+
+-----
+
 Matthew Nanas
 ******************
 .. image:: _img/people/Matthew.jpg
