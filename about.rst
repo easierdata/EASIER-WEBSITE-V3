@@ -89,7 +89,10 @@ Victor Irekponor
 
 Contact
 ~~~~~~~~
-`vireks@umd.edu <mailto:vireks@umd.edu>`_
+`vireks@umd.edu <mailto:vireks@umd.edu>`_ 
+| `GitHub <https://github.com/marquisvictor>`_
+| `Twitter <https://twitter.com/IrekponorVictor>`_
+
 
 -----
 
