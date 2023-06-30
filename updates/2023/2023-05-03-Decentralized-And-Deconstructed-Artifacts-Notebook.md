@@ -13,9 +13,9 @@ related_posts: []
 ---
 # A New Method to Code Citation
 
-As it pertains to publications, being able to share artifacts such as code is imperative to illustrate a methodology in practice and support the validity of findings through replicability.
+For scientific publishing, being able to share artifacts such as data and code is imperative to illustrate a methodology in practice and support the validity of findings through replicability.
 
-Unfortunately, many publications fail to abide by open nature through broken links, outdated code snippets, and sharing only a fraction of code used (if not any). Additionally, querying a set of publications by code contents is difficult compared to using keywords and phrases as code follows a unique syntax. A one-line search box is insufficient if one were to include both non-alphanumeric characters, indentations, and other elements in their query. As the EASIER Data Initiative continues to explore the harmony between geospatial data and web3, the team has explored opportunities to reach fields of science outside of GIS. This post will explore how the interplanetary file system (IPFS) may benefit researchers and developers through code atomization.
+Unfortunately, many publications aren't quite reproducible (even with good faith efforts) due to stale/broken links, changing code versions, and lack of reporting detail. Additionally, while it is possible to query a publication or code file for keywords, there isn’t a mechanism to query publications by associated code contents or to search for unique chunks of code. As the EASIER Data Initiative continues to explore the harmony between geospatial data and web3, the team has explored broader opportunities for advancing open science. This post will explore how content-addressing and the interplanetary file system (IPFS) may benefit researchers and developers through code atomization.
 
 # Code Atomization
 
