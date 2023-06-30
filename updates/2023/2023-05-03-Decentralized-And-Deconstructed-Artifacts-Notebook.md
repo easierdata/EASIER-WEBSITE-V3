@@ -19,7 +19,7 @@ Unfortunately, many publications aren't quite reproducible (even with good faith
 
 # Code Atomization
 
-*Code atomization* refers to breaking down a program into smaller, manageable components. An atomized program enables more manageable testing and debugging as one points toward only the components that are used.
+*Code atomization* refers to breaking down a program into smaller, manageable components than can more easily be referenced and shared. 
 
 # Atomization Illustration
 
