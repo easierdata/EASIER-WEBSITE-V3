@@ -1,7 +1,7 @@
 ---
 title: Decentralized and Deconstructed Approach to Code Artifacts
 layout: post
-date: 03, May 2023
+date: 30, June 2023
 author: Matthew Nanas
 sub_heading: ''
 tags:

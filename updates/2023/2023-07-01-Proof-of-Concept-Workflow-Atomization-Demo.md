@@ -1,7 +1,7 @@
 ---
 title: Proof of Concept Workflow Atomization Demo
 layout: post
-date: 16, May 2023
+date: 1, July 2023
 author: Matthew Nanas
 sub_heading: ''
 tags:
