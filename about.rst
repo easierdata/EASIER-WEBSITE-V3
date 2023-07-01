@@ -9,6 +9,8 @@ About
 .. image:: _img/umdbuildings.jpeg
     :alt: Banner
 
+| Where open geospatial science meets the decentralized geospatial web!
+
 | The EASIER Data Initiative develops decentralized cyberinfrastructure for efficiently, accessibly, and sustainably onloading, analyzing, and extracting large amounts of geospatial data. Concerning onloading, we are building a generalizable pipeline for heterogeneous geospatial data ingress into the Filecoin and IPFS environment.
 
 We aim to facilitate data analysis and extraction to create a streamlined process to bring data off the Filecoin/IPFS network in an actionable and useful capacity. The goal is to design and optimize offloading techniques that are compatible with existing geospatial workflows, integrating with existing standards such as Cloud Optimized GeoTIFFs (COGs), and SpatioTemporal Asset Catalogs (STACs). To solidify the accessible offloading experience, we are creating several approachable client programs in common languages such as JavaScript, Python, and Go.
@@ -75,6 +77,22 @@ Jack Rickey
 Contact
 ~~~~~~~~
 `jrickey@umd.edu <mailto:jrickey@umd.edu>`_
+
+-----
+
+Victor Irekponor
+******************
+.. image:: _img/people/victor.jpeg
+    :height: 300
+| **Geospatial Developer**
+| Victor is a Ph.D. student at the Center for Geospatial Information Science, University of Maryland. He has a broad interest in spatial data science, smart cities, artificial intelligence, and decentralized ecosystems. With a strong background as a machine learning software engineer and data scientist, he possesses expertise in Python and JavaScript programming languages. Committed to making a meaningful impact, Victor aims to advance knowledge and drive positive change through cutting-edge research and the application of emerging technologies in our interconnected world.
+
+Contact
+~~~~~~~~
+`vireks@umd.edu <mailto:vireks@umd.edu>`_ 
+| `GitHub <https://github.com/marquisvictor>`_
+| `Twitter <https://twitter.com/IrekponorVictor>`_
+
 
 -----
 
