@@ -57,8 +57,8 @@ Zheng Liu
 .. image:: _img/people/zheng.jpg
     :height: 300
 
-| **Geospatial Developer**
-| Zheng is a Graduate Research Assistant in the project who is expanding his knowledge and experiences in the data ETL process. He obtained his BSc in Geographical Information Science from Peking University and is currently a doctoral student at the Department of Geographical Science at the University of Maryland, College Park.
+| **Post-Doctoral Associate**
+| Zheng is a Post-Doctoral Associate in the project who is growing and applying his knowledge and experiences in the cyber-infrastructure, spatial data ETL process, and decentralized ecosystems. He received his Ph.D. in Geographical Sciences at the Department of Geographical Sciences at the University of Maryland, College Park in 2023 and obtained his BSc in Geographical Information Science and Mathematics from Peking University in 2017.
 
 Contact
 ~~~~~~~~
