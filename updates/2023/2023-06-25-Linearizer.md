@@ -11,7 +11,7 @@ tags:
 - Solidity
 related_posts: []
 ---
-## Introduction
+## Linear Approximations for Geospatial Calculations in EVM Smart Contracts
 
 The implementation of mathemematical formulas in EVM programming languages such as solidity is difficult and uninutitive due to the lack of floating points. Additionally, contracts might rely on libraries for functions that are deprecated, or insecure. This article will present a method to implement any mathematical function on an EVM smart contract, with the ultimate purpose of creating a framework for geospatial calculations within a smart contract.
 
