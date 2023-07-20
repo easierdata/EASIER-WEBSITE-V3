@@ -3,8 +3,6 @@ jupyter
 mapclassify
 matplotlib
 numpy
-pystac-client
-rasterio
 geopandas
 python-dateutil
 Pillow
