@@ -107,3 +107,16 @@ Contact
 ~~~~~~~~
 `mnanas@umd.edu <mailto:mnanas@umd.edu>`_
 | `GitHub <https://github.com/matthewnanas>`_
+
+-----
+
+Oluwatomisin Akinrinade
+******************
+.. image:: _img/people/Tomisin.jpeg
+    :height: 300
+| **Coordination and Marketing**
+| Oluwatomisin is a University of Maryland graduate, having obtained a degree in Geographical Sciences with a specialization in GIS/Computer Cartography in 2017. With a professional background as a GIS / Data analyst, Oluwatomisin developed proficient skills in spatial analysis and data visualization. He has since leveraged his experience in marketing and project management across various sectors, including government, web3, and agency projects, enabling him to adeptly apply a unique fusion of analytical and creative expertise, resulting in highly impactful outcomes.
+
+Contact
+~~~~~~~~
+`tomiakin@umd.edu <mailto:tomiakin@umd.edu>`_ 
