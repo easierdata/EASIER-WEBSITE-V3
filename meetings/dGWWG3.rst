@@ -12,19 +12,9 @@ Third Decentralized Geospatial Web Working Group Meeting
 | Meetings are hosted by The EASIER Data Initiative - a collaborative project between the University of Maryland Department of Geographical Science and the Filecoin Foundation for the Decentralized Web.
 | 
 | The featured speaker will be Dr. Majid Hojati who will discuss distributed spatial data and issues of privacy, access control, and retrieval.
-| 
-| The tentative meeting schedule:
-| 1. Lightning talks - project introductions or updates (~10m)
-| 2. Presentation by guest speaker Dr. Majid Hojati (20m)
-| 3. Q&A and open discussion (20m)
-| 4. Wrap-up (5m)
-|
-| We still have slots left for lightning talks for anyone who would like to introduce themselves or their project or provide any updates from their organization. Please reach out to Taylor Oshan (`toshan@umd.edu <mailto:toshan@umd.edu>`_)
-| 
-| Other agenda items:
-| 1. Opportunities within the Open Geospatial Consortium (OGC)
-| 2. Potential collaborative projects 
-| 
+
 .. raw:: html
 
-    <strong><a target="_blank" rel="noopener noreferrer" href="https://bit.ly/dGWWG-Hojati">Register For Meeting</a></strong>
+    <strong><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=L00tZ0m60_8">Meeting Recording</a></strong>
+    <br />
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/L00tZ0m60_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
