@@ -6,3 +6,4 @@ numpy
 geopandas
 python-dateutil
 Pillow
+ipfs-stac
