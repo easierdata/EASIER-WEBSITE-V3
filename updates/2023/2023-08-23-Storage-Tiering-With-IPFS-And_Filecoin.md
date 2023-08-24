@@ -23,8 +23,9 @@ The workflow is as follows:
 5. If the file is not in the IPFS network, the application checks S3 for the file.
 6. If the file is not in S3, the application checks CID.contact to see if there are any miners storing the file in an unsealed state.
 7. If a miner is found with an unsealed copy of the file, the application requests the file from the miner via HTTP.
-8. If a miner is not found with an unsealed copy of the file, the application then checks CID.contact to see if there are any miners storing the file in a sealed state.
-9. If a miner is found with a sealed copy of the file, the application connects to MetaMask and pays the miner to unseal the file.
+
+## Try it out yourself!
+In [this github repo]() you will find a Python script that will allow you to try out this workflow yourself. After configuring the environment variables, you will be able to simulate the workflow described above with your own files.
 
 
 
