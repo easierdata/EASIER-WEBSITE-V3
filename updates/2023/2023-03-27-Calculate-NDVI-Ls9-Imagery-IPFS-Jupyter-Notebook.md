@@ -1,7 +1,7 @@
 ---
 title: NDVI on Landsat 9 imagery with data using IPFS
 layout: post
-date: 03, April 2023
+date: 30, August 2023
 author: John Solly
 sub_heading: ''
 tags:
