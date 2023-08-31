@@ -1,0 +1,9 @@
+folium
+jupyter
+mapclassify
+matplotlib
+numpy
+geopandas
+python-dateutil
+Pillow
+ipfs-stac
