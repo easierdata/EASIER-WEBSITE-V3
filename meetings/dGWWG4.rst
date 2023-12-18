@@ -1,6 +1,6 @@
 Second Decentralized Geospatial Web Working Group Meeting
 *********************************************************
-**Featuring Guest Speaker Ryan King**
+**Featuring Guest Speaker Jed Sundwall**
 
 .. image:: _img/dgwwg/dGWWG_Sundwall.png
     :width: 300
