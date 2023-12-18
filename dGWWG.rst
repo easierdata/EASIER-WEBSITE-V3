@@ -14,6 +14,7 @@ dGWWG
 
 Events
 =========
+.. include:: meetings/dGWWG4.rst
 
 .. include:: meetings/dGWWG3.rst
 
