@@ -15,4 +15,4 @@ Second Decentralized Geospatial Web Working Group Meeting
 
 .. raw:: html
 
-    <strong>Registration out soon...</strong>
+    <strong><a target="_blank" rel="noopener noreferrer" href="https://bit.ly/dGWWG-Sundwall">Register Now!</a></strong>
