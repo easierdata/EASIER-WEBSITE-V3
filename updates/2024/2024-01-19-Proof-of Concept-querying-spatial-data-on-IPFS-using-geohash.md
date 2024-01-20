@@ -32,4 +32,4 @@ Requests for data can be of three forms. A region, a state, or a county. When a 
 
 A least recently used or LRU cache is a cache system which is based on a stack. When data are retrieved from the cache, these data are moved to the bottom of the stack. When new data are placed in the cache, these new data take the place of data at the top of the stack, which is popped off.  Effectively, this means that the cache will maintain data which are frequently requested. Data which was requested the least recently is what will be removed first to make room for new data.
 
-[Explore More with our Notebook](../../notebooks/geohash-ipfs-blog-post.ipynb)
+[Explore More with our Notebook](../../notebooks/preloading_a_cache.ipynb)
