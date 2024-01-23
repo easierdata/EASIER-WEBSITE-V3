@@ -1,7 +1,7 @@
 ---
 title: Proof of concept for querying spatial data on IPFS using geohash
 layout: post
-date: 19, January 2024
+date: 22, January 2024
 author: Zheng Liu
 sub_heading: ''
 tags:
