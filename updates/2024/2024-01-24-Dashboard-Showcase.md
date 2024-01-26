@@ -38,6 +38,8 @@ The "Pin to local" button triggers a pin API call to the node configured with th
 
 ## Feature 2 - Pinning
 
+In IPFS, The concept of ["pinning"](https://docs.ipfs.tech/how-to/pin-files/) content is the equivalent of a user downloading and self-hosting. Pinning is the mechanism that allows you to tell IPFS to keep a given object and store it to your local IPFS instance. With the Chrome extension enabled, a user is then able grab content from the dashboard via the **Pin to local** button in the pop-up.  This tells IPFS to reach out to the DHT and identify all providers that have that CID. When a successful response is returned, the process of grabbing "blocks" of the content from all the providers is made until the requested CID matches the generated DAG object, in this case the image file.
+
 As mentioned previously, all pop-ups will have a "Pin to local" button that sends API calls to the configured node. Upon clicking, a user will be able to check their IPFS desktop or run `ipfs pin ls | grep recursive` within a terminal to view the newly pinned CID.
 
 ![Pins](../../_img/posts/2024-01-24/pins.png)
