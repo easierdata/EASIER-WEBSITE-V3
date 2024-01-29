@@ -15,4 +15,6 @@ Fourth Decentralized Geospatial Web Working Group Meeting
 
 .. raw:: html
 
-    <strong><a target="_blank" rel="noopener noreferrer" href="https://bit.ly/dGWWG-Sundwall">Register Now!</a></strong>
+    <strong><a target="_blank" rel="noopener noreferrer" href="https://youtu.be/p4XPvziWHds?si=umxuNkP6-WfEEOBO">Meeting Recording</a></strong>
+    <br />
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/p4XPvziWHds?si=umxuNkP6-WfEEOBO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
