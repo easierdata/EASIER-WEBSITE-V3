@@ -1,4 +1,4 @@
-Second Decentralized Geospatial Web Working Group Meeting
+Fourth Decentralized Geospatial Web Working Group Meeting
 *********************************************************
 **Featuring Guest Speaker Jed Sundwall**
 
@@ -15,4 +15,6 @@ Second Decentralized Geospatial Web Working Group Meeting
 
 .. raw:: html
 
-    <strong><a target="_blank" rel="noopener noreferrer" href="https://bit.ly/dGWWG-Sundwall">Register Now!</a></strong>
+    <strong><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=<add url id>">Meeting Recording</a></strong>
+    <br />
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/L00tZ0m60_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
