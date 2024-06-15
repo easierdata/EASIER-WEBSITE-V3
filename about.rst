@@ -36,21 +36,20 @@ Contact
 
 -----
 
-John Solly
+Seth Docherty
 ******************
-.. image:: _img/people/john.JPG
+.. image:: _img/people/seth.jpeg
     :height: 300
 
-| **Senior Geospatial Developer**
-| As a Geospatial Developer, John combines GIS domain knowledge and full stack web development to create beautiful (and fast) applications. He studied GIS under thought leaders (Michael Goodchild, Waldo Tobler, Krzysztof Janowicz, and Dan Montello) while completing a B.A. in Geography at UC Santa Barbara and an M.S. in Geoinformatics and Geospatial Intelligence at George Mason University.
+| **Software and Geospatial Developer**
+| Seth is the newest member of the EASIER Data Initiative. He has a deep background in GIS through working at Esri. At EASIER, he assists developing all projects and is currently exploring feasible ways to curate a pipeline to store GEDI data on Filecoin.
 
 Contact
 ~~~~~~~~
-`jsolly@umd.edu <mailto:jsolly@umd.edu>`_
-| `Twitter <https://twitter.com/_jsolly>`_
-| `GitHub <https://github.com/jsolly>`_
+`sdoc@umd.edu <mailto:sdoc@umd.edu>`_
 
 -----
+
 
 Zheng Liu
 ******************
@@ -108,15 +107,20 @@ Contact
 `mnanas@umd.edu <mailto:mnanas@umd.edu>`_
 | `GitHub <https://github.com/matthewnanas>`_
 
------
 
-Oluwatomisin Akinrinade
+Alumni
+=========
+
+John Solly
 ******************
-.. image:: _img/people/Tomisin.jpeg
+.. image:: _img/people/john.JPG
     :height: 300
-| **Coordination and Marketing**
-| Oluwatomisin is a University of Maryland graduate, having obtained a degree in Geographical Sciences with a specialization in GIS/Computer Cartography in 2017. With a professional background as a GIS / Data analyst, Oluwatomisin developed proficient skills in spatial analysis and data visualization. He has since leveraged his experience in marketing and project management across various sectors, including government, web3, and agency projects, enabling him to adeptly apply a unique fusion of analytical and creative expertise, resulting in highly impactful outcomes.
+
+| **Senior Geospatial Developer**
+| As a Geospatial Developer, John combines GIS domain knowledge and full stack web development to create beautiful (and fast) applications. He studied GIS under thought leaders (Michael Goodchild, Waldo Tobler, Krzysztof Janowicz, and Dan Montello) while completing a B.A. in Geography at UC Santa Barbara and an M.S. in Geoinformatics and Geospatial Intelligence at George Mason University.
 
 Contact
 ~~~~~~~~
-`tomiakin@umd.edu <mailto:tomiakin@umd.edu>`_ 
+`jsolly@umd.edu <mailto:jsolly@umd.edu>`_
+| `Twitter <https://twitter.com/_jsolly>`_
+| `GitHub <https://github.com/jsolly>`_
