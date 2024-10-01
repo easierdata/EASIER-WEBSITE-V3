@@ -66,19 +66,6 @@ Contact
 
 -----
 
-Jack Rickey
-******************
-.. image:: _img/people/jack.jpg
-    :height: 300
-| **Web3 Consultant**
-| Jack is a Master of Quantitative Finance student at the Robert H. Smith School of Business and he graduated in 2021 from the University of Maryland with a Bachelor's Degree in Mathematics. He is interested in exploring the economic and organizational implications of decentralized web technology on the geospatial data ecosystem. He also runs a consulting business, providing modeling and analytics services in token economics for web3 startups and companies.
-
-Contact
-~~~~~~~~
-`jrickey@umd.edu <mailto:jrickey@umd.edu>`_
-
------
-
 Victor Irekponor
 ******************
 .. image:: _img/people/victor.jpeg
@@ -124,3 +111,16 @@ Contact
 `jsolly@umd.edu <mailto:jsolly@umd.edu>`_
 | `Twitter <https://twitter.com/_jsolly>`_
 | `GitHub <https://github.com/jsolly>`_
+
+-----
+
+Jack Rickey
+******************
+.. image:: _img/people/jack.jpg
+    :height: 300
+| **Web3 Consultant**
+| Jack is a Master of Quantitative Finance student at the Robert H. Smith School of Business and he graduated in 2021 from the University of Maryland with a Bachelor's Degree in Mathematics. He is interested in exploring the economic and organizational implications of decentralized web technology on the geospatial data ecosystem. He also runs a consulting business, providing modeling and analytics services in token economics for web3 startups and companies.
+
+Contact
+~~~~~~~~
+`jrickey@umd.edu <mailto:jrickey@umd.edu>`_
