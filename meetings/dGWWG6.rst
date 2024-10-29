@@ -1,8 +1,8 @@
-Fifth Decentralized Geospatial Web Working Group Meeting
+Sixth Decentralized Geospatial Web Working Group Meeting
 *********************************************************
-**Featuring Guest Speaker Chris Walker**
+**Featuring Guest Speaker Ariel Seidman**
 
-.. image:: _img/dgwwg/dGWWG_proximum.png
+.. image:: _img/dgwwg/dGWWG_hivemapper.png
     :width: 300
 
 | Please join us for the next Decentralized Geospatial Web Working Group (dGWWG) meeting!
@@ -11,10 +11,8 @@ Fifth Decentralized Geospatial Web Working Group Meeting
 | 
 | Meetings are hosted by The EASIER Data Initiative - a collaborative project between the University of Maryland Department of Geographical Science and the Filecoin Foundation for the Decentralized Web.
 | 
-| This meeting will feature guest speaker Chris Walker. Chris is the founder of Proximum and will be sharing insights about on-chain proof of location.
+| This meeting will feature guest speaker Ariel Seidman. Ariel is the founder of Bee Maps and Hivemapper and will be sharing insights about decentralized mapping.
 
 .. raw:: html
 
-    <strong><a target="_blank" rel="noopener noreferrer" href="https://youtu.be/WxMqR7mf0m4?si=2X5wx4BVi8GyRhx-">Meeting Recording</a></strong>
-    <br />
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/WxMqR7mf0m4?si=2X5wx4BVi8GyRhx-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <strong><a target="_blank" rel="noopener noreferrer" href="http://bit.ly/dGWWG-hivemapper">Register Now!</a></strong>
