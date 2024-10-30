@@ -1,0 +1,10 @@
+ipfs-stac
+geopandas
+shapely
+h5py
+notebook
+ipykernel
+folium
+mapclassify
+matplotlib
+tabulate
