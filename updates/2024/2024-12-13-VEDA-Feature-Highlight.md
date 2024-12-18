@@ -69,3 +69,5 @@ Once the MDX folder has been uploaded, you will see the VEDA UI instance running
 ![1734126971648](../../_img/posts/2024-12-13/1734126971648.png)
 
 By integrating IPFS into software such as VEDA, we're setting the stage for other teams and developers to continue leveraging decentralized infrastructure in their geospatial workflows. The workflow outlined in this post--creating frontmatter for data stored on IPFS--illustrates how creating pipelines that connect the dots is possible. This integration is just the beginning of more capabilities from our team.
+
+This demonstration embarks the beginning of intertwining both the traditional geospatial web and decentralized technology. Keep your eye out as the EASIER team continues to build on top of this foundation. One key milestone that has been under the team's radar is leveraging VEDA's interactive visualization functionalities to render geospatial data stored on IPFS.
