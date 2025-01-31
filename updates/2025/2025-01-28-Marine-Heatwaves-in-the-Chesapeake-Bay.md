@@ -87,7 +87,7 @@ Overall, satellite-derived MHW analysis is consistent with past buoy based analy
 
 ## Preserving Scientific Knowledge with Decentralized Technologies
 
-As we've explored Wegener's study on marine heatwaves in the Chesapeake Bay, it's clear that a wealth of scholarly artifacts has been generated throughout the research lifecycle. From raw satellite data to processed SST products, from analysis code to the final publication, each element contributes to the comprehensive understanding of this environmental phenomenon. Preserving these artifacts is crucial for the advancement of science and the ability of future researchers to build upon this work.
+As we've explored this study on marine heatwaves in the Chesapeake Bay, it's clear that a wealth of scholarly artifacts has been generated throughout the research lifecycle. From raw satellite data to processed SST products, from analysis code to the final publication, each element contributes to the comprehensive understanding of this environmental phenomenon. Preserving these artifacts is crucial for the advancement of science and the ability of future researchers to build upon this work.
 
 Decentralized web technologies offer promising solutions for preserving and sharing scientific knowledge in an open, accessible manner. Networks like the InterPlanetary File System (IPFS) and Filecoin provide distributed, permanent, and tamper-proof storage systems that can address many of the challenges faced in digital preservation of scholarly work.
 
