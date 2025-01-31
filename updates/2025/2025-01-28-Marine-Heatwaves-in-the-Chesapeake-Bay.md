@@ -84,3 +84,17 @@ By combining satellite data with in-situ measurements for validation, revealing 
 - Seasonal variations in MHW occurrence and intensity, more so during the summer months.
 
 Overall, satellite-derived MHW analysis is consistent with past buoy based analysis, demonstrating the utility of satellite data for monitoring and analyzing MHWs in estuarine environments like the Chesapeake Bay, where in-situ measurements may be limited. This also opens the door for the use of SST satellite data as an effective tool for monitoring and tracking MHWs, providing valuable information for resource managers and policymakers to mitigate the societal and economic impacts of these events on marine ecosystems.
+
+## Preserving Scientific Knowledge with Decentralized Technologies
+
+As we've explored Wegener's study on marine heatwaves in the Chesapeake Bay, it's clear that a wealth of scholarly artifacts has been generated throughout the research lifecycle. From raw satellite data to processed SST products, from analysis code to the final publication, each element contributes to the comprehensive understanding of this environmental phenomenon. Preserving these artifacts is crucial for the advancement of science and the ability of future researchers to build upon this work.
+
+Decentralized web technologies offer promising solutions for preserving and sharing scientific knowledge in an open, accessible manner. Networks like the InterPlanetary File System (IPFS) and Filecoin provide distributed, permanent, and tamper-proof storage systems that can address many of the challenges faced in digital preservation of scholarly work.
+
+Building upon these decentralized technologies, [DeSci Labs](https://desci.com) has developed a fully open science framework that leverages the power of decentralized systems. This framework aims to transform how scientific research is conducted, shared, and preserved throughout the entire research lifecycle.
+
+One of the key innovations in DeSci Labs' approach is with [dPIDs (decentralized Persistent Identifier)](https://www.dpid.org/), drawing inspiration from the content addressing features of IPFS, which uses cryptographic hashes to uniquely identify and locate data across a distributed network. The dPID system takes this concept further by permanently registering these identifiers on a distributed ledger, ensuring long-term persistence and discoverability of scientific artifacts.
+
+## Conclusion
+
+Current closed systems often result in valuable research being locked behind paywalls, limiting access to those who can afford it and hindering the free flow of knowledge. These centralized models also incur significant costs related to ownership, maintenance, and access control. By embracing decentralized technologies, we can break down these barriers, ensuring that valuable research, such as Wegener's study, remains openly accessible and verifiable for generations to come. This approach not only supports the principles of open science but also democratizes access to knowledge, reduces costs associated with traditional publishing models, and accelerates scientific progress by enabling researchers worldwide to freely build upon and extend existing work, regardless of their institutional affiliations or financial resources.
