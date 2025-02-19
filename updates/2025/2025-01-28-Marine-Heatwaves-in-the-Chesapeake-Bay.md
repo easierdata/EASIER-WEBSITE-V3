@@ -87,9 +87,21 @@ Overall, satellite-derived MHW analysis is consistent with past buoy based analy
 
 ## Preserving Scientific Knowledge with Decentralized Technologies
 
-As we have explored this study on marine heatwaves in the Chesapeake Bay, it's clear that a wealth of scholarly artifacts are needed to support the research lifecycle. From raw satellite data to processed SST products, from analysis code to the final publication, each element contributes to the comprehensive understanding of this environmental phenomenon. Preserving these artifacts is crucial for the advancement of science and the ability of future researchers to build upon this work.
+As we have explored this [study](https://eartharxiv.org/repository/view/8261/) on marine heatwaves in the Chesapeake Bay, it's clear that a wealth of scholarly artifacts are needed to support the research lifecycle. From raw satellite data to processed SST products, from analysis code to the final publication, each element contributes to the comprehensive understanding of this environmental phenomenon. Preserving these artifacts is crucial for the advancement of science and the ability of future researchers to build upon this work.
 
 Decentralized web technologies offer promising solutions for preserving and sharing scientific knowledge in an open, accessible manner. Networks like the InterPlanetary File System (IPFS) and Filecoin provide distributed, permanent, and tamper-proof storage systems that can address many of the challenges faced in digital preservation of scholarly work.
+
+## Implementing Decentralized Storage for Scientific Data
+
+To demonstrate a practical application, we've published the source code from this study onto IPFS and Filecoin. Using the data onboarding tool, [Singularity](https://data-programs.gitbook.io/singularity), all the files found in our [repo](https://github.com/easierdata/chesapeake_mhw) were packaged into [Content Addressable Archives (CAR) files]((https://docs.filecoin.io/builder-cookbook/data-storage/store-data#prepare-data-for-filecoin-storage)). Since CAR files are content-addressable, the repository files can be easily retrieved and verified using the root Content Identifier (CID). To understand how this works, check out our previous post on [Using Content Addressable aRchives to store decentralized data](https://easierdata.org/updates/2024/2024-01-25-getting-to-know-content-addressable-archives).
+
+let's go ahead and access the [source code](https://github.com/easierdata/chesapeake_mhw) via the root CID `bafybeihtvc5pgiwq2bakyoiqequkveneequcpcbwvowk53c5nv2e33xenq` on IPFS.
+
+![root CID](../../_img/posts/2025-01-28/mhw-root-cid.jpeg)
+
+This CID uniquely identifies the entire repository, a verifiable snapshot of all the files. If we were to update the codebase or add new files, the CID would change, reflecting the modifications made to the repository. Yet, the original CID remains accessible, providing a permanent record of the research artifacts at that point in time.
+
+> Note: There are mechanisms within the larger IPFS ecosystem like the [InterPlanetary Name System](https://docs.ipfs.tech/concepts/ipns/) (IPNS), enabling self-certifying mutable pointers to CIDs. In this example, we would use an IPNS name similarly to sharing a link to our repository.  Visiting the link would resolve to the CID representing the latest version of the repository, without any centralized authority controlling the resolution process.
 
 Building upon these decentralized technologies, [DeSci Labs](https://desci.com) has developed a fully open science framework that leverages the power of decentralized systems. This framework aims to transform how scientific research is conducted, shared, and preserved throughout the entire research lifecycle.
 
