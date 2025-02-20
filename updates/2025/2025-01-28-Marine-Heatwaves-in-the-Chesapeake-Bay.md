@@ -93,9 +93,9 @@ Decentralized web technologies offer promising solutions for preserving and shar
 
 ## Implementing Decentralized Storage for Scientific Data
 
-To demonstrate a practical application, we've published the source code from this study onto IPFS and Filecoin. Using the data onboarding tool, [Singularity](https://data-programs.gitbook.io/singularity), all the files found in our [repo](https://github.com/easierdata/chesapeake_mhw) were packaged into [Content Addressable Archives (CAR) files]((https://docs.filecoin.io/builder-cookbook/data-storage/store-data#prepare-data-for-filecoin-storage)). Since CAR files are content-addressable, the repository files can be easily retrieved and verified using the root Content Identifier (CID). To understand how this works, check out our previous post on [Using Content Addressable aRchives to store decentralized data](https://easierdata.org/updates/2024/2024-01-25-getting-to-know-content-addressable-archives).
+To demonstrate a practical application, we have published the source code from this study onto IPFS and Filecoin. Using the data onboarding tool, [Singularity](https://data-programs.gitbook.io/singularity), all the files found in our [repo](https://github.com/easierdata/chesapeake_mhw) were packaged into [Content Addressable Archives (CAR) files]((https://docs.filecoin.io/builder-cookbook/data-storage/store-data#prepare-data-for-filecoin-storage)). Since CAR files are content-addressable, the repository files can be easily retrieved and verified using the root Content Identifier (CID). To understand how this works, check out our previous post on [Using Content Addressable aRchives to store decentralized data](https://easierdata.org/updates/2024/2024-01-25-getting-to-know-content-addressable-archives).
 
-let's go ahead and access the [source code](https://github.com/easierdata/chesapeake_mhw) via the root CID `bafybeihtvc5pgiwq2bakyoiqequkveneequcpcbwvowk53c5nv2e33xenq` on IPFS.
+Let's go ahead and access the [source code](https://github.com/easierdata/chesapeake_mhw) via the root CID `bafybeihtvc5pgiwq2bakyoiqequkveneequcpcbwvowk53c5nv2e33xenq` on IPFS.
 
 ![root CID](../../_img/posts/2025-01-28/mhw-root-cid.jpeg)
 
