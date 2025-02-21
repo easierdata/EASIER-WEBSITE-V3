@@ -50,22 +50,6 @@ Contact
 
 -----
 
-
-Zheng Liu
-******************
-.. image:: _img/people/zheng.jpg
-    :height: 300
-
-| **Post-Doctoral Associate**
-| Zheng is a Post-Doctoral Associate in the project who is growing and applying his knowledge and experiences in the cyber-infrastructure, spatial data ETL process, and decentralized ecosystems. He received his Ph.D. in Geographical Sciences at the Department of Geographical Sciences at the University of Maryland, College Park in 2023 and obtained his BSc in Geographical Information Science and Mathematics from Peking University in 2017.
-
-Contact
-~~~~~~~~
-`zliu1208@umd.edu <mailto:zliu1208@umd.edu>`_
-| `GitHub <https://github.com/leonardzh>`_
-
------
-
 Victor Irekponor
 ******************
 .. image:: _img/people/victor.jpeg
@@ -94,6 +78,18 @@ Contact
 `mnanas@umd.edu <mailto:mnanas@umd.edu>`_
 | `GitHub <https://github.com/matthewnanas>`_
 
+-----
+
+Adrien Ramsamy
+******************
+.. image:: _img/people/adrien.jpeg
+    :height: 300
+| **Web3 Developer**
+| Adrien is a Master's student at the University of Maryland studying Computer Science. He is interested in the interplay between cryptography and geospatial systems. At the EASIER Data Initiative, he leads the development of the Astral Logbook.
+
+Contact
+~~~~~~~~
+`aramsamy@umd.edu <mailto:aramsamy@umd.edu>`_
 
 Alumni
 =========
@@ -124,3 +120,18 @@ Jack Rickey
 Contact
 ~~~~~~~~
 `jrickey@umd.edu <mailto:jrickey@umd.edu>`_
+
+-----
+
+
+Zheng Liu
+******************
+.. image:: _img/people/zheng.jpg
+    :height: 300
+
+| **Post-Doctoral Associate**
+| Zheng was a Post-Doctoral Associate in the project who is growing and applying his knowledge and experiences in the cyber-infrastructure, spatial data ETL process, and decentralized ecosystems. He received his Ph.D. in Geographical Sciences at the Department of Geographical Sciences at the University of Maryland, College Park in 2023 and obtained his BSc in Geographical Information Science and Mathematics from Peking University in 2017.
+
+Contact
+~~~~~~~~
+| `GitHub <https://github.com/leonardzh>`_
