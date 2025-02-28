@@ -85,7 +85,7 @@ Adrien Ramsamy
 .. image:: _img/people/adrien.jpeg
     :height: 300
 | **Web3 Developer**
-| Adrien is a Master's student at the University of Maryland studying Computer Science. He is interested in the interplay between cryptography and geospatial systems. At the EASIER Data Initiative, he leads the development of the Astral Logbook.
+| Adrien is pursuing a Master's in Computer Science at the University of Maryland. He is interested in applications of decentralized systems to geospatial challenges. At the EASIER Data Initiative, he leads the development of the decentralized proof of location application.
 
 Contact
 ~~~~~~~~
