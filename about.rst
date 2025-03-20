@@ -91,6 +91,19 @@ Contact
 ~~~~~~~~
 `aramsamy@umd.edu <mailto:aramsamy@umd.edu>`_
 
+-----
+
+John Hoopes
+******************
+.. image:: _img/people/JohnHoopes.jpeg
+    :height: 300
+| **Web3 Consultant**
+| John's background is in spatial data science and visualization, with a specialization in geospatial data, deep learning systems, and smart contracts — remote sensing, web mapping, and spatial data science along with consensus networks, blockchains, and decentralized identity. 
+
+Contact
+~~~~~~~~
+`LinkedIn <https://linkedin.com/in/johnx25bd>`_
+
 Alumni
 =========
 
