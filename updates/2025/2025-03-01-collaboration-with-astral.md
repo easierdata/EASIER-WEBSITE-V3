@@ -1,9 +1,9 @@
 ---
-title: Announcing the The Decentralized Geospatial Collaborative
+title: Collaboration with Astral - Creating a community driven decentralized geospatial web
 
 layout: post
 
-date: 31, March 2025
+date: 01, March 2025
 
 author: Seth Docherty
 
@@ -18,6 +18,7 @@ tags:
 - Collaboration
 
 ---
+
 ## A More Streamlined and Accessible Codebase for the Community
 
 As part of our ongoing efforts under [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/), we are bringing together the work from Astral and EASIER into a unified ecosystem. This initiative aims to enhance decentralized geospatial tools, foster community collaboration, and develop a proof-of-location framework with broader applications. By merging these repositories, we are not only consolidating development efforts but also making it easier for contributors to engage with the project.
@@ -31,7 +32,6 @@ Previously, the [Astral](https://github.com/AstralProtocol) and [EASIER](https:/
 - **Repository Transfers:** Several core projects have been moved to the DecentralizedGeo GitHub organization, ensuring a more structured development environment:
 
   - `astral-api` - Unified API for location proof attestations
-  - `astral-sdk` - Location Proof Protocol SDK
   - `Decentralized Location Logger` - Decentralized geotagged log entries
   - `ipfs-stac` - Python client for interfacing with Easier STAC Server
   - `web3-geo-dashboard` - UI for geospatial Web3 applications
