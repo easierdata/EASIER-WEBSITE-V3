@@ -21,7 +21,7 @@ tags:
 
 ## A More Streamlined and Accessible Codebase for the Community
 
-As part of our ongoing efforts under [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/), we are bringing together the work from Astral and EASIER into a unified ecosystem. This initiative aims to enhance decentralized geospatial tools, foster community collaboration, and develop a proof-of-location framework with broader applications. By merging these repositories, we are not only consolidating development efforts but also making it easier for contributors to engage with the project.
+We are bringing together the work from Astral and EASIER into a unified ecosystem as [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/). This initiative aims to enhance decentralized geospatial tools, foster community collaboration, and develop a proof-of-location framework with broader applications. By merging these repositories, we are not only consolidating development efforts but also making it easier for contributors to engage with the project.
 
 ## What Changed?
 
