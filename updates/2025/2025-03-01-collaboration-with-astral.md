@@ -35,7 +35,6 @@ Previously, the [Astral](https://github.com/AstralProtocol) and [EASIER](https:/
   - `Decentralized Location Logger` - Decentralized geotagged log entries
   - `ipfs-stac` - Python client for interfacing with Easier STAC Server
   - `web3-geo-dashboard` - UI for geospatial Web3 applications
-  - And more!
 
 - **Centralized Documentation Hub:** We have created a new [DecentralizedGeo Hub](https://decentralizedgeo.github.io/DecentralizedGeo-hub/) that consolidates all documentation in one place, making it easier to explore project details, APIs, and developer resources.
 
