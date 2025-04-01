@@ -93,6 +93,14 @@ The **Decentralized Location Logger** enables users to record and verify locatio
   - Provides an open and censorship-resistant way to track and verify geospatial events.
   - Enables individuals and organizations to create immutable location-based records.
 
+## The Broader Ecosystem
+
+The success of the decentralized geospatial ecosystem is driven by the contributions of developers, researchers, and community members who are exploring new ways to leverage these tools. Here's a few of community-led initiatives and projects that are pushing the boundaries of decentralized geospatial technologies:
+
+> Add callout to each group with a couple sentences describing their work/purpose/example usecase.
+> 
+> Groups of interest: Devonian (Alan), dClimate, Proximum and ProofMode
+
 ## The Road Ahead
 
 The decentralized geospatial web is still evolving, and these tools represent just the beginning of what’s possible. With continued innovation, we anticipate:
