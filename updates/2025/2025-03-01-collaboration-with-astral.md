@@ -1,5 +1,5 @@
 ---
-title: Collaboration with Astral - Creating a community driven decentralized geospatial web
+title: Introducing the Decentralized Geospatial Collaborative - Creating a community driven decentralized geospatial web
 
 layout: post
 
