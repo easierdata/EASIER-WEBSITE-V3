@@ -21,7 +21,7 @@ tags:
 
 ## A More Streamlined and Accessible Codebase for the Community
 
-We are bringing together the work from Astral and EASIER into a unified ecosystem as [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/). This initiative aims to enhance decentralized geospatial tools, foster community collaboration, and develop a proof-of-location framework with broader applications. By merging these repositories, we are not only consolidating development efforts but also making it easier for contributors to engage with the project.
+We are bringing together the work from Astral and EASIER into a unified ecosystem as [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/). This initiative aims to enhance decentralized geospatial tools, foster community collaboration, and develop a framework for working with location data on the decentralized web with broader applications. By merging these repositories, we are not only consolidating development efforts but also making it easier for contributors to engage with the project.
 
 ## What Changed?
 
@@ -31,8 +31,8 @@ Previously, the [Astral](https://github.com/AstralProtocol) and [EASIER](https:/
 
 - **Repository Transfers:** Several core projects have been moved to the DecentralizedGeo GitHub organization, ensuring a more structured development environment:
 
-  - `astral-api` - Unified API for location proof attestations
-  - `Decentralized Location Logger` - Decentralized geotagged log entries
+  - `astral-api` - Unified API for attestations compatible with Astral's Location Protocol
+  - `astral-logbook` - Client UI — a react app for creating and viewing geotagged log entries
   - `ipfs-stac` - Python client for interfacing with Easier STAC Server
   - `web3-geo-dashboard` - UI for geospatial Web3 applications
 
@@ -40,7 +40,7 @@ Previously, the [Astral](https://github.com/AstralProtocol) and [EASIER](https:/
 
 - **Contribution Guidelines:** A clear set of [contribution guidelines](https://decentralizedgeo.github.io/DecentralizedGeo-hub/contribute/contributing-guidelines/) has been introduced to help new contributors get started quickly.
 
-- **Improved Development Practices:** With this migration, we have standardized repository structures, refined APIs, and aligned our work with broader decentralized geospatial initiatives. This effort lays the foundation for further development, including a **general proof-of-location claim specification** that supports various validation mechanisms using blockchain and decentralized storage.
+- **Improved Development Practices:** With this migration, we have standardized repository structures, refined APIs, and aligned our work with broader decentralized geospatial initiatives. This effort lays the foundation for further development, including a **general spatial data specification for the decentralized web** that supports various validation mechanisms using blockchain and decentralized storage.
 
 ## Why This Matters
 
@@ -49,7 +49,7 @@ This migration isn’t just about moving code—it’s about making our projects
 - **Easier Onboarding:** New contributors can now navigate our repositories and documentation more efficiently.
 - **Improved Collaboration:** A more structured organization enables smoother collaboration across teams and projects.
 - **Future Growth:** A cleaner architecture lays the groundwork for expanding our ecosystem of decentralized geospatial tools.
-- **Alignment with Future Goals:** This restructuring is a crucial step toward developing a **proof-of-location framework**, integrating IPFS/Filecoin for decentralized data storage, and enhancing the capabilities of Web3 geospatial applications.
+- **Alignment with Future Goals:** This restructuring is a crucial step toward developing a **decentralized location data framework**, integrating IPFS/Filecoin for decentralized data storage, and enhancing the capabilities of Web3 geospatial applications.
 
 ## Get Involved
 
