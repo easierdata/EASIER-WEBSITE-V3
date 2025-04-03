@@ -57,6 +57,6 @@ We’d love for the community to explore the new setup and contribute. Here’s 
 
 - **Check Out the Documentation** – Visit the [DecentralizedGeo Hub](https://decentralizedgeo.github.io/DecentralizedGeo-hub/) to explore the projects.
 - **Contribute** – Follow our [contribution guidelines](https://decentralizedgeo.github.io/DecentralizedGeo-hub/contribute/contributing-guidelines/) to see how you can help.
-- **Join the Conversation** – Share your feedback, ask questions, or contribute ideas on our social media and dev channels.
+- **Join the Conversation** – Share your feedback, ask questions, or contribute ideas on our social media ([Linkedin](https://www.linkedin.com/company/decentralized-geospatial-collaborative), [twitter](https://x.com/dGeoWeb)) and the [Astral community channel](https://t.me/+UkTOSXnDcDM5ZTBk) on Telegram.
 
 This is just the beginning of a more streamlined and community-driven future for decentralized geospatial technologies. Stay tuned for more updates!
