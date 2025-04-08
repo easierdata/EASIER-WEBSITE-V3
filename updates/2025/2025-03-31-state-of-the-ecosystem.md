@@ -95,11 +95,9 @@ The **Decentralized Location Logger** enables users to record, store and verify 
 
 ## The Broader Ecosystem
 
-The success of the decentralized geospatial ecosystem is driven by the contributions of developers, researchers, and community members who are exploring new ways to leverage these tools. Here's a few of community-led initiatives and projects that are pushing the boundaries of decentralized geospatial technologies:
+The success of the decentralized geospatial ecosystem is driven by the contributions of developers, researchers, and community members who are exploring new ways to leverage these tools. Devonian is a research and development group advancing verifiable geocompute for environmental data by leveraging decentralized, permissioned IPFS‐based workflows. Their flagship product, Cherty, provides a platform for securely publishing, exchanging, and validating geospatial models and data, ensuring greater transparency and trust in environmental and resource monitoring applications.
 
-> Add callout to each group with a couple sentences describing their work/purpose/example usecase.
-> 
-> Groups of interest: Devonian (Alan), dClimate, Proximum and ProofMode
+Expect to hear more community-led initiatives and projects that are pushing the boundaries of decentralized geospatial technologies.
 
 ## The Road Ahead
 
