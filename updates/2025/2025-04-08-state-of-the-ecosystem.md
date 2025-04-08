@@ -94,9 +94,17 @@ The **[Decentralized Location Logger](https://github.com/DecentralizedGeo/astral
 
 ## The Broader Ecosystem
 
-The success of the decentralized geospatial ecosystem is driven by the contributions of developers, researchers, and community members who are exploring new ways to leverage these tools. [Devonian](https://www.linkedin.com/company/devonian) is a research and development group advancing verifiable geocompute for environmental data by leveraging decentralized, permissioned IPFS‐based workflows. Their flagship product, [Cherty](https://home.cherty.io/), provides a platform for securely publishing, exchanging, and validating geospatial models and data, ensuring greater transparency and trust in environmental and resource monitoring applications.
+The success of the decentralized geospatial ecosystem is driven by the contributions of developers, researchers, and community members who are exploring new ways to leverage these tools. Here's a few of community-led initiatives and projects that are pushing the boundaries of decentralized geospatial technologies:
 
-Expect to hear more community-led initiatives and projects that are pushing the boundaries of decentralized geospatial technologies.
+[Devonian](https://www.linkedin.com/company/devonian) is a research and development group advancing verifiable geocompute for environmental data by leveraging decentralized, permissioned IPFS‐based workflows. Their flagship product, [Cherty](https://home.cherty.io/), provides a platform for securely publishing, exchanging, and validating geospatial models and data, ensuring greater transparency and trust in environmental and resource monitoring applications.
+
+[FOAM](https://www.foam.space/) is building decentralized geospatial infrastructure with a focus on privacy-preserving and open location protocols. Their work spans proof-of-location standards, open maps, and geospatial registries for Web3 ecosystems.
+
+[Proximum](https://www.proximum.xyz/) is exploring new ways to generate and verify location claims using zero-knowledge proofs and decentralized identifiers (DIDs). Their research bridges technical advancements in privacy and location-based trust systems.
+
+[Hivemapper](https://docs.hivemapper.com/) is a decentralized, user-owned mapping network where contributors use dashcams to map the world and earn tokens. Their platform combines crowdsourced data collection with AI-powered map generation.
+
+[dClimate](https://www.dclimate.net/) is a decentralized network for climate data, forecasts, and models. By making environmental data open, transparent, and tamper-resistant, they’re helping build more resilient systems for everything from agriculture to disaster planning.
 
 ## The Road Ahead
 
