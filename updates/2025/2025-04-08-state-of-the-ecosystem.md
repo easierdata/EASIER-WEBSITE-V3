@@ -65,9 +65,9 @@ The motivation behind this project is to demonstrate how decentralized technolog
   - Cultivates an open ecosystem for exploring decentralized geospatial data.
   - Allows users and developers to explore and verify metadata stored on decentralized networks.
 
-### 4. Astral API: A gateway for accessing location proofs on decentralized networks
+### 4. API: A gateway for accessing location proofs on decentralized networks
 
-The **[Astral API](https://github.com/DecentralizedGeo/astral-api)** serves as a **unified access point** for accessing location proofs that are designed to work seamlessly with the Astral Location Protocol, a framework for verifiable geospatial attestations. By aggregating and standardizing attestations across multiple blockchains and storage solutions, it simplifies the development of decentralized geospatial applications.
+The **[API](https://github.com/DecentralizedGeo/astral-api)** serves as a **unified access point** for accessing location proofs that are designed to work seamlessly with the Astral Location Protocol, a framework for verifiable geospatial attestations. By aggregating and standardizing attestations across multiple blockchains and storage solutions, it simplifies the development of decentralized geospatial applications.
 
 - **Capabilities:**
   - Provides a standard API for querying location proof attestations.
@@ -79,7 +79,33 @@ The **[Astral API](https://github.com/DecentralizedGeo/astral-api)** serves as a
   - Acts as the core infrastructure query layer for decentralized proof-of-location applications.
   - Enables developers to easily integrate location verification into their decentralized applications.
 
-### 5. Decentralized Location Logger: Log verifiable geotagged records
+### 5. SDK: Tools for Location Proof Integration
+
+The **[SDK](https://github.com/DecentralizedGeo/astral-sdk)** provides developers with tools for integrating Astral-compatible location proofs into applications. It supports issuing, formatting, and verifying location attestations in alignment with the Astral Location Protocol.
+
+- **Capabilities:**
+  - Offers utilities to interact with location proof APIs.
+  - Facilitates generation and validation of geospatial attestations.
+  - Built to streamline onboarding to the broader decentralized location proof ecosystem.
+
+- **How it fits in:**
+  - Enables developers to add location verification features with minimal setup.
+  - Helps standardize proof-of-location workflows across multiple apps and services.
+
+### 6. spatial-sol: Geospatial Computation for Smart Contracts
+
+**[spatial-sol](https://github.com/DecentralizedGeo/spatial-sol)** is a Solidity library for performing geospatial calculations directly within EVM-compatible smart contracts. It provides the foundational math and geometry tools necessary to reason about spatial relationships on-chain.
+
+- **Capabilities:**
+  - Implements core geospatial functions (e.g., point-in-polygon, distance checks) in Solidity.
+  - Enables smart contracts to interact with geospatial data natively.
+  - Useful for applications that rely on real-time or rule-based location logic on-chain.
+
+- **How it fits in:**
+  - Acts as the building block for integrating geospatial reasoning into decentralized applications.
+  - Supports location-aware dApps and contracts without needing to offload computation to external services.
+
+### 7. Decentralized Location Logger: Log verifiable geotagged records
 
 The **[Decentralized Location Logger](https://github.com/DecentralizedGeo/astral-logbook)** enables users to record, store and verify location data using blockchain and decentralized storage. Built on top of Astrals Location Protocol, this tool is particularly useful for creating **tamper-proof** geospatial records, essential for use cases such as environmental monitoring, supply chain tracking, and disaster response.
 
