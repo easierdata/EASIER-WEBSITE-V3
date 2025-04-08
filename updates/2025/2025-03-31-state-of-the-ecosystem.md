@@ -81,14 +81,14 @@ The **Astral API** serves as a **unified access point** for accessing location p
   - Acts as the core infrastructure query layer for decentralized proof-of-location applications.
   - Enables developers to easily integrate location verification into their decentralized applications.
 
-### **5. Decentralized Location Logger: Secure and verifiable geospatial logging**
+### **5. Decentralized Location Logger: Log verifiable geotagged records**
 
-The **Decentralized Location Logger** enables users to record and verify location data using blockchain and decentralized storage. This tool is particularly useful for creating **tamper-proof** geospatial records, essential for use cases such as environmental monitoring, supply chain tracking, and disaster response.
+The **Decentralized Location Logger** enables users to record, store and verify location data using blockchain and decentralized storage. Built on top of Astrals Location Protocol, this tool is particularly useful for creating **tamper-proof** geospatial records, essential for use cases such as environmental monitoring, supply chain tracking, and disaster response.
 
 - **Capabilities:**
-  - Allows users to log location data with cryptographic attestations.
-  - Stores data on decentralized networks like IPFS/Filecoin for enhanced availability and security.
-  - Supports verifiable timestamps and proof-of-existence mechanisms.
+  - Allows users to record geotagged entries with content as location proof attestations.
+  - Attached content is Stored on decentralized networks like IPFS/Filecoin for enhanced availability and security.
+  - Explore an interactive map of entries.
 
 - **How it fits in:**
   - Provides an open and censorship-resistant way to track and verify geospatial events.
