@@ -21,7 +21,7 @@ tags:
 
 # State of the Ecosystem - A closer look at the decentralized geospatial web
 
-As part of our ongoing efforts under [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/), we've started to define the ecosystem for decentralized geospatial tooling.  We've also been fostering a community on the Astral Telegram channel, with discussions on expanding the possibilities of decentralization within the digital geospatial realm. In this post, we take a closer look at the core applications and tools that form the backbone of this ecosystem, each playing a critical role in enabling decentralized geospatial capabilities.
+As part of our ongoing efforts under [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/), we've started to define the ecosystem for decentralized geospatial tooling.  We've also been fostering a community on the [Telegram Astral channel](https://t.me/+UkTOSXnDcDM5ZTBk), with discussions on expanding the possibilities of decentralization within the digital geospatial realm. In this post, we take a closer look at the core applications and tools that form the backbone of this ecosystem, each playing a critical role in enabling decentralized geospatial capabilities.
 
 ## Core Components of the Decentralized Geospatial Ecosystem
 
