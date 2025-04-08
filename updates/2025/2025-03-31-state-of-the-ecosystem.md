@@ -67,18 +67,19 @@ provides a user-friendly interface to interact with decentralized geospatial dat
   - Acts as a central access point for decentralized geospatial applications.
   - Allows users and developers to explore and verify geospatial claims and metadata stored on decentralized networks.
 
-### **4. Astral API: A gateway for decentralized Proof-of-Location**
+### **4. Astral API: A gateway for accessing location proofs on decentralized networks**
 
-The **Astral API** serves as a **unified access point** for decentralized location proofs. By aggregating and standardizing proof-of-location attestations across multiple blockchains and storage solutions, it simplifies the development of Web3 geospatial applications.
+The **Astral API** serves as a **unified access point** for accessing location proofs that are compatible with Astral's Location Protocol. By aggregating and standardizing attestations across multiple blockchains and storage solutions, it simplifies the development of decentralized geospatial applications.
 
 - **Capabilities:**
-  - Provides a standard API for querying proof-of-location data.
-  - Enables interoperability between different decentralized geospatial systems.
+  - Provides a standard API for querying location proof attestations.
+  - Enables interoperability between different decentralized network systems.
   - Supports multi-blockchain verification mechanisms.
+  - OGC-compliant, allowing for integration with existing geospatial standards.
 
 - **How it fits in:**
-  - Acts as the core infrastructure layer for decentralized proof-of-location applications.
-  - Enables developers to easily integrate location verification into their Web3 applications.
+  - Acts as the core infrastructure query layer for decentralized proof-of-location applications.
+  - Enables developers to easily integrate location verification into their decentralized applications.
 
 ### **5. Decentralized Location Logger: Secure and verifiable geospatial logging**
 
