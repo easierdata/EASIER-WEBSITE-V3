@@ -29,7 +29,7 @@ These applications and protocols are redefining how geospatial data is stored, s
 
 ### **1. STAC Ecosystem: Discover geospatial content on decentralized networks**
 
-The **[STAC Ecosystem](https://stacspec.org/en)** enables us to discover geospatial content stored on decentralized networks. By leveraging the interoperability of SpatioTemporal Asset Catalog (STAC) specification, we can extend the metadata that describes each collection of data with tags like [content identifiers](https://docs.ipfs.tech/concepts/content-addressing/) (CIDs) for retrieving content from IPFS and a [Filecoin Piece](https://spec.filecoin.io/systems/filecoin_files/piece/) CID to identify storage providers on the Filecoin network that are storing the file.
+The **[STAC Ecosystem](https://stacspec.org/en)** enables users to discover geospatial content stored on decentralized networks. By leveraging the interoperability of SpatioTemporal Asset Catalog (STAC) specification, we can extend the metadata that describes each collection of data.  This includes tags like [content identifiers](https://docs.ipfs.tech/concepts/content-addressing/) (CIDs) for retrieving content from IPFS and a [Filecoin Piece](https://spec.filecoin.io/systems/filecoin_files/piece/) CID to identify storage providers on the Filecoin network that are storing the file.
 
 - **Capabilities:**
   - Provides a standardized way to describe geospatial assets and collections.
@@ -37,11 +37,11 @@ The **[STAC Ecosystem](https://stacspec.org/en)** enables us to discover geospat
   - Enhances interoperability between geospatial tools and decentralized storage solutions.
 - **How it fits in:**
   - Acts as a bridge between traditional geospatial workflows and decentralized storage solutions.
-  - Facilitates the creation of decentralized geospatial applications that leverage IPFS and Filecoin.
+  - Facilitates the creation of geospatial applications that leverage decentralized networks like IPFS and Filecoin.
 
-### **2. IPFS-STAC: Decentralized retrieval of geospatial content**
+### **2. ipfs-stac: Decentralized retrieval of geospatial content**
 
-The **IPFS-STAC** library provides an interface between geospatial datasets and decentralized storage solutions like IPFS and Filecoin. Built as a Python client, it enables users to manage and retrieve geospatial assets in a decentralized way, ensuring data persistence and integrity without reliance on centralized servers.
+The **ipfs-stac** library provides an interface between geospatial datasets and decentralized storage solutions like IPFS and Filecoin. Built as a Python client, it enables users to manage and retrieve geospatial assets in a decentralized way, ensuring data persistence and integrity without reliance on centralized servers.
 
 - **Capabilities:**
   - Stores and retrieves geospatial metadata and assets using IPFS and Filecoin.
@@ -52,20 +52,19 @@ The **IPFS-STAC** library provides an interface between geospatial datasets and 
   - This tool bridges the gap between Web3 storage solutions and traditional GIS workflows.
   - It allows researchers, developers, and institutions to securely share and retrieve geospatial datasets without a central authority.
 
-### **3. Web3 Geo-Dashboard: A unified interface for visualizing decentralized geospatial data**
+### **3. Web3 Geo-Dashboard and Extension: Explore and  decentralized geospatial data**
 
-The motivation behind this project is to showcase how decentralized technology such as IPFS and Filecoin can cultivate an open ecosystem for data exploration and management.
-
-provides a user-friendly interface to interact with decentralized geospatial datasets. It enables users to visualize, query, and interact with blockchain-based geospatial data.
+Motivation behind this project is to showcase how decentralized technology such as IPFS and Filecoin can cultivate an open ecosystem for data exploration and management. The **Web3 Geo-Dashboard** provides a visual interface to explore STAC endpoints that contain geospatial assets stored on IPFS and Filecoin. The accompanying **Browser Extension** enhances the dashboard's interactive capabilities, allowing users to simply retrieve the data they are interested in via CIDs, instead of relying on centralized servers.
 
 - **Capabilities:**
-  - Visually explore geospatial datasets that contain metadata of content enriched STAC API.
-  - Provides tools for querying and interacting with proof-of-location data.
-  - Supports integration with blockchain-based geospatial applications.
+  - Visually explore geospatial datasets from STAC endpoints.
+  - Manage and retrieve geospatial assets stored on IPFS and Filecoin.
+  - Data retrieval is managed at the content level: reference data based on **what** it is instead of **where** to access and download it.
+  - ManageSupports integration with blockchain-based geospatial applications.
 
 - **How it fits in:**
-  - Acts as a central access point for decentralized geospatial applications.
-  - Allows users and developers to explore and verify geospatial claims and metadata stored on decentralized networks.
+  - Cultivates an open ecosystem for exploring decentralized geospatial data.
+  - Allows users and developers to explore and verify metadata stored on decentralized networks.
 
 ### **4. Astral API: A gateway for accessing location proofs on decentralized networks**
 
