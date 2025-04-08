@@ -41,7 +41,7 @@ The **[STAC Ecosystem](https://stacspec.org/en)** enables users to discover geos
 
 ### **2. ipfs-stac: Decentralized retrieval of geospatial content**
 
-The **ipfs-stac** library provides an interface between geospatial datasets and decentralized storage solutions like IPFS and Filecoin. Built as a Python client, it enables users to manage and retrieve geospatial assets in a decentralized way, ensuring data persistence and integrity without reliance on centralized servers.
+The **[ipfs-stac](https://github.com/DecentralizedGeo/ipfs-stac)** library provides an interface between geospatial datasets and decentralized storage solutions like IPFS and Filecoin. Built as a Python client, it enables users to manage and retrieve geospatial assets in a decentralized way, ensuring data persistence and integrity without reliance on centralized servers.
 
 - **Capabilities:**
   - Stores and retrieves geospatial metadata and assets using IPFS and Filecoin.
@@ -54,7 +54,7 @@ The **ipfs-stac** library provides an interface between geospatial datasets and 
 
 ### **3. Web3 Geo-Dashboard and Extension: Explore Decentralized Geospatial Data**
 
-The motivation behind this project is to demonstrate how decentralized technologies like IPFS and Filecoin can foster an open ecosystem for geospatial data exploration and management. The **Web3 Geo-Dashboard** provides a visual interface to explore STAC endpoints that contain geospatial assets stored on IPFS and Filecoin. The accompanying **Browser Extension** enhances the dashboard's interactive capabilities, allowing users to simply retrieve the data they are interested in via CIDs, instead of relying on centralized servers.
+The motivation behind this project is to demonstrate how decentralized technologies like IPFS and Filecoin can foster an open ecosystem for geospatial data exploration and management. The **[Web3 Geo-Dashboard](https://github.com/DecentralizedGeo/web3-geo-dashboard)** provides a visual interface to explore STAC endpoints that contain geospatial assets stored on IPFS and Filecoin. The accompanying **[Browser Extension](https://github.com/DecentralizedGeo/web3-geo-extension)** enhances the dashboard's interactive capabilities, allowing users to simply retrieve the data they are interested in via CIDs, instead of relying on centralized servers.
 
 - **Capabilities:**
   - Visually explore geospatial datasets from STAC endpoints.
@@ -67,7 +67,7 @@ The motivation behind this project is to demonstrate how decentralized technolog
 
 ### **4. Astral API: A gateway for accessing location proofs on decentralized networks**
 
-The **Astral API** serves as a **unified access point** for accessing location proofs that are designed to work seamlessly with the Astral Location Protocol, a framework for verifiable geospatial attestations. By aggregating and standardizing attestations across multiple blockchains and storage solutions, it simplifies the development of decentralized geospatial applications.
+The **[Astral API](https://github.com/DecentralizedGeo/astral-api)** serves as a **unified access point** for accessing location proofs that are designed to work seamlessly with the Astral Location Protocol, a framework for verifiable geospatial attestations. By aggregating and standardizing attestations across multiple blockchains and storage solutions, it simplifies the development of decentralized geospatial applications.
 
 - **Capabilities:**
   - Provides a standard API for querying location proof attestations.
@@ -81,7 +81,7 @@ The **Astral API** serves as a **unified access point** for accessing location p
 
 ### **5. Decentralized Location Logger: Log verifiable geotagged records**
 
-The **Decentralized Location Logger** enables users to record, store and verify location data using blockchain and decentralized storage. Built on top of Astrals Location Protocol, this tool is particularly useful for creating **tamper-proof** geospatial records, essential for use cases such as environmental monitoring, supply chain tracking, and disaster response.
+The **[Decentralized Location Logger](https://github.com/DecentralizedGeo/astral-logbook)** enables users to record, store and verify location data using blockchain and decentralized storage. Built on top of Astrals Location Protocol, this tool is particularly useful for creating **tamper-proof** geospatial records, essential for use cases such as environmental monitoring, supply chain tracking, and disaster response.
 
 - **Capabilities:**
   - Allows users to record geotagged entries with content as location proof attestations.
@@ -94,7 +94,7 @@ The **Decentralized Location Logger** enables users to record, store and verify 
 
 ## The Broader Ecosystem
 
-The success of the decentralized geospatial ecosystem is driven by the contributions of developers, researchers, and community members who are exploring new ways to leverage these tools. Devonian is a research and development group advancing verifiable geocompute for environmental data by leveraging decentralized, permissioned IPFS‐based workflows. Their flagship product, Cherty, provides a platform for securely publishing, exchanging, and validating geospatial models and data, ensuring greater transparency and trust in environmental and resource monitoring applications.
+The success of the decentralized geospatial ecosystem is driven by the contributions of developers, researchers, and community members who are exploring new ways to leverage these tools. [Devonian](https://www.linkedin.com/company/devonian) is a research and development group advancing verifiable geocompute for environmental data by leveraging decentralized, permissioned IPFS‐based workflows. Their flagship product, [Cherty](https://home.cherty.io/), provides a platform for securely publishing, exchanging, and validating geospatial models and data, ensuring greater transparency and trust in environmental and resource monitoring applications.
 
 Expect to hear more community-led initiatives and projects that are pushing the boundaries of decentralized geospatial technologies.
 
