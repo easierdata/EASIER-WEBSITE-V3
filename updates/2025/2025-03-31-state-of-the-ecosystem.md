@@ -1,5 +1,5 @@
 ---
-title: State of the Ecosystem - A closer look at the decentralized geospatial web
+title: State of the Ecosystem - A Closer Look at the Decentralized Geospatial Web
 
 layout: post
 
@@ -19,7 +19,7 @@ tags:
 
 ---
 
-# State of the Ecosystem - A closer look at the decentralized geospatial web
+# State of the Ecosystem - A Closer Look at the Decentralized Geospatial Web
 
 As part of our ongoing efforts under [The Decentralized Geospatial Collaborative](https://decentralizedgeo.org/), we've started to define the ecosystem for decentralized geospatial tooling.  We've also been fostering a community on the [Telegram Astral channel](https://t.me/+UkTOSXnDcDM5ZTBk), with discussions on expanding the possibilities of decentralization within the digital geospatial realm. In this post, we take a closer look at the core applications and tools that form the backbone of this ecosystem, each playing a critical role in enabling decentralized geospatial capabilities.
 
@@ -52,15 +52,14 @@ The **ipfs-stac** library provides an interface between geospatial datasets and 
   - This tool bridges the gap between Web3 storage solutions and traditional GIS workflows.
   - It allows researchers, developers, and institutions to securely share and retrieve geospatial datasets without a central authority.
 
-### **3. Web3 Geo-Dashboard and Extension: Explore and  decentralized geospatial data**
+### **3. Web3 Geo-Dashboard and Extension: Explore Decentralized Geospatial Data**
 
-Motivation behind this project is to showcase how decentralized technology such as IPFS and Filecoin can cultivate an open ecosystem for data exploration and management. The **Web3 Geo-Dashboard** provides a visual interface to explore STAC endpoints that contain geospatial assets stored on IPFS and Filecoin. The accompanying **Browser Extension** enhances the dashboard's interactive capabilities, allowing users to simply retrieve the data they are interested in via CIDs, instead of relying on centralized servers.
+The motivation behind this project is to demonstrate how decentralized technologies like IPFS and Filecoin can foster an open ecosystem for geospatial data exploration and management. The **Web3 Geo-Dashboard** provides a visual interface to explore STAC endpoints that contain geospatial assets stored on IPFS and Filecoin. The accompanying **Browser Extension** enhances the dashboard's interactive capabilities, allowing users to simply retrieve the data they are interested in via CIDs, instead of relying on centralized servers.
 
 - **Capabilities:**
   - Visually explore geospatial datasets from STAC endpoints.
   - Manage and retrieve geospatial assets stored on IPFS and Filecoin.
   - Data retrieval is managed at the content level: reference data based on **what** it is instead of **where** to access and download it.
-  - ManageSupports integration with blockchain-based geospatial applications.
 
 - **How it fits in:**
   - Cultivates an open ecosystem for exploring decentralized geospatial data.
@@ -68,7 +67,7 @@ Motivation behind this project is to showcase how decentralized technology such 
 
 ### **4. Astral API: A gateway for accessing location proofs on decentralized networks**
 
-The **Astral API** serves as a **unified access point** for accessing location proofs that are compatible with Astral's Location Protocol. By aggregating and standardizing attestations across multiple blockchains and storage solutions, it simplifies the development of decentralized geospatial applications.
+The **Astral API** serves as a **unified access point** for accessing location proofs that are designed to work seamlessly with the Astral Location Protocol, a framework for verifiable geospatial attestations. By aggregating and standardizing attestations across multiple blockchains and storage solutions, it simplifies the development of decentralized geospatial applications.
 
 - **Capabilities:**
   - Provides a standard API for querying location proof attestations.
@@ -86,7 +85,7 @@ The **Decentralized Location Logger** enables users to record, store and verify 
 
 - **Capabilities:**
   - Allows users to record geotagged entries with content as location proof attestations.
-  - Attached content is Stored on decentralized networks like IPFS/Filecoin for enhanced availability and security.
+  - Attached content is stored on IPFS/Filecoin, ensuring availability and verifiability.
   - Explore an interactive map of entries.
 
 - **How it fits in:**
