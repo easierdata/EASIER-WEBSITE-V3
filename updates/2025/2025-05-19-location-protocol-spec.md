@@ -108,8 +108,6 @@ The `location` value is interpreted based on the `locationType` field. Implement
 
 A location attestation object can be composed of each representing a different aspect of the location data. These sub-objects can be used to provide additional context or information about the location data.
 
-> Note: The fields marked with :heavy_check_mark: have common overlap with their EAS counterparts and are included in the location attestation object by default.
-
 #### Common fields
 
 The location attestation object supports additional fields that are common to all location attestations but not necessary to use. These fields provide additional information about the attestation and its context.
