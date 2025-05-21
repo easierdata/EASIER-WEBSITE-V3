@@ -400,7 +400,7 @@ const attestationObject: OnChainAttestationData = {
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
 ```
 
-## Real-World use scenarios of Location Attestations
+## Scenarios for real-world applications of Location Attestations
 
 ### Touch-Grass
 
