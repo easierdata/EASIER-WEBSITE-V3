@@ -1,5 +1,5 @@
 ---
-title: The Location Protocol Specification - A standardized framework for working location information on the decentralized web
+title: The **Location Protocol** specification - A standardized framework for working location information on the decentralized web
 
 layout: post
 
