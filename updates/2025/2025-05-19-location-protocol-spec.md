@@ -1,5 +1,5 @@
 ---
-title: The **Location Protocol** specification - A standardized framework for working location information on the decentralized web
+title: The **Location Protocol** specification - A standardized framework for working with location information on the decentralized web
 
 layout: post
 
@@ -19,7 +19,7 @@ tags:
 
 ---
 
-# The **Location Protocol** specification - A standardized framework for working location information on the decentralized web
+# The **Location Protocol** specification - A standardized framework for working with location information on the decentralized web
 
 In collaboration with [Astral](https://www.astral.global/), we have been designing a standardized framework for working with location information on the decentralized web. The goal of this work is to enrich the emerging decentralized geospatial with established geospatial standards, making it easier to create and share geographic data and services in a decentralized manner, but also bringing novel mechanisms for verifiability, transparency, and trust to the web more generally. An initial version of the **Location Protocol** specification is outlined below, including xxx, yyy, and zzz.
 
