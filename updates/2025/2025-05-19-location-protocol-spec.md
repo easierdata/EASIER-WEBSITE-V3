@@ -137,7 +137,7 @@ An attestation is retrievable by its UID, a 32-byte hash, to identify the attest
 | revocable | `bool` | A boolean indicating whether the attestation is revocable or not. |
 | data | `bytes` | The location attestation object. |
 
-
+<br>
 
 The following diagram illustrates the composition of an attestation object and the relationship of the various fields and properties outlined above, specifically within the context of a location attestation:
 
