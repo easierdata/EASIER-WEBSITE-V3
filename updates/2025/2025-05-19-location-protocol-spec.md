@@ -33,42 +33,6 @@ Currently built on top of  the [Ethereum Attestation Service](https://attest.org
 
 A location attestation object is a geospatial data artifact that includes a digital signature that verifies the authenticity and integrity of an arbitrary metadata object. At a minimum, a valid location attestation object must conforms to the [base data model](#base-fields), but can be extended with [composable fields](#composable-fields) to provide more context or information, and can also leverage [EAS properties](#eas-properties) for additional functionality.
 
-The following diagram illustrates the composition of an attestation object:
-
-```mermaid
----
-config:
-  theme: mc
----
-C4Container
-    Node(obj, "Attestation Object") {
-      Node(attestationProps, "Attestation Properties") {
-        System(recipient, "Recipient", "The entity receiving the attestation.")
-        System(expirationTime, "Expiration Time", "The time until the attestation remains valid.")
-        System(revocable, "Revocable", "Indicates if the attestation can be revoked.")
-        System(refUID, "Reference UID", "Unique identifier for the attestation reference.")
-        System(schemaUID, "Schema UID", "The schema identifier associated with the attestation")
-        System(schemaString, "Schema String", "A string defining the structure of the data to be attested.")
-
-        Node(data, "Data", "Contains the location attestation object.") {
-          Node(locationDataContainer, "Location Attestation Object") {
-            System(srs, "srs", "The spatial reference system.")
-            System(locationType, "Location Type", "The type of location data.")
-            System(location, "Location", "The actual location data.")
-            System(specVersion, "Specification Version", "The version of the specification.")
-            
-            Node(systemRef, "Optional fields") {
-              System(objectFields, "Common Fields", "Additional commonly supported fields.")
-              System(proofFields, "Proof Fields", "Proofs verifying authenticity and integrity.")
-            }
-          }
-        }
-      }
-    }
-
-    UpdateLayoutConfig($c4ShapeInRow="4")
-```
-
 ### Base fields
 
 The location attestation object at a minimum must contain the fields below as to identify and represent the location data.
@@ -172,6 +136,43 @@ An attestation is retrievable by its UID, a 32-byte hash, to identify the attest
 | attester | `address` | The address of the attester who created the attestation. |
 | revocable | `bool` | A boolean indicating whether the attestation is revocable or not. |
 | data | `bytes` | The location attestation object. |
+
+
+The following diagram illustrates the composition of an attestation object:
+
+```mermaid
+---
+config:
+  theme: mc
+---
+C4Container
+    Node(obj, "Attestation Object") {
+      Node(attestationProps, "Attestation Properties") {
+        System(recipient, "Recipient", "The entity receiving the attestation.")
+        System(expirationTime, "Expiration Time", "The time until the attestation remains valid.")
+        System(revocable, "Revocable", "Indicates if the attestation can be revoked.")
+        System(refUID, "Reference UID", "Unique identifier for the attestation reference.")
+        System(schemaUID, "Schema UID", "The schema identifier associated with the attestation")
+        System(schemaString, "Schema String", "A string defining the structure of the data to be attested.")
+
+        Node(data, "Data", "Contains the location attestation object.") {
+          Node(locationDataContainer, "Location Attestation Object") {
+            System(srs, "srs", "The spatial reference system.")
+            System(locationType, "Location Type", "The type of location data.")
+            System(location, "Location", "The actual location data.")
+            System(specVersion, "Specification Version", "The version of the specification.")
+            
+            Node(systemRef, "Optional fields") {
+              System(objectFields, "Common Fields", "Additional commonly supported fields.")
+              System(proofFields, "Proof Fields", "Proofs verifying authenticity and integrity.")
+            }
+          }
+        }
+      }
+    }
+
+    UpdateLayoutConfig($c4ShapeInRow="4")
+```
 
 ## Creating Location Attestations
 
