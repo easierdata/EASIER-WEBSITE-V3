@@ -248,3 +248,54 @@ After the attestation is signed, submitted and added to the blockchain, a UID is
 **Attestation UID**: 0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
 
 **EAS Explorer Link**:  https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
+
+### Example code to create and submit an attestation
+
+The following code TypeScript snippet demonstrates how to create a location attestation object using the EAS SDK.
+
+```TypeScript
+// 1. Get the provider and signer
+const { signer } = getProviderSigner();
+
+// 2. Specify the schema UID and schema string
+const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
+const schemaString = "string srs, string locationType, string location, uint8 specVersion";
+
+// 3. Prepare the location attestation object 
+const locationAttestationObject = [
+  {"name": "srs", "type": "string", "value": "EPSG:4326"},
+  {"name": "locationType", "type": "string", "value": "decimalDegrees"},
+  {"name": "location", "type": "string", "value": "44.967243, -103.771556"},
+  {"name": "specVersion", "type": "uint8", "value": 1}
+];
+
+// 4. Encode the location attestation object
+const schemaEncoder = new SchemaEncoder(schemaString);
+const encodedLocationAttestationObject = schemaEncoder.encodeData(locationAttestationObject);
+
+// 5. Create the attestation object
+const attestationObject: OnChainAttestationData = {
+          recipient: currentSigner.address,
+          expirationTime: NO_EXPIRATION,
+          revocable: true,
+          schemaUID: SCHEMA_UID,
+          schemaString: "string id,string timestamp,uint40[] location,string locationType",
+          encodedData: encodedLocationAttestationObject
+        };
+
+const newAttestationUID = await createOnChainAttestation(signer, attestationData);
+```
+
+## Demonstrating real-world use case scenarios
+
+### 1. Event Check-in using GeoIP
+
+**PLACEHOLDER**
+
+### 2. Geocaching attestations with QR codes
+
+**PLACEHOLDER**
+
+### 3. Attesting to media generated with Proofmode
+
+**PLACEHOLDER**
