@@ -1,5 +1,5 @@
 ---
-title: The Location Protocol Spec - Building a standardized framework for storing location data on the blockchain
+title: The Location Protocol Specification - A standardized framework for working location information on the decentralized web
 
 layout: post
 
@@ -19,9 +19,9 @@ tags:
 
 ---
 
-# The Location Protocol Spec - Building a standardized framework for storing location data on the blockchain
+# The Location Protocol Specification - A standardized framework for working location information on the decentralized web
 
-One of the primary goals with our collaboration with [Astral](https://www.astral.global/) is to design a standardized framework for storing location data on the blockchain. Our aim is to bridge established geographic tools and standards with the emerging decentralized web, opening new possibilities for how we create, share, and trust spatial information. We've finally reached our first milestone in this journey and would like to share details on the first version of the **Location Protocol Specification**.
+In collaboration with [Astral](https://www.astral.global/), we have been designing a standardized framework for working with location information on the decentralized web. The goal of this work is to enrich the emerging decentralized geospatial with established geospatial standards, making it easier to create and share geographic data and services in a decentralized manner, but also bringing novel mechanisms for verifiability, transparency, and trust to the web more generally. An initial version of the **Location Protocol** Specification is outlined below, including xxx, yyy, and zzz.
 
 ## What is the Location Protocol Spec?
 
