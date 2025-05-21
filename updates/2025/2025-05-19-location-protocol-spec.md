@@ -197,7 +197,7 @@ To create a location attestation, you can use the following schema:
 }
 ```
 
-This schema conforms to the base data model for creating location attestation objects.
+This schema conforms to the base data model for creating location attestation objects. You can view the schema in the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
 
 ### Step 2: Prepare a location attestation object
 
@@ -249,7 +249,7 @@ After the attestation is signed, submitted and added to the blockchain, a UID is
 
 **Attestation UID**: 0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
 
-**EAS Explorer Link**:  https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
+**EAS Explorer Link**:  [https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31](https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31)
 
 ### Example of creating an On-Chain Location Attestation with the EAS SDK
 
@@ -342,7 +342,7 @@ const schemaString: "string srs, string locationType, uint40[2][] location, uint
 const schemaUID = await registerSchema(signer, schemaString);
 
 // Extract QR code metadata and Create the attestation object
-const qrData = await decodeQR(imagePath)
+const qrData = await decodeQR(imagePath) // Returns {lat: <latitude coordinate>, long: <longitude coordinate>}
 const attestationObject: OnChainAttestationData = {
   recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
   revocable: true,
