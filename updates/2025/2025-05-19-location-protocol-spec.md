@@ -31,7 +31,7 @@ Currently built on top of  the [Ethereum Attestation Service](https://attest.org
 
 ## Location Attestation Object
 
-A location attestation object is a geospatial data artifact that includes a digital signature that verifies the authenticity and integrity of an arbitrary metadata object. At minimum it conforms to the [base data model](#base-fields) and can be extended with [composable fields](#composable-fields) to provide more context or information and leverage [EAS properties](#eas-properties) to customize the attestations.
+A location attestation object is a geospatial data artifact that includes a digital signature that verifies the authenticity and integrity of an arbitrary metadata object. At minimum, it conforms to the [base data model](#base-fields) and can be extended with [composable fields](#composable-fields) to provide more context or information and leverage [EAS properties](#eas-properties) to customize the attestations.
 
 The following diagram illustrates the composition of an attestation object that we'll be referencing in this document.
 
