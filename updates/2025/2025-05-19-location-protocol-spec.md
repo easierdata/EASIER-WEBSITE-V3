@@ -249,53 +249,155 @@ After the attestation is signed, submitted and added to the blockchain, a UID is
 
 **EAS Explorer Link**:  https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
 
-### Example code to create and submit an attestation
+### Example of creating an On-Chain Location Attestation with the EAS SDK
 
 The following code TypeScript snippet demonstrates how to create a location attestation object using the EAS SDK.
+
+```TypeScript
+import { EAS, SchemaEncoder } from "@ethereum-attestation-service/eas-sdk";
+
+const eas = new EAS(EASContractAddress);
+eas.connect(signer);
+
+// Initialize SchemaEncoder with the schema string
+const schemaEncoder = new SchemaEncoder("string srs, string locationType, string location, uint8 specVersion");
+const encodedData = schemaEncoder.encodeData([
+  { name: "srs", value: "EPSG:4326", type: "string" },
+  { name: "locationType", value: "decimalDegrees", type: "string" },
+  { name: "location", value: "44.967243, -103.771556", type: "string" },
+  { name: "specVersion", value: 1, type: "uint8" },
+]);
+
+const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
+
+const tx = await eas.attest({
+  schema: schemaUID,
+  data: {
+    recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+    expirationTime: 0,
+    revocable: true
+    data: encodedData,
+  },
+});
+
+const newAttestationUID = await tx.wait();
+
+console.log("New attestation UID:", newAttestationUID);
+```
+
+## Demonstrating real-world uses
+
+### 1. Event Check-in using GeoIP
+
+This example snippet demonstrates how location attestations could be used to as a way to verify attendance at an event. The app uses the device's IP address to get the location and create an attestation object. This could be used for events like concerts, conferences, or any other event where attendance needs to be verified.
 
 ```TypeScript
 // 1. Get the provider and signer
 const { signer } = getProviderSigner();
 
-// 2. Specify the schema UID and schema string
-const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
-const schemaString = "string srs, string locationType, string location, uint8 specVersion";
+// Register schema if not already registered. Will return the schema UID if already registered
+const schemaString = "string srs, string locationType, string location, uint8 specVersion, string eventId, uint64 eventTimestamp, string ticketId"
+const schemaUID = await registerSchema(signer, schemaString);
 
-// 3. Prepare the location attestation object 
-const locationAttestationObject = [
-  {"name": "srs", "type": "string", "value": "EPSG:4326"},
-  {"name": "locationType", "type": "string", "value": "decimalDegrees"},
-  {"name": "location", "type": "string", "value": "44.967243, -103.771556"},
-  {"name": "specVersion", "type": "uint8", "value": 1}
-];
+// Grab the IP Address of the mobile device and use GeoIP to get the location
+const ipAddress = await publicIpv4();
+const locationData = geoip.lookup(ipAddress);
+const geoJsonPoint = {
+    type: "Point",
+    coordinates: [locationData.ll[1], locationData.ll[0]]
+};
+const geoJsonPointString = JSON.stringify(geoJsonPoint);
 
-// 4. Encode the location attestation object
-const schemaEncoder = new SchemaEncoder(schemaString);
-const encodedLocationAttestationObject = schemaEncoder.encodeData(locationAttestationObject);
-
-// 5. Create the attestation object
+// Create the attestation object
 const attestationObject: OnChainAttestationData = {
-          recipient: currentSigner.address,
-          expirationTime: NO_EXPIRATION,
-          revocable: true,
-          schemaUID: SCHEMA_UID,
-          schemaString: "string id,string timestamp,uint40[] location,string locationType",
-          encodedData: encodedLocationAttestationObject
-        };
+  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+  revocable: true,
+  schemaUID: schemaUID,
+  schemaString: schemaString,
+  dataToEncode: [
+    { name: "srs", value: "EPSG:4326", type: "string" },
+    { name: "locationType", value: "geoJson", type: "string" },
+    { name: "location", value: geoJsonPointString, type: "string" },
+    { name: "specVersion", value: 1, type: "uint8" },
+    { name: "eventId", value: "GEO-OPEN-HACK-2025", type: "string" },
+    { name: "eventTimestamp", Math.floor(time.getTime() / 1000), type: "uint64" },
+    { name: "ticketId", value: "ticket-1234567890", type: "string" }
+  ]
+};
 
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
 ```
 
-## Demonstrating real-world use case scenarios
-
-### 1. Event Check-in using GeoIP
-
-**PLACEHOLDER**
-
 ### 2. Geocaching attestations with QR codes
 
-**PLACEHOLDER**
+This example snippet demonstrates how QR codes could be used in a scenario such as geocaching, treasure hunts, or location-based games event. The app scans a QR code, containing geo-spatial metadata, triggering the generation of location attestation.
+
+```TypeScript
+const { signer } = getProviderSigner();
+
+// Register schema if not already registered. Will return the schema UID if already registered
+const schemaString: "string srs, string locationType, uint40[2][] location, uint40 specVersion, uint64 eventTimestamp, string memo";
+const schemaUID = await registerSchema(signer, schemaString);
+
+// Extract QR code metadata and Create the attestation object
+const qrData = await decodeQR(imagePath)
+const attestationObject: OnChainAttestationData = {
+  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+  revocable: true,
+  schemaUID: schemaUID,
+  schemaString: schemaString
+  dataToEncode: [
+    { name: "srs", value: "EPSG:4326", type: "string" },
+    { name: "locationType", value: "scaledCoordinates", type: "string" },
+    { name: "location", value: [qrData.lat, qrData.long], type: "uint40[2][]" },
+    { name: "specVersion", value: 1, type: "uint8" },
+    { name: "eventTimestamp", value: Math.floor(time.getTime() / 1000), type: "uint64" },
+    { name: "memo", value: "Geocaching event - Location 1", type: "string" }
+  ]
+};
+
+const newAttestationUID = await createOnChainAttestation(signer, attestationData);
+```
 
 ### 3. Attesting to media generated with Proofmode
 
-**PLACEHOLDER**
+This example snippet demonstrates how [Proofmode](https://proofmode.org/) (a mobile app for capturing verifiable photos) practical implementation of media verification attestations using EAS as to preserve the integrity and origin of digital evidence. This proof of concept is particularly valuable for applications requiring verified media evidence, such as journalism, human rights documentation, legal evidence collection, and scientific field research where the authenticity and provenance of media are critical.
+
+```TypeScript
+// 1. Get the provider and signer
+const { signer } = getProviderSigner();
+
+// Register schema if not already registered. Will return the schema UID if already registered
+const schemaString: "string srs, string locationType, string location, uint40 specVersion, uint40 eventTimestamp, string memo, string mediaType, bytes media";
+const schemaUID = await registerSchema(signer, schemaString);
+
+// Extract the ProofMode zip file and grab the metadata
+const files = extractZipFile(zipFilePath, extractDir);
+const proofModeData = getProofModeMetadata(files);
+
+// Create the attestation object
+const attestationObject: OnChainAttestationData = {
+  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+  revocable: true,
+  schemaUID: schemaUID,
+  schemaString: schemaString,
+  dataToEncode: [
+    { name: "srs", value: "EPSG:4326", type: "string" },
+    { name: "locationType", value: "decimalDegrees", type: "string" },
+    { name: "location", value: proofModeData.location, type: "string" },
+    { name: "specVersion", value: 1, type: "uint8" },
+    { name: "eventTimestamp", BigInt(proofModeData.timestamp), type: "uint64" },
+    { name: "memo", value: proofModeData.notes, type: "string" },
+    { name: "mediaType", value: proofModeData.mediaType, type: "string" },
+    { name: "media", value: proofModeData.media, type: "bytes" },
+  ]
+};
+
+const newAttestationUID = await createOnChainAttestation(signer, attestationData);
+```
+
+## Conclusion
+
+The Location Protocol Specification is a significant step towards creating a standardized framework for storing location data on the blockchain. By leveraging the Ethereum Attestation Service, we can create, sign, and verify location attestations that can be used across different platforms and applications. This opens up new possibilities for how we create, share, and trust spatial information in the decentralized web.
+
+We are excited to see how the community will use this framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol Specification and contribute to its evolution. Together, we can create a more open, transparent, and trustworthy ecosystem for location data on the blockchain.
