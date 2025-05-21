@@ -72,24 +72,24 @@ The `location` value is interpreted based on the `locationType` field. Implement
 
 ### Composable fields
 
-A location attestation object can be composed of each representing a different aspect of the location data. These sub-objects can be used to provide additional context or information about the location data.
+A location attestation object can be extended by additional fields that describe, support, or verify different aspects of the encoded location information. These composable fields can be grouped by (a) "common fields" and (b) "proof fields", which can each be thought of as sub-objects.
 
 #### Common fields
 
-The location attestation object supports additional fields that are common to all location attestations but not necessary to use. These fields provide additional information about the attestation and its context.
+The location attestation object supports additional fields that may be common to most location attestations but are still optional. These fields provide additional information about the context of an attestation, such as a textual description (i.e., "memo"), when the location information was recorded (i.e., "eventTimeStamp"), or other values associated with the location (i.e., "attributes").
 
 | Field Name | Type | Description |
 |------------|------|-------------|
-| media | `bytes`, `mediaType` | bytes array representing the media data associated with the location data. The `mediaType` is a MIME-type-style string describing the media data. |
-| attributes | `string` | Additional attributes of the location data. |
-| eventTimeStamp | `uint64` | The UNIX timestamp of the event associated with the location data. _Note, this should not be confused with the `time` field that represents when the attestation was created_. |
+| media | `bytes`, `mediaType` | bytes array representing the media data associated with the location. The `mediaType` is a MIME-type-style string describing the media data. |
+| attributes | `string` | Additional attributes associated with the location. |
+| eventTimeStamp | `uint64` | The UNIX timestamp of the event associated with the location record. _Note, this should not be confused with the `time` field that represents when the attestation was created_. |
 | eventId | `byte32`, `string` | An external identifier to be used as foreign key to link non-referenced attestations or external sources.  |
 | recepient | `address` | The address of the recipient of the attestation. |
 | memo | `string` | An arbitrary message or note. |
 
 #### Proof fields
 
-The location attestation object supports additional verification properties that can be used _prove_ the authenticity and integrity of the location data. These properties are optional but recommended for use cases that require a higher level of assurance.
+The location attestation object can include verification fields that can incorporate corroborating evidence to _prove_ the authenticity and integrity of the location information. These fields are optional but recommended for use cases that require a higher level of assurance.
 
 | Field Name | Type | Description |
 |------------|------|-------------|
@@ -101,7 +101,7 @@ The location attestation object supports additional verification properties that
 
 ### EAS Properties
 
-The location protocol framework is built on top of the Ethereum Attestation Service (EAS) and uses the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, and verify attestations. The following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are included in the location attestation object
+The Location Protocol is built on top of the Ethereum Attestation Service (EAS) and uses the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, and verify location attestations. As a result, the following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are therefore also included as part of the location attestation object. Though largely similar, there are a few smill differences between the properties available for creating an attestation and those available when retrieving attestations.
 
 **Properties for creating attestations**
 
@@ -117,11 +117,11 @@ The location protocol framework is built on top of the Ethereum Attestation Serv
 | data | `bytes` | The location attestation object. | :heavy_check_mark: |
 | value | `uint256` | The ETH value that is being sent with the attestation. _(onchain only)_ | |
 
-The `schemaString` and `schemaUID` properties are used to define the structure of the data being attested, while the `refUID` property is used to link attestations together. The `expirationTime` property is used to set a time limit on the validity of the attestation, while the `recipient` property specifies who will receive the attestation. Once the attestation is created, it is signed and stored on the blockchain, returning a UID representing created attestation
+The `schemaString` and `schemaUID` properties are used to define the structure of the data being attested to, while the `refUID` property is used to link attestations together. The `expirationTime` property is used to set a time limit on the validity of the attestation, while the `recipient` property specifies who will receive the attestation. Once the attestation is created, it is signed and stored on the blockchain, returning a UID representing the created attestation.
 
-**Attestation properties**
+**Properties when retrieving attestations**
 
-An attestation is retrievable by its UID, a 32-byte hash, to identify the attestation on the blockchain. Here are the following properties that are returned when an attestation is retrieved from the blockchain:
+An attestation is retrievable by its UID, a 32-byte hash, to identify the attestation on the blockchain. In addition, the following properties are returned when an attestation is retrieved from the blockchain:
 
 | Property Name | Type | Description |
 |---------------|------|-------------|
