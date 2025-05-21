@@ -287,7 +287,7 @@ const newAttestationUID = await tx.wait();
 console.log("New attestation UID:", newAttestationUID);
 ```
 
-## Demonstrating real-world uses
+## Technical strategies of applying location attestations
 
 ### 1. Event Check-in using GeoIP
 
