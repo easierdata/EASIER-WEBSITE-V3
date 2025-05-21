@@ -406,7 +406,9 @@ const newAttestationUID = await createOnChainAttestation(signer, attestationData
 
 The [Touch Grass app](https://touch-grass-gamma.vercel.app/), is a fun and interactive way to encourage people to spend time outdoors. It lets users "touch grass" and record these moments — using attestations to prove they were actually outside. The app checks if they're in an outdoor area, like a park or nature reserve. Once confirmed, it records the details of the user being outside and uses their wallet address to sign a secure digital ledger so it can't be changed or erased. Users can see their own history of outdoor events, view a global map of where others have touched grass, and even compete on a leaderboard to see who is the most active outdoors.
 
-### 
+### Kolektivo
+
+[Kolektivo](https://www.kolektivo.network/) focuses on empowering local communities in Curaçao to restore ecosystems and improve food security through regenerative agriculture. Leveraging decentralized technology to support these initiatives, using community currencies and decentralized governance to ensure transparent, equitable resource allocation and to incentivize sustainable practices. Using the location protocol, regenerative agricultural stewards, could verify the location of say wind data that's collected from a weather station, and use that data to create an attestation object. This could be used to verify the location of the weather station, and the data collected from it, and provide a verifiable record of the data that could be impacted by extreme weather events.
 
 ## Conclusion
 
