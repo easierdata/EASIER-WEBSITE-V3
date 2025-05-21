@@ -35,7 +35,7 @@ A location attestation object is a geospatial data artifact that includes a digi
 
 ### Base fields
 
-The location attestation object at a minimum must contain the fields below as to identify and represent the location data.
+The location attestation object at a minimum must contain the fields below in order to identify and represent the location information.
 
 | Field Name | Type | Description |
 |------------|------|-------------|
