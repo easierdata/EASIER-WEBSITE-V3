@@ -400,6 +400,14 @@ const attestationObject: OnChainAttestationData = {
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
 ```
 
+## Real-World use scenarios of Location Attestations
+
+### Touch-Grass
+
+The [Touch Grass app](https://touch-grass-gamma.vercel.app/), is a fun and interactive way to encourage people to spend time outdoors. It lets users "touch grass" and record these moments — using attestations to prove they were actually outside. The app checks if they're in an outdoor area, like a park or nature reserve. Once confirmed, it records the details of the user being outside and uses their wallet address to sign a secure digital ledger so it can't be changed or erased. Users can see their own history of outdoor events, view a global map of where others have touched grass, and even compete on a leaderboard to see who is the most active outdoors.
+
+### 
+
 ## Conclusion
 
 The Location Protocol Specification is a significant step towards creating a standardized framework for storing location data on the blockchain. By leveraging the Ethereum Attestation Service, we can create, sign, and verify location attestations that can be used across different platforms and applications. This opens up new possibilities for how we create, share, and trust spatial information in the decentralized web.
