@@ -117,7 +117,7 @@ The Location Protocol is built on top of the Ethereum Attestation Service (EAS) 
 | data | `bytes` | The location attestation object. | :heavy_check_mark: |
 | value | `uint256` | The ETH value that is being sent with the attestation. _(onchain only)_ | |
 
-The `schemaString` and `schemaUID` properties are used to define the structure of the data being attested to, while the `refUID` property is used to link attestations together. The `expirationTime` property is used to set a time limit on the validity of the attestation, while the `recipient` property specifies who will receive the attestation. Once the attestation is created, it is signed and stored on the blockchain, returning a UID representing the created attestation.
+The `schemaString` and `schemaUID` properties are used to define the structure of the data being attested to, while the `refUID` property is used to link attestations together. The `expirationTime` property is used to set a time limit on the validity of the attestation, while the `recipient` property specifies who will receive the attestation. Once an attestation is created, it is signed and stored on the blockchain, returning a UID representing the created attestation.
 
 **Properties when retrieving attestations**
 
