@@ -203,7 +203,7 @@ This schema conforms to the base data model for creating location attestation ob
 
 ### Step 2: Prepare a location attestation object
 
-At it's core, an EAS attestation is a is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the `schemaString` defines the structure of the location information that will be encoded in the attestation. Let's assign some values to the fields in the schema:
+At it's core, an EAS attestation is a is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the `schemaString` defines the structure of the location information that will be encoded in the attestation. Let's assign some values to the fields in the schema using decimal degrees and a basic reference system:
 
 ```json
 {
