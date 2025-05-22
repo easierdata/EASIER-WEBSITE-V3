@@ -177,7 +177,7 @@ C4Container
 
 ## Creating Location Attestations
 
-This document provides a guide for creating location attestation objects for the Ethereum Attestation Service (EAS). It covers the steps to create, sign, and verify location attestations.
+Below is an example of how to create location attestation objects using the Ethereum Attestation Service (EAS). It covers the steps to create, sign, and verify location attestations.
 
 ## Making an attestation
 
@@ -188,7 +188,7 @@ The first step in creating a location attestation is to identify the schema that
 - **Schema UID**: A unique identifier for the schema on the EAS schema registry.
 - **Schema String**: The string representation of the schema, which includes the fields and their types.
 
-To create a location attestation, you can use the following schema:
+To create a location attestation, the following example JSON schema can be used:
 
 ```json
 {
@@ -199,11 +199,11 @@ To create a location attestation, you can use the following schema:
 }
 ```
 
-This schema conforms to the base data model for creating location attestation objects. You can view the schema in the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
+This schema conforms to the base data model for creating location attestation objects and can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
 
 ### Step 2: Prepare a location attestation object
 
-At it's core, attesting is a way to make a claim about some data. In this case, the claim is about a location. Whether that's a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the `schemaString` defines the structure of the data that will be attested. Let's assign some values to the fields in the schema:
+At it's core, an EAS attestation is a is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the `schemaString` defines the structure of the location information that will be encoded in the attestation. Let's assign some values to the fields in the schema:
 
 ```json
 {
