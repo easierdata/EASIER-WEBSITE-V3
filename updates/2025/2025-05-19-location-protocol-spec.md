@@ -332,9 +332,9 @@ const attestationObject: OnChainAttestationData = {
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
 ```
 
-### 2. Geocaching attestations with QR codes
+### 2. Using a QR code for geocaching
 
-This example snippet demonstrates how QR codes could be used in a scenario such as geocaching, treasure hunts, or location-based games event. The app scans a QR code, containing geo-spatial metadata, triggering the generation of location attestation.
+This example snippet demonstrates how a QR codes could be used in a scenario such as geocaching, treasure hunts, or location-based gameing event. The application would first scan a QR code containing geospatial metadata according to the Location Protocol and then trigger the generation of location attestation. In this case, the base fields were extended with xxx, yyy, and zzz.
 
 ```TypeScript
 const { signer } = getProviderSigner();
