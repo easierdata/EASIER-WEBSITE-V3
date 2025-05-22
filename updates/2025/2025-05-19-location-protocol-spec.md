@@ -293,7 +293,7 @@ console.log("New attestation UID:", newAttestationUID);
 
 ### 1. Event Check-in using GeoIP
 
-This example demonstrates how location attestations could be used to as a way to verify attendance at an event. The Typescript app uses the device's IP address to get the location and create an attestation object. This could be used for events like concerts, conferences, or any other event where verifying attendance, during the event or in the future, could be useful.
+This example demonstrates how location attestations could be used to as a way to verify attendance at an event. The Typescript app uses the device's IP address to get the location and create an attestation object. This could be used for events like concerts, conferences, or any other event where verifying attendance, during the event or in the future, could be useful. Here, several optional composable fields are incorporated in addition to the base fields, such as xxx, yyyy, and zzzz.
 
 ```TypeScript
 // 1. Get the provider and signer
