@@ -400,7 +400,9 @@ const attestationObject: OnChainAttestationData = {
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
 ```
 
+<br>
 
+These three demonstrative strategies are only a few the many recipes that could be used to make Location Protocol compliant location attestations that ensure location information is verifiable, transparent, interoperable, and trustworthy on the decentralized web. Importantly, these strategies can be extended and combined to create new recipes that provide additional verification and security for location information. Ongoing work includes the development of a library of recipes for using the Location Protocol to make more complex and extensible location attestations, including those that include formal proofs to verify location. It also includes the development of an SDK for creating location attestations compliant with the Location Protocol and various recipes to streamline applications development.
 
 ## Scenarios for real-world applications of Location Attestations
 
