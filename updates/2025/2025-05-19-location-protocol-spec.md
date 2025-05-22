@@ -289,11 +289,11 @@ const newAttestationUID = await tx.wait();
 console.log("New attestation UID:", newAttestationUID);
 ```
 
-## Technical strategies of applying location attestations
+## Some strategies demonstrating the use of the Location Protocol
 
 ### 1. Event Check-in using GeoIP
 
-This example snippet demonstrates how location attestations could be used to as a way to verify attendance at an event. The app uses the device's IP address to get the location and create an attestation object. This could be used for events like concerts, conferences, or any other event where attendance needs to be verified.
+This example demonstrates how location attestations could be used to as a way to verify attendance at an event. The Typescript app uses the device's IP address to get the location and create an attestation object. This could be used for events like concerts, conferences, or any other event where verifying attendance, during the event or in the future, could be useful.
 
 ```TypeScript
 // 1. Get the provider and signer
