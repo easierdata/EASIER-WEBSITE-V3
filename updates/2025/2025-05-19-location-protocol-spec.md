@@ -139,7 +139,7 @@ An attestation is retrievable by its UID, a 32-byte hash, to identify the attest
 
 <br>
 
-Ultimately, all location attestation objects are an instance of the more general EAS attestation object and extend the data model to support the Location Protocol while remaining extremely flexible. The following diagram illustrates the composition of a location attestation object and the relationship of the various fields and properties outlined above:
+Ultimately, the location attestation object is an instance of the more general EAS attestation object and extends the data model in order to support the Location Protocol while remaining extremely flexible. The following diagram illustrates the composition of a location attestation object and the relationship of the various fields and properties outlined above:
 
 ```mermaid
 ---
