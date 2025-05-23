@@ -184,38 +184,58 @@ C4Container
 
 Below is an example of how to create location attestations using the Ethereum Attestation Service (EAS).
 
-### Step 1: Define the schema
+### Step 1: Defining a schema
 
-The first step is to define the schema string, representing the data (location attestation object), that will be attached to an attestation object. A schema is a structured framework that outlines the format of the data and a schema string is a string representation of that framework. The following is how a schema string is defined:
+The first step is to define the schema string for the location attestation object that will be attached to an attestation object (i.e. the data field). A schema outlines the format of the data and is representated as a string containing datatypes and fields. The following is how a schema string is defined:
 
 ```text
 `<dataType> <fieldName>, <dataType> <fieldName>, ...`
 ```
 
-Where `<dataType>` is the type of data (e.g., `string`, `uint8`, `int40[2]`, etc.) and `<fieldName>` is the name of the field.
+where `<dataType>` is the type of data (e.g., `string`, `uint8`, `int40[2]`, etc.) and `<fieldName>` is the name of the field.
 
-The following schema string conforms to the base model for creating a location attestation object.
+Schema strings must conform to the location attestation object base model, meaning it must contain the following four fields and appropriate data types, but can be expanded as needed.
 
 ```text
 "string srs, string locationType, string location, uint8 specVersion"
 ```
 
-A schema in EAS is defined by a schema UID, a unique 32-byte hash id of the schema string. A schema must be registered in the EAS schema registry. The following schema UID represents  the schema string above. 
+To use a schema on EAS, it must first be registered. This allows users to leverage preexisting schemas or create new ones as needed. Here is an example of how to register a schema
 
-```text
-"schemaUID": "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a",
+```typescript
+import { SchemaRegistry } from "@ethereum-attestation-service/eas-sdk";
+import { ethers } from 'ethers';
+
+const schemaRegistryContractAddress = ""; // This for sophelia testnet
+const schemaRegistry = new SchemaRegistry(schemaRegistryContractAddress);
+
+schemaRegistry.connect(signer);
+
+const schema = "string srs, string locationType, string location, uint8 specVersion";
+const resolverAddress = "0x0000000000000000000000000000000000000000"; // Default value
+const revocable = true;
+
+const transaction = await schemaRegistry.register({
+  schema,
+  resolverAddress,
+  revocable,
+});
+
+// Optional: Wait for transaction to be validated
+await transaction.wait();
 ```
 
-To create an attestation, UID 
-To use a schema in EAS, it must be registered in the EAS schema registry. allowing users to leverage preexisting schemas or create new ones tailored to their specific needs
-The following UID from the EAS schema registry represents that schema string above.
+Once registered, the scheama can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/). The registration process will generate a schema UID, a unique 32-byte hash of the schema string, which is needed to make attestions. It is also possible to genereate a schema UID independently of registration, though we won't cover that here. 
 
-The following link ca
-and can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
+The following [schema UID ](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a) was genereated based on the schema string above.
+
+```text
+"0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a"
+```
 
 ### Step 2: Prepare a location attestation object
 
-At it's core, an EAS attestation is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the `schemaString` defines the structure of the location information that will be encoded and passed into the attestation object. Let's assign some values to the fields in the schema using decimal degrees and a basic reference system conforming to a specific EPSG code:
+At it's core, an EAS attestation is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the schema string defines the format of the location information that will be encoded and subsquently passed into the attestation object. In the example below, values are assigned to the fields in the schema using decimal degrees and a basic reference system conforming to a specific EPSG code:
 
 ```json
 {
