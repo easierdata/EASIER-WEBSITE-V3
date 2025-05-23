@@ -186,9 +186,9 @@ Below is an example of how to create location attestation objects using the Ethe
 
 ## Making an attestation
 
-### Step 1: Identify the schema
+### Step 1: Define the schema
 
-The first step in creating a location attestation is to identify the schema defining the data (location attestation object). A schema is a structured framework that outlines the format of the data. A schema string is a string representation of the schema, defined in the following format:
+The first step is to define the schema string, representing the data (location attestation object), that will be attached to an attestation object. A schema is a structured framework that outlines the format of the data and a schema string is a string representation of that framework. The following is how a schema string is defined:
 
 ```text
 `<dataType> <fieldName>, <dataType> <fieldName>, ...`
@@ -196,20 +196,24 @@ The first step in creating a location attestation is to identify the schema defi
 
 Where `<dataType>` is the type of data (e.g., `string`, `uint8`, `int40[2]`, etc.) and `<fieldName>` is the name of the field.
 
-A schema in EAS is defined by a schema UID, a 32-byte hash that uniquely identifies the schema on the EAS schema registry.
+The following schema string conforms to the base model for creating a location attestation object.
 
-To create a location attestation, the following example JSON schema can be used:
-
-```json
-{
-  "schemaComponents": {
-    "schemaUID": "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a",
-    "schemaString": "string srs, string locationType, string location, uint8 specVersion"
-  }
-}
+```text
+"string srs, string locationType, string location, uint8 specVersion"
 ```
 
-The schemaComponents listed above conforms to the base data model for creating location attestation objects and can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
+A schema in EAS is defined by a schema UID, a unique 32-byte hash id of the schema string. A schema must be registered in the EAS schema registry. The following schema UID represents  the schema string above. 
+
+```text
+"schemaUID": "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a",
+```
+
+To create an attestation, UID 
+To use a schema in EAS, it must be registered in the EAS schema registry. allowing users to leverage preexisting schemas or create new ones tailored to their specific needs
+The following UID from the EAS schema registry represents that schema string above.
+
+The following link ca
+and can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
 
 ### Step 2: Prepare a location attestation object
 
