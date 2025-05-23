@@ -31,7 +31,7 @@ An extension of the [Ethereum Attestation Service](https://attest.org/) (EAS), t
 
 ## Location Protocol Specification
 
-The specification ... a location attestation object as a geospatial data artifact that includes a digital signature that verifies the authenticity and integrity of an arbitrary metadata object. At a minimum, a valid location attestation object must include a few [base fields](#base-fields), but can be extended with [composable fields](#composable-fields) to provide more context, and can also leverage [EAS properties](#eas-properties) for additional functionality. Below, an outline is provided for the base fields, which can support many different representations of location information, as well as the composable fields and properties.
+The specification ...<need to massage the intro here>... a location attestation object as a geospatial data artifact that includes a digital signature that verifies the authenticity and integrity of an arbitrary metadata object. At a minimum, a valid location attestation object must include a few [base fields](#base-fields), but can be extended with [composable fields](#composable-fields) to provide more context, and can also leverage [EAS properties](#eas-properties) for additional functionality. Below, an outline is provided for the base fields, which can support many different representations of location information, as well as the composable fields and properties.
 
 ### Base fields
 
@@ -350,7 +350,7 @@ const newAttestationUID = await createOnChainAttestation(signer, attestationData
 
 ### 2. Using a QR code for geocaching
 
-This example demonstrates how a QR codes could be used for geocaching, treasure hunts, or location-based gaming events. The application would first scan a QR code geospatial metadata, formatted according to the Location Protocol, and finally triggering the generation of an attestation on EAS. In this case, the QR code metadata is mapped to the base model field, `location` as scaled coordinates,and an optional composable field, `memo` representing a note or message associated with the geocache. The `eventTimestamp` represents the time of when the QR code was scanned.
+This example demonstrates how a QR codes could be used for geocaching, treasure hunts, or location-based gaming events. The application would first scan a QR code geospatial metadata, formatted according to the Location Protocol, and finally triggering the generation of an attestation on EAS. In this case, the QR code metadata is mapped to the base model field `location` as scaled coordinates and an optional composable field `memo` representing a note or message associated with the geocache. The `eventTimestamp` represents the time of when the QR code was scanned.
 
 ```TypeScript
 const { signer } = getProviderSigner();
