@@ -21,17 +21,17 @@ tags:
 
 # The **Location Protocol** specification - A standardized framework for working with location information on the decentralized web
 
-In collaboration with [Astral](https://www.astral.global/), we have been designing a standardized framework for working with location information on the decentralized web. The goal of this work is to enrich the emerging decentralized geospatial web with established geospatial standards, making it easier to create and share geographic data and services in a decentralized manner, but also bringing novel mechanisms for verifiability, transparency, and trust to the web more generally. An initial version of the **Location Protocol** specification is detailed below, including the motivation for the protocol, an outline of the core metadata,  how to use the protocol to record location-based records, and some demonstrations and potential real-word use-cases.
+In collaboration with [Astral](https://www.astral.global/), we have been designing a standardized framework for working with location information on the decentralized web. The goal of this work is to enrich the emerging decentralized geospatial web with established geospatial standards, making it easier to create and share geographic data and services in a decentralized manner, but also bringing novel mechanisms for verifiability, transparency, and trust to the web more generally. An initial version of the **Location Protocol** specification is detailed below, including the motivation for the protocol, an outline of the core metadata, how to use the protocol to record location-based records, and some demonstrations and potential real-word use-cases.
 
 ## What is the Location Protocol?
 
 The Location Protocol is an implementation‑agnostic format for encoding, signing, and verifying spatial records both on- and off‑chain. As a general-purpose, open standard for digitally signed spatial records it enables independent applications to interoperatively talk to each other about where things are in space, whether in reference to the Earth's surface, somewhere in the metaverse, or another digital location context. These digitally signed spatial records are versatile, and can represent the location of events, objects, features, and interactions. Further, the Location Protocol is designed to support an extensible range of geospatial feature types, data formats, and location proofs, including formal cryptographic evidence (i.e., from zkmaps or Proximum) and informal supporting media (i.e., photo or video documentation), as well as arbitrary metadata (i.e., additional fields or an attribute table).
 
-Currently built on top of  the [Ethereum Attestation Service](https://attest.org/) (EAS), the Location Protocol provides a standardized way to formulate assertations about a location or geographic feature. More specifically, it allows users to formalize these assertions by creating and signing "location attestations" that can be used across different platforms and applications. The location attestation object is a core component of the Location Protocol and is a digitally signed metadata object containing information about location and attester that is verifiable.
+An extension of the [Ethereum Attestation Service](https://attest.org/) (EAS), the Location Protocol provides a standardized way to formulate assertations about a location or geographic feature. More specifically, it allows users to formalize these assertions by creating and signing "*location attestations*" that can be used across different platforms and applications. The location attestation object is a core component of the Location Protocol and is a digitally signed metadata object containing information about location and attester that is verifiable.
 
-## Location Attestation Object
+## Location Protocol Specification
 
-A location attestation object is a geospatial data artifact that includes a digital signature that verifies the authenticity and integrity of an arbitrary metadata object. At a minimum, a valid location attestation object must include a few [base fields](#base-fields), but can be extended with [composable fields](#composable-fields) to provide more context, and can also leverage [EAS properties](#eas-properties) for additional functionality. Below, an outline is provided for the base fields, which can support many different representations of location information, as well as the composable fields and properties.
+The specification ... a location attestation object as a geospatial data artifact that includes a digital signature that verifies the authenticity and integrity of an arbitrary metadata object. At a minimum, a valid location attestation object must include a few [base fields](#base-fields), but can be extended with [composable fields](#composable-fields) to provide more context, and can also leverage [EAS properties](#eas-properties) for additional functionality. Below, an outline is provided for the base fields, which can support many different representations of location information, as well as the composable fields and properties.
 
 ### Base fields
 
@@ -76,7 +76,7 @@ A location attestation object can be extended by additional fields that describe
 
 #### Common fields
 
-The location attestation object supports additional fields that may be common to most location attestations but are still optional. These fields provide additional information about the context of an attestation, such as a textual description (i.e., "memo"), when the location information was recorded (i.e., "eventTimeStamp"), or other values associated with the location (i.e., "attributes").
+The location attestation object supports additional fields that may be common to most location attestations but are still optional. These fields provide additional information about the context of an attestation, such as a textual description (i.e., "memo"), when the location information was recorded (i.e., "eventTimeStamp"), or other values associated with the location (i.e., "attributes"). The composable nature of location attestation objects allow for the inclusion of additional arbitrary fields that may be relevant to specific use cases or applications. The common fields listed below is what's currently recognized by our downstream API.
 
 | Field Name | Type | Description |
 |------------|------|-------------|
@@ -86,6 +86,9 @@ The location attestation object supports additional fields that may be common to
 | eventId | `byte32`, `string` | An external identifier to be used as foreign key to link non-referenced attestations or external sources.  |
 | recepient | `address` | The address of the recipient of the attestation. |
 | memo | `string` | An arbitrary message or note. |
+| ... | `any`[^3] | An arbitrary field to extend the base model. |
+
+[^3]: The `any` type is a placeholder for any arbitrary field, following an [acceptable Solidity ABI](https://docs.attest.org/docs/tutorials/create-a-schema#schema-fields). Learn more about Solidity ABI types and the Contract ABI Specification [here](https://docs.soliditylang.org/en/v0.8.16/abi-spec.html).
 
 #### Proof fields
 
@@ -99,9 +102,11 @@ The location attestation object can include verification fields that can incorpo
 | prooverAddress | `address` | The address of the prover who generated the proof. |
 | proofTime | `uint64` | The timestamp of when the proof was generated. |
 
+## Working with the location protocol on EAS to create location attestations
+
 ### EAS Properties
 
-The Location Protocol is built on top of the Ethereum Attestation Service (EAS) and uses the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, and verify location attestations. As a result, the following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are therefore also included as part of the location attestation object. Though largely similar, there are a few smill differences between the properties available for creating an attestation and those available when retrieving attestations.
+The Location Protocol is flexible and can be consumed by Ethereum Attestation Service (EAS) using the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, and verify location attestations. The following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are therefore also included as part of the location attestation object. Though largely similar, there are a few small differences between the properties available for creating an attestation and those available when retrieving attestations.
 
 **Properties for creating attestations**
 
@@ -139,7 +144,7 @@ An attestation is retrievable by its UID, a 32-byte hash, to identify the attest
 
 <br>
 
-Ultimately, the location attestation object is an instance of the more general EAS attestation object and extends the data model in order to support the Location Protocol while remaining extremely flexible. The following diagram illustrates the composition of a location attestation object and the relationship of the various fields and properties outlined above:
+Ultimately, the (an attestation object and location attestation object) is an instance of the more general EAS attestation and extends the data model in order to support the Location Protocol while remaining extremely flexible. The following diagram illustrates the composition of a location attestation object and the relationship of the various fields and properties outlined above:
 
 ```mermaid
 ---
@@ -183,27 +188,32 @@ Below is an example of how to create location attestation objects using the Ethe
 
 ### Step 1: Identify the schema
 
-The first step in creating a location attestation is to identify the schema that will be used. The schema defines the structure of the attestation and the data it will contain. A schema in EAS is defined by:
+The first step in creating a location attestation is to identify the schema defining the data (location attestation object). A schema is a structured framework that outlines the format of the data. A schema string is a string representation of the schema, defined in the following format:
 
-- **Schema UID**: A unique identifier for the schema on the EAS schema registry.
-- **Schema String**: The string representation of the schema, which includes the fields and their types.
+```text
+`<dataType> <fieldName>, <dataType> <fieldName>, ...`
+```
+
+Where `<dataType>` is the type of data (e.g., `string`, `uint8`, `int40[2]`, etc.) and `<fieldName>` is the name of the field.
+
+A schema in EAS is defined by a schema UID, a 32-byte hash that uniquely identifies the schema on the EAS schema registry.
 
 To create a location attestation, the following example JSON schema can be used:
 
 ```json
 {
-  "Schema Components": {
+  "schemaComponents": {
     "schemaUID": "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a",
     "schemaString": "string srs, string locationType, string location, uint8 specVersion"
   }
 }
 ```
 
-This schema conforms to the base data model for creating location attestation objects and can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
+The schemaComponents listed above conforms to the base data model for creating location attestation objects and can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a).
 
 ### Step 2: Prepare a location attestation object
 
-At it's core, an EAS attestation is a is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the `schemaString` defines the structure of the location information that will be encoded in the attestation. Let's assign some values to the fields in the schema using decimal degrees and a basic reference system:
+At it's core, an EAS attestation is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the `schemaString` defines the structure of the location information that will be encoded and passed into the attestation object. Let's assign some values to the fields in the schema using decimal degrees and a basic reference system conforming to a specific EPSG code:
 
 ```json
 {
@@ -218,13 +228,13 @@ At it's core, an EAS attestation is a is a formalized assertion or claim about s
 
 ### Step 3: Encode the location attestation object
 
-Before creating an attestation object, it is necessary to encode the data according to the schema. The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
+Before creating an attestation object, a schemaEncoder object is created using the `schemaString` to encode the location attestation object. The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
 
 **On-chain Validation**: Smart contracts rely on structured data to verify the integrity and correctness of an attestation. The SchemaEncoder ensures the data adheres to the schema's format, making it possible for on-chain logic (e.g., verification or revocation) to process the data reliably.
 
 **Consistency and Interoperability**: By encoding data according to a defined schema, different systems and parties can interpret and validate the data uniformly, ensuring compatibility across applications and platforms.
 
-We'll take the `locationAttestationObject` and encode it using the schemaString. Here's what the encoded location attestation object looks like:
+We'll take the `locationAttestationObject` and encode it using the `schemaString`. Here's what the encoded location attestation object looks like:
 
 ```string
 0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000009455053473a343332360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e646563696d616c44656772656573000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001634342e3936373234332c202d3130332e37373135353600000000000000000000
@@ -232,9 +242,11 @@ We'll take the `locationAttestationObject` and encode it using the schemaString.
 
 > It is possible to verify this encoding with any ETH ABI Decoder tool such as [this](https://adibas03.github.io/online-ethereum-abi-encoder-decoder/decode). Just paste the encoding into the input box and enter the schema field types in the order they appear in the schema string. For example, for the above encoding, you would enter `string, string, string, uint8` as the types.
 
+The encoded `locationAttestationObject` is then passed into the `data` property of the attestation object.
+
 ### Step 4: Create the attestation object
 
-At this point, we are now ready to create the (location) attestation object for EAS. The attestation object contains the data, representing the encoded location attestation object, and the required EAS properties. Here is an example of the structure of an attestation object:
+The attestation object contains the EAS properties, one of which is the data property that contains the encoded location attestation object. The following illustrates the structure of an attestation object:
 
 ```json
 {
@@ -247,7 +259,7 @@ At this point, we are now ready to create the (location) attestation object for 
 }
 ```
 
-After the attestation is signed, submitted and added to the blockchain, a UID is generated, that can be used to query the attestation and view it's details. Here is an attestation for the location attestation object we created above.
+After the attestation is signed, submitted and added to the blockchain, a UID is generated that can be used to query the attestation and view it's details. Here is a resultant attestation UID for an attestation that also incorporates the location attestation object from above.
 
 **Attestation UID**: 0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
 
@@ -257,43 +269,47 @@ After the attestation is signed, submitted and added to the blockchain, a UID is
 
 The following TypeScript code snippet demonstrates how to create a location attestation object using the EAS SDK.
 
-```TypeScript
-import { EAS, SchemaEncoder } from "@ethereum-attestation-service/eas-sdk";
-
-const eas = new EAS(EASContractAddress);
-eas.connect(signer);
-
-// Initialize SchemaEncoder with the schema string
-const schemaEncoder = new SchemaEncoder("string srs, string locationType, string location, uint8 specVersion");
-const encodedData = schemaEncoder.encodeData([
-  { name: "srs", value: "EPSG:4326", type: "string" },
-  { name: "locationType", value: "decimalDegrees", type: "string" },
-  { name: "location", value: "44.967243, -103.771556", type: "string" },
-  { name: "specVersion", value: 1, type: "uint8" },
-]);
-
-const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
-
-const tx = await eas.attest({
-  schema: schemaUID,
-  data: {
-    recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
-    expirationTime: 0,
-    revocable: true
-    data: encodedData,
-  },
-});
-
-const newAttestationUID = await tx.wait();
-
-console.log("New attestation UID:", newAttestationUID);
+```typescript
+1    import { EAS, SchemaEncoder } from "@ethereum-attestation-service/eas-sdk";
+2
+3    const eas = new EAS(EASContractAddress);
+4    eas.connect(signer);
+5
+6    // Initialize SchemaEncoder with the schema string
+7    const schemaEncoder = new SchemaEncoder("string srs, string locationType, string location, uint8 specVersion");
+8    const encodedData = schemaEncoder.encodeData([
+9      { name: "srs", value: "EPSG:4326", type: "string" },
+10     { name: "locationType", value: "decimalDegrees", type: "string" },
+11     { name: "location", value: "44.967243, -103.771556", type: "string" },
+12     { name: "specVersion", value: 1, type: "uint8" },
+13   ]);
+14
+15   const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
+16
+17   const tx = await eas.attest({
+18     schema: schemaUID,
+19     data: {
+20       recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+21       expirationTime: 0,
+22      revocable: true,
+23      data: encodedData,
+24     },
+25   });
+26
+27  const newAttestationUID = await tx.wait();
+28
+29  console.log("New attestation UID:", newAttestationUID);
 ```
 
-## Some strategies demonstrating the use of the Location Protocol
+Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instance of the EAS class, which is used to interact with the Ethereum Attestation Service. Line 4 connects the EAS instance to a signer, which is used to sign transactions. Lines 6-13 create a new SchemaEncoder instance with the schema string and encode the location attestation object. Lines 15-25 create a new attestation using the `attest` method of the EAS instance, passing in the schema UID and encoded data. Lines 27-29 wait for the transaction to complete and log the new attestation UID to the console.
+
+## Patterns and strategies demonstrating the use of the Location Protocol
+
+Here are some demonstration examples to illustrate how geographical information can be recorded and integrated into the location protocol and used to make location attestations. We have created some [helper functions](https://github.com/DecentralizedGeo/eas-sandbox) to make it easier to work with EAS and create location attestations. These functions will be incorporated and wrapped up into an SDK.
 
 ### 1. Event Check-in using GeoIP
 
-This example demonstrates how location attestations could be used to as a way to verify attendance at an event. The Typescript app uses the device's IP address to get the location and create an attestation object. This could be used for events like concerts, conferences, or any other event where verifying attendance, during the event or in the future, could be useful. Here, several optional composable fields are incorporated in addition to the base fields, such as xxx, yyyy, and zzzz.
+This example demonstrates how location attestations could be used to as a way to verify attendance at an event. The Typescript app uses the device's IP address to record location and create an attestation. This could be used for events like concerts, conferences, or any other event where verifying attendance for an event could be useful. Here, we've extended the base model by incorporating several optional [composable fields](#composable-fields) as well as a custom extensible field. The `eventId` represents a unique identifier for the event, the `eventTimestamp` is the time of the event, and the `ticketId` is a unique identifier for the ticket purchased.
 
 ```TypeScript
 // 1. Get the provider and signer
@@ -334,7 +350,7 @@ const newAttestationUID = await createOnChainAttestation(signer, attestationData
 
 ### 2. Using a QR code for geocaching
 
-This example snippet demonstrates how a QR codes could be used in a scenario such as geocaching, treasure hunts, or location-based gameing event. The application would first scan a QR code containing geospatial metadata according to the Location Protocol and then trigger the generation of location attestation. In this case, the base fields were extended with xxx, yyy, and zzz.
+This example demonstrates how a QR codes could be used for geocaching, treasure hunts, or location-based gaming events. The application would first scan a QR code geospatial metadata, formatted according to the Location Protocol, and finally triggering the generation of an attestation on EAS. In this case, the QR code metadata is mapped to the base model field, `location` as scaled coordinates,and an optional composable field, `memo` representing a note or message associated with the geocache. The `eventTimestamp` represents the time of when the QR code was scanned.
 
 ```TypeScript
 const { signer } = getProviderSigner();
@@ -356,7 +372,7 @@ const attestationObject: OnChainAttestationData = {
     { name: "location", value: [qrData.lat, qrData.long], type: "uint40[2][]" },
     { name: "specVersion", value: 1, type: "uint8" },
     { name: "eventTimestamp", value: Math.floor(time.getTime() / 1000), type: "uint64" },
-    { name: "memo", value: "Geocaching event - Location 1", type: "string" }
+    { name: "memo", value: qrData.note, type: "string" }
   ]
 };
 
@@ -365,7 +381,7 @@ const newAttestationUID = await createOnChainAttestation(signer, attestationData
 
 ### 3. Preserving and sharing verifed photograph metadata generated by Proofmode
 
-This example demonstrates how the Location Protocol can be used to support the preservation and dissemination of metadata generated by [Proofmode](https://proofmode.org/), a mobile app for capturing verifiable photos. A verified photo from ProofMode will include information about xxx, yyy, and location information that can be easily parsed into a Location Protocol compliant attestation for further verification and downstream use. This strategy could be particularly valuable for applications requiring verified media evidence, such as journalism, human rights documentation, legal evidence collection, and scientific field research where the authenticity and provenance of media are critical.
+This example demonstrates how the Location Protocol can be used to support the preservation and dissemination of metadata generated by [ProofMode](https://proofmode.org/), a mobile app for capturing verifiable photos. A verified photo from ProofMode includes information about mediaType and media, and location information that can be easily parsed into a Location Protocol compliant attestation for further verification and downstream use. The Location Protocol can extend the capability of applications like ProofMode by incorporating and mapping the verifiable metadata components into the [proof fields](#proof-fields) of a location attestation object. In this case, the `proofType` is set to "ProofMode", and the `proof` field contains the hash of the image file. The `proofTime` represents the time of when the proof was generated. We can also include the composable fields to capture the actual media data, a bytes array representing the media, to the `media` field field, `mediaType` is a MIME-type-style string describing the media data. and the `memo` field contains any additional notes or attributes. The `location` field is set to the location of the photo, and the `eventTimestamp` represents the time of when the photo was taken. This strategy could be particularly valuable for applications requiring verified media evidence, such as journalism, human rights documentation, legal evidence collection, and scientific field research where the authenticity and provenance of media are critical.
 
 ```TypeScript
 // 1. Get the provider and signer
@@ -394,6 +410,9 @@ const attestationObject: OnChainAttestationData = {
     { name: "memo", value: proofModeData.notes, type: "string" },
     { name: "mediaType", value: proofModeData.mediaType, type: "string" },
     { name: "media", value: proofModeData.media, type: "bytes" },
+    { name: "proofType", value: "ProofMode", type: "string" }
+    { name: "proof", value: proofModeData.fileHash, type: "string" },
+    { name: "proofTime", value: proofModeData.proofGenerated, type: "uint64" }
   ]
 };
 
@@ -402,7 +421,7 @@ const newAttestationUID = await createOnChainAttestation(signer, attestationData
 
 <br>
 
-These three demonstrative strategies are only a few the many recipes that could be used to make Location Protocol compliant location attestations that ensure location information is verifiable, transparent, interoperable, and trustworthy on the decentralized web. Importantly, these strategies can be extended and combined to create new recipes that provide additional verification and security for location information. Ongoing work includes the development of a library of recipes for using the Location Protocol to make more complex and extensible location attestations, including those that include formal proofs to verify location. It also includes the development of an SDK for creating location attestations compliant with the Location Protocol and various recipes to streamline applications development.
+These three demonstrative strategies are only a few the many recipes that could be used to make Location Protocol compliant attestations that ensure location information is verifiable, transparent, interoperable, and trustworthy on the decentralized web. Importantly, these strategies can be extended and combined to create new recipes that provide additional verification and security for location information. Ongoing work includes the development of a library of recipes for using the Location Protocol to make more complex and extensible location attestations, including those that include formal [location proofs as evidence](#proof-fields). It also includes the development of an SDK for creating location attestations compliant with the Location Protocol, with the recipe library, will streamline application development.
 
 ## Scenarios for real-world applications of Location Attestations
 
@@ -422,8 +441,21 @@ The [M3tering Protocol](https://m3ter.ing/) is a blockchain-based initiative des
 
 [Whiteflag Protocol](https://www.whiteflagprotocol.org/standard/) utilizes blockchain technology to establish secure, decentralized communication channels in conflict zones, enabling stakeholders to share cryptographically verified messages—such as protected area designations or danger zone alerts—through immutable on-chain transactions authenticated via private keys and web resource control. Its standardized message schema supports seven functional categories, from emergency signals to resource coordination, while elliptic-curve encryption ensures sensitive data remains accessible only to intended recipients despite public blockchain visibility. The extensible nature of decentralized protocols enables new functionality. Using the location protocol framework alongside Whiteflag enables new functionality, providing humanitarian organizations and other key stakeholders with a spatial lens for crisis mapping by providing real-time, cryptographically signed geospatial data to improve the accuracy of conflict zone boundary markers and resource tracking
 
-## Conclusion
+## Call to action
 
 The Location Protocol Specification is a significant step towards creating a standardized framework for storing location data on the blockchain. By leveraging the Ethereum Attestation Service, we can create, sign, and verify location attestations that can be used across different platforms and applications. This opens up new possibilities for how we create, share, and trust spatial information in the decentralized web.
 
 We are excited to see how the community will use this framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol Specification and contribute to its evolution. Together, we can create a more open, transparent, and trustworthy ecosystem for location data on the blockchain.
+
+**Notes Captured from the discussion**
+
+we would love feedback on any aspect of this. In particular, do you have a an application that would benefit from the location protocol? Do you have a use case that you would like to see supported? Do you have a specific location data type that you would like to see supported. Does the location protocol spec fields meet you needs? Is there a location component (locationType) that's not included in the spec that you use and would like to see included?  
+
+Flexibility is core to the Location Protocol, allowing users to extend the base model of a location attestation object with additional fields to suit their needs.
+
+This is a core element of the the Decentrlized geospatial web, and treating location data as a first class citizen. We are excited to see how the community will use this framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol Specification and contribute to its evolution. Together, we can create a more open, transparent, and trustworthy ecosystem for location data on the blockchain.
+
+(Reference to other projects that we are working on)
+
+- spatial.sol for performing spatial queries on the blockchain
+- API to query geospatial attestations with an interactive mapping interface
