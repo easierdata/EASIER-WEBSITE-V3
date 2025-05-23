@@ -186,7 +186,7 @@ Below is an example of how to create location attestations using the Ethereum At
 
 ### Step 1: Defining a schema
 
-The first step is to define the schema string for the location attestation object that will be attached to an attestation object (i.e. the data field). A schema outlines the format of the data and is representated as a string containing datatypes and fields. The following is how a schema string is defined:
+The first step is to define the schema string that specifies the structure of a location attestation object, that is eventually attached to an attestation object (i.e. the `data` property). A schema outlines the format of the data and is representated as a string containing datatypes and fields. The following is how a schema string is defined:
 
 ```text
 `<dataType> <fieldName>, <dataType> <fieldName>, ...`
@@ -194,10 +194,10 @@ The first step is to define the schema string for the location attestation objec
 
 where `<dataType>` is the type of data (e.g., `string`, `uint8`, `int40[2]`, etc.) and `<fieldName>` is the name of the field.
 
-Schema strings must conform to the location attestation object base model, meaning it must contain the following four fields and appropriate data types, but can be expanded as needed.
+Schema strings must conform to the [Location Protocol base model](#base-fields), meaning it must contain the following four fields and appropriate data types, but can be expanded as needed.
 
-```text
-"string srs, string locationType, string location, uint8 specVersion"
+```typescript
+const schemaString = "string srs, string locationType, string location, uint8 specVersion"
 ```
 
 To use a schema on EAS, it must first be registered. This allows users to leverage preexisting schemas or create new ones as needed. Here is an example of how to register a schema
@@ -211,7 +211,7 @@ const schemaRegistry = new SchemaRegistry(schemaRegistryContractAddress);
 
 schemaRegistry.connect(signer);
 
-const schema = "string srs, string locationType, string location, uint8 specVersion";
+const schemaString = "string srs, string locationType, string location, uint8 specVersion";
 const resolverAddress = "0x0000000000000000000000000000000000000000"; // Default value
 const revocable = true;
 
@@ -221,13 +221,14 @@ const transaction = await schemaRegistry.register({
   revocable,
 });
 
-// Optional: Wait for transaction to be validated
-await transaction.wait();
+const schemaUid = await transaction.wait();
+
+console.log("Registered Schema UID:", schemaUid);
 ```
 
 Once registered, the scheama can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/). The registration process will generate a schema UID, a unique 32-byte hash of the schema string, which is needed to make attestions. It is also possible to genereate a schema UID independently of registration, though we won't cover that here. 
 
-The following [schema UID ](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a) was genereated based on the schema string above.
+The following [schema UID](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a) was genereated based on the schema string above.
 
 ```text
 "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a"
@@ -235,28 +236,33 @@ The following [schema UID ](https://sepolia.easscan.org/schema/view/0xedd6b005e2
 
 ### Step 2: Prepare a location attestation object
 
-At it's core, an EAS attestation is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the schema string defines the format of the location information that will be encoded and subsquently passed into the attestation object. In the example below, values are assigned to the fields in the schema using decimal degrees and a basic reference system conforming to a specific EPSG code:
+At it's core, an EAS attestation is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](./location-attestation.md/#supported-location-types). As mentioned above, the schema string defines the format of the location information that will be encoded and subsequently passed into the attestation object. In the example below, latitude and longitude coordinates are assigned to `location`, the type of coordinates (decimal degrees) are assigned to `locationType`, and the specific ESPG code that the coordinates conform to are assigned to `srs`. The value for `specVersion` represents the version of the Location Protocol specification.
 
-```json
-{
-  "locationAttestationObject": {
-    "srs": "EPSG:4326",
-    "locationType": "decimalDegrees",
-    "location": "44.967243, -103.771556",
-    "specVersion": 1
-  }
-}
+```typscript
+const locationAttestationObject = [
+       { name: "location", value: "44.967243, -103.771556", type: "string" },
+       { name: "locationType", value: "decimalDegrees", type: "string" },
+       { name: "srs", value: "EPSG:4326", type: "string" },
+       { name: "specVersion", value: 1, type: "uint8" }
+     ]
 ```
 
 ### Step 3: Encode the location attestation object
 
-Before creating an attestation object, a schemaEncoder object is created using the `schemaString` to encode the location attestation object. The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
+Before creating an attestation object, a schemaEncoder object is created using the schema string to encode a location attestation object. The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
 
 **On-chain Validation**: Smart contracts rely on structured data to verify the integrity and correctness of an attestation. The SchemaEncoder ensures the data adheres to the schema's format, making it possible for on-chain logic (e.g., verification or revocation) to process the data reliably.
 
 **Consistency and Interoperability**: By encoding data according to a defined schema, different systems and parties can interpret and validate the data uniformly, ensuring compatibility across applications and platforms.
 
-We'll take the `locationAttestationObject` and encode it using the `schemaString`. Here's what the encoded location attestation object looks like:
+Creating a schemaEncoder object from `schemaString` and encoding `locationAttestationObject`
+
+```typescript
+const schemaEncoder = new SchemaEncoder(schemaString)
+const encodedData = schemaEncoder.encodeData(locationAttestationObject)
+```
+
+returns the following result: 
 
 ```string
 0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000009455053473a343332360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e646563696d616c44656772656573000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001634342e3936373234332c202d3130332e37373135353600000000000000000000
@@ -268,16 +274,16 @@ The encoded `locationAttestationObject` is then passed into the `data` property 
 
 ### Step 4: Create the attestation object
 
-The attestation object contains the EAS properties, one of which is the data property that contains the encoded location attestation object. The following illustrates the structure of an attestation object:
+The attestation object contains [EAS properties](#eas-properties), one of which is the `data` property that contains the encoded location attestation object. The following illustrates the structure of an attestation object:
 
-```json
-{
-  "attestation object": {
-    "schemaUID": "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a",
-    "schemaString": "string srs, string locationType, string location, unit8 specVersion",
-    "recipient": "0x1234567890abcdef1234567890abcdef12345678",
-    "data": "encodedLocationAttestationObject"
-    }
+```typescript
+const attestationOjbect = {
+  schema: schemaUID,
+  data: {
+    recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+    expirationTime: 0,
+    data: encodedData,
+  },
 }
 ```
 
@@ -285,7 +291,7 @@ After the attestation is signed, submitted and added to the blockchain, a UID is
 
 **Attestation UID**: 0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
 
-**EAS Explorer Link**:  [https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31](https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31)
+**EAS Explorer Link**: [https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31](https://sepolia.easscan.org/attestation/view/0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31)
 
 ### Example of creating an On-Chain Location Attestation with the EAS SDK
 
@@ -297,33 +303,40 @@ The following TypeScript code snippet demonstrates how to create a location atte
 3    const eas = new EAS(EASContractAddress);
 4    eas.connect(signer);
 5
-6    // Initialize SchemaEncoder with the schema string
-7    const schemaEncoder = new SchemaEncoder("string srs, string locationType, string location, uint8 specVersion");
-8    const encodedData = schemaEncoder.encodeData([
-9      { name: "srs", value: "EPSG:4326", type: "string" },
-10     { name: "locationType", value: "decimalDegrees", type: "string" },
-11     { name: "location", value: "44.967243, -103.771556", type: "string" },
-12     { name: "specVersion", value: 1, type: "uint8" },
-13   ]);
-14
-15   const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
+6    // defining the schema string
+7    const schemaString = "string srs, string locationType, string location, uint8 specVersion"
+8
+9    // Create the location attestion object
+10   const locationAttestationObject = [
+11     { name: "srs", value: "EPSG:4326", type: "string" },
+12     { name: "locationType", value: "decimalDegrees", type: "string" },
+13     { name: "location", value: "44.967243, -103.771556", type: "string" },
+14     { name: "specVersion", value: 1, type: "uint8" }
+15   ]
 16
-17   const tx = await eas.attest({
-18     schema: schemaUID,
-19     data: {
-20       recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
-21       expirationTime: 0,
-22      revocable: true,
-23      data: encodedData,
-24     },
-25   });
-26
-27  const newAttestationUID = await tx.wait();
-28
-29  console.log("New attestation UID:", newAttestationUID);
+17   // Initialize SchemaEncoder with the schema string
+18   const schemaEncoder = new SchemaEncoder(schemaString);
+19   const encodedData = schemaEncoder.encodeData(locationAttestationObject)
+20
+21   const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
+22
+23   const attestationOjbect = {
+24     schema: schemaUID,
+25     data: {
+26       recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+27       expirationTime: 0,
+28       data: encodedData,
+29      },
+30   }
+31
+32   const tx = await eas.attest(attestationOjbect)
+33
+34   const newAttestationUID = await tx.wait();
+35
+36   console.log("New attestation UID:", newAttestationUID);
 ```
 
-Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instance of the EAS class, which is used to interact with the Ethereum Attestation Service. Line 4 connects the EAS instance to a signer, which is used to sign transactions. Lines 6-13 create a new SchemaEncoder instance with the schema string and encode the location attestation object. Lines 15-25 create a new attestation using the `attest` method of the EAS instance, passing in the schema UID and encoded data. Lines 27-29 wait for the transaction to complete and log the new attestation UID to the console.
+Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instance of the EAS class, which is used to interact with the Ethereum Attestation Service. Line 4 connects the EAS instance to a signer, which is used to sign transactions. Lines 7 - 15 defines the schema string that structures our location attestation object. Lines 18-19 generates the schema encoder object that's used to encode the location attestation object.  In lines 23-30, an attestation object is created containing the encoded location attestation object and schema UID of the registered schema string. The attestation object is submitted on line 32 and line 34 returns the UID of the attestation submission once the transaction is complete.
 
 ## Patterns and strategies demonstrating the use of the Location Protocol
 
