@@ -180,11 +180,9 @@ C4Container
     UpdateLayoutConfig($c4ShapeInRow="4")
 ```
 
-## Creating Location Attestations
+## Creating Attestations
 
-Below is an example of how to create location attestation objects using the Ethereum Attestation Service (EAS). It covers the steps to create, sign, and verify location attestations.
-
-## Making an attestation
+Below is an example of how to create location attestations using the Ethereum Attestation Service (EAS).
 
 ### Step 1: Define the schema
 
