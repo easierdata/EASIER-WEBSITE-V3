@@ -68,7 +68,7 @@ The `locationType` field identifies the type of location data being represented.
 
 [^2]: It's up to the implementor to set the precision and provide guidance on the default precision to be used. The maximum coordinate precision that can be set is 10⁹ as `int40` can store values up to ±549,755,813. For example, a coordinate of `123.456` with a precision of 10¹⁰ would exceed the maximum value of `int40` and would not be valid.
 
-The `location` value is interpreted based on the `locationType` field. Implementations should not attempt to decode `location` without first resolving `locationType`.
+The `location` value is interpreted based on the `locationType` field and `location` cannot be decoded without first resolving `locationType`.
 
 ### Composable fields
 
