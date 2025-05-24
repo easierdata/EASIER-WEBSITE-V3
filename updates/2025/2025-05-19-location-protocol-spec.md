@@ -285,7 +285,7 @@ const attestationOjbect = {
 }
 ```
 
-After the attestation is signed, submitted and added to the blockchain, a UID is generated that can be used to query the attestation and view it's details. Here is a resultant attestation UID for an attestation that also incorporates the location attestation object from above.
+After the attestation is signed, submitted, and added to the blockchain, a UID is generated that can be used to query the attestation and view it's details. Here is a resultant attestation UID for an attestation that incorporates the location attestation object from above.
 
 **Attestation UID**: 0x628f06c011351ef39b419718f29f20f0bc62ff3342d1e9c284531bf12bd20f31
 
