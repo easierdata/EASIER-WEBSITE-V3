@@ -29,7 +29,7 @@ The Location Protocol is an implementation‑agnostic format for encoding, signi
 
 Compatible with the [Ethereum Attestation Service](https://attest.org/) (EAS), the Location Protocol provides a standardized way to formulate assertations about a location or geographic feature. More specifically, it allows users to formalize these assertions by creating and signing "*location attestations*" that can be used across different platforms and applications. The location attestation object is a core component of the Location Protocol and is a digitally signed metadata object containing verifiable information about a location and the entity making an attestation.
 
-## Location Protocol Specification
+## The Location Protocol specification
 
 The Location Protocol specification is built around a location attestation object, which is a geospatial data artifact that includes a digital signature verifying its source, structured metadata about location attributes, and potentially some additional supporting fields. At a minimum, a valid location attestation object must include a few [base fields](#base-fields), but can be extended with [composable fields](#composable-fields) to provide more context, and can also leverage [EAS properties](#eas-properties) for additional functionality. Below, an outline is provided for the base fields, which can support many different representations of location information, as well as a description of the composable fields and properties.
 
@@ -104,9 +104,9 @@ The location attestation object can include fields that can incorporate corrobor
 | prooverAddress | `address` | The address of the prover who generated the proof. |
 | proofTime | `uint64` | The timestamp of when the proof was generated. |
 
-## Working with the location protocol on EAS to create location attestations
+## Working with the Location Protocol on EAS to create location attestations
 
-### EAS Properties
+### EAS properties
 
 The Location Protocol is flexible and can be integrated into the Ethereum Attestation Service (EAS) using the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, verify, and disseminate location attestations. The following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are therefore may also be associated with the location attestation object. Though largely similar, there are a few small differences between the properties available for creating an attestation and those available when retrieving an attestation.
 
@@ -182,7 +182,7 @@ C4Container
     UpdateLayoutConfig($c4ShapeInRow="4")
 ```
 
-## Creating Attestations
+## Using the Location Protocol and EAS to create location attestations
 
 Below is an example of how to create location attestations using the Ethereum Attestation Service (EAS).
 
