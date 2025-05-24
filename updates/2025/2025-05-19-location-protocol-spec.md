@@ -212,7 +212,7 @@ const schemaRegistry = new SchemaRegistry(schemaRegistryContractAddress);
 schemaRegistry.connect(signer);
 
 const schemaString = "string srs, string locationType, string location, uint8 specVersion";
-const resolverAddress = "0x0000000000000000000000000000000000000000"; // Default value
+const resolverAddress = ethers.ZeroAddress; // Default zero address value
 const revocable = true;
 
 const transaction = await schemaRegistry.register({
@@ -280,7 +280,7 @@ The attestation object contains [EAS properties](#eas-properties), one of which 
 const attestationOjbect = {
   schema: schemaUID,
   data: {
-    recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+    recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165", // Example Ethereum address of the recipient of the attestation 
     expirationTime: 0,
     data: encodedData,
   },
@@ -323,13 +323,13 @@ The following TypeScript code snippet demonstrates how to create a location atte
 23   const attestationOjbect = {
 24     schema: schemaUID,
 25     data: {
-26       recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+26       recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165", // Example Ethereum address of the recipient of the attestation 
 27       expirationTime: 0,
 28       data: encodedData,
 29      },
 30   }
 31
-32   const tx = await eas.attest(attestationOjbect)
+32   const tx = await eas.attest(attestationOjbect);
 33
 34   const newAttestationUID = await tx.wait();
 35
@@ -340,7 +340,7 @@ Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instan
 
 ## Patterns and strategies demonstrating the use of the Location Protocol
 
-Here are some demonstration examples to illustrate how geographical information can be recorded and integrated into the location protocol and used to make location attestations. We have created some [helper functions](https://github.com/DecentralizedGeo/eas-sandbox) to make it easier to work with EAS and create location attestations. These functions will be incorporated and wrapped up into an SDK.
+The following examples demonstrate how geographical information can be recorded, integrated, and attested using the Location Protocol. To simplify the process, we have developed a set of [helper functions](https://github.com/DecentralizedGeo/eas-sandbox) that streamline tasks such as schema registration, encoding location attestation objects, and preparing attestation for submission. These capabilities will ultimately be bundled into an SDK, making it easier for developers to adopt the protocol. The key takeaway is understanding how location attestation objects are populated with relevant details.
 
 ### 1. Event Check-in using GeoIP
 
@@ -394,14 +394,9 @@ const { signer } = getProviderSigner();
 const schemaString: "string srs, string locationType, uint40[2][] location, uint40 specVersion, uint64 eventTimestamp, string memo";
 const schemaUID = await registerSchema(signer, schemaString);
 
-// Extract QR code metadata and Create the attestation object
+// Extract QR code metadata and apply to the appropriate fields in the locationAttestationObject
 const qrData = await decodeQR(imagePath) // Returns {lat: <latitude coordinate>, long: <longitude coordinate>}
-const attestationObject: OnChainAttestationData = {
-  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
-  revocable: true,
-  schemaUID: schemaUID,
-  schemaString: schemaString
-  dataToEncode: [
+const locationAttestationObject = [
     { name: "srs", value: "EPSG:4326", type: "string" },
     { name: "locationType", value: "scaledCoordinates", type: "string" },
     { name: "location", value: [qrData.lat, qrData.long], type: "uint40[2][]" },
@@ -409,6 +404,15 @@ const attestationObject: OnChainAttestationData = {
     { name: "eventTimestamp", value: Math.floor(time.getTime() / 1000), type: "uint64" },
     { name: "memo", value: qrData.note, type: "string" }
   ]
+
+// Extract QR code metadata and Create the attestation object
+const qrData = await decodeQR(imagePath) // Returns {lat: <latitude coordinate>, long: <longitude coordinate>}
+const attestationObject: OnChainAttestationData = {
+  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+  revocable: true,
+  schemaUID: schemaUID,
+  schemaString: schemaString
+  dataToEncode: locationAttestationObject
 };
 
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
