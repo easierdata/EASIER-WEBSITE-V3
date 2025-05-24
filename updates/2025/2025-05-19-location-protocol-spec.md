@@ -484,11 +484,9 @@ The [M3tering Protocol](https://m3ter.ing/) is a blockchain-based initiative des
 
 The Location Protocol Specification is a significant step towards creating a standardized framework for storing location data on the blockchain. By leveraging the Ethereum Attestation Service, we can create, sign, and verify location attestations that can be used across different platforms and applications. This opens up new possibilities for how we create, share, and trust spatial information in the decentralized web.
 
-We are excited to see how the community will use this framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol Specification and contribute to its evolution. Together, we can create a more open, transparent, and trustworthy ecosystem for location data on the blockchain.
+We are excited to see how the community will use this framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol Specification and contribute to its evolution. We would love feedback on any aspect of this. In particular, do the location protocol specification fields meet your needs and what others should we include? Is there a location component (locationType) that's not included in the spec that you use and would like to see included? What applications or use cases would you like to see supported from the location protocol?
 
 **Notes Captured from the discussion**
-
-we would love feedback on any aspect of this. In particular, do you have a an application that would benefit from the location protocol? Do you have a use case that you would like to see supported? Do you have a specific location data type that you would like to see supported. Does the location protocol spec fields meet you needs? Is there a location component (locationType) that's not included in the spec that you use and would like to see included?  
 
 Flexibility is core to the Location Protocol, allowing users to extend the base model of a location attestation object with additional fields to suit their needs.
 
