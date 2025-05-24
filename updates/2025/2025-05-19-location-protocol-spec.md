@@ -92,7 +92,7 @@ The location attestation object supports additional fields that may be common to
 
 #### Proof fields
 
-The location attestation object can include fields that can incorporate corroborating evidence to _prove_ the authenticity and integrity of the location information. These fields are optional but recommended for use cases that require a higher level of assurance.
+The location attestation object can include fields that can incorporate corroborating evidence to _prove_ the authenticity and integrity of the location information. These fields are optional but recommended for use cases that require a higher level of confidence.
 
 | Field Name | Type | Description |
 |------------|------|-------------|
