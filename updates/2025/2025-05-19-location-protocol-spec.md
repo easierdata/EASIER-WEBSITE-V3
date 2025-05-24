@@ -247,7 +247,7 @@ const locationAttestationObject = [
 
 ### Step 3: Encode the location attestation object
 
-Before creating an attestation object, a schemaEncoder object is created using the schema string to encode a location attestation object. The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
+Before creating an attestation object, a schemaEncoder object is created using the schema string to encode a location attestation object (i.e., `locationAttestationObject`). The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
 
 **On-chain Validation**: Smart contracts rely on structured data to verify the integrity and correctness of an attestation. The SchemaEncoder ensures the data adheres to the schema's format, making it possible for on-chain logic (e.g., verification or revocation) to process the data reliably.
 
