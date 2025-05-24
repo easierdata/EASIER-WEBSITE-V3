@@ -76,7 +76,9 @@ A location attestation object can be extended by additional fields that describe
 
 #### Common fields
 
-The location attestation object supports additional fields that may be common to many location attestations but are nevertheless optional. These fields provide additional information about the context of an attestation, such as a textual description (i.e., "memo"), when the location information was recorded (i.e., "eventTimeStamp"), or other values associated with the location (i.e., "attributes"). The composable nature of location attestation objects allow for the inclusion of additional arbitrary fields that may be relevant to specific use cases or applications. These "common fields" listed below cover those that are currently recognized by our downstream API but could be expanded based on community feedback and emergent usage patterns.
+The location attestation object supports additional fields that may be common to many location attestations but nevertheless are optional. These fields provide additional information about the context of an attestation, such as a textual description (i.e., "memo"), when the location information was recorded (i.e., `eventTimeStamp`), or other values associated with the location (i.e., `attributes`). The composable nature of location attestation objects allow for the inclusion of additional arbitrary fields that may be relevant to specific use cases or applications. For instance, the `media` field could be used to store a pointer to photographic or video evidence, perhaps on IPFS or the Filecoin network, that supports or enhances the context of the location attestation. This could be useful to record the exact location of damage caused by artillery in civilian zones, the location of unexploded munitions, or the location of emergency response requests during a natural disaster. In each case, using the Location Protocol ensures the location information is structured and recorded in a way that ensures it is accessible and interoperable, while also remaining extensible with media and other fields to contextualize the location record. This allows for maximal flexibility in how a location attestation is composed, disseminated, and consumed. An example of how this could be particularly useful might be one or more decentralized applications allowing individuals to record calls for aid during an emergency. Different organizations or agencies, with different missions and resources might consume this information across different time horizons and respond differently based on the context provided by a photo linked by the `media` field.
+
+These "common fields" listed below cover those that are currently recognized by our downstream API but could be expanded based on community feedback and emergent usage patterns.
 
 | Field Name | Type | Description |
 |------------|------|-------------|
@@ -92,7 +94,7 @@ The location attestation object supports additional fields that may be common to
 
 #### Proof fields
 
-The location attestation object can include fields that can incorporate corroborating evidence to _prove_ the authenticity and integrity of the location information. These fields are optional but recommended for use cases that require a higher level of confidence.
+The location attestation object can include fields that can incorporate corroborating evidence to _prove_ the authenticity and integrity of the location information. These fields are optional but recommended for use cases that require a higher level of confidence or privacy about the exact location associated with an attestation.
 
 | Field Name | Type | Description |
 |------------|------|-------------|
