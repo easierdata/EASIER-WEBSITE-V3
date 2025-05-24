@@ -342,7 +342,7 @@ The following examples demonstrate how geographical information can be recorded,
 
 ### 1. Event Check-in using GeoIP
 
-This example demonstrates how location attestations could be used to as a way to verify attendance at an event. The Typescript app uses the device's IP address to record location and create an attestation. This could be used for events like concerts, conferences, or any other event where verifying attendance for an event could be useful. Here, we've extended the base model by incorporating several optional [composable fields](#composable-fields) as well as a custom extensible field. The `eventId` represents a unique identifier for the event, the `eventTimestamp` is the time of the event, and the `ticketId` is a unique identifier for the ticket purchased.
+This example demonstrates how location attestations could be used to as a way to verify attendance at an event. The Typescript app uses the device's IP address to record location and create an attestation. This could be used for events like concerts, conferences, or any other event where verifying attendance for an event could be useful. Here, we have extended the base model by incorporating several optional [composable fields](#composable-fields), as well as a custom extensible field. The `eventId` represents a unique identifier for the event, the `eventTimestamp` is the time of the event, and the `ticketId` is a unique identifier for the ticket purchased.
 
 ```TypeScript
 // 1. Get the provider and signer
