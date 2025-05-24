@@ -339,8 +339,6 @@ Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instan
 ## Patterns and strategies demonstrating the use of the Location Protocol
 
 The following examples demonstrate how geographical information can be recorded, integrated, and attested using the Location Protocol. To simplify the process, we have developed a set of [helper functions](https://github.com/DecentralizedGeo/eas-sandbox) that streamline tasks such as registering a schema, encoding the location attestation object, and preparing an attestation for submission. These capabilities will ultimately be bundled into an SDK, making it easier for developers to build decentralized geospatial applications. Therefore, the focus is on the variations of the location attestation object used in each example.
-=======
-The following examples demonstrate how geographical information can be recorded, integrated, and attested using the Location Protocol. To simplify the process, we have developed a set of [helper functions](https://github.com/DecentralizedGeo/eas-sandbox) that streamline tasks such as schema registration, encoding location attestation objects, and preparing an attestation for submission. These capabilities will ultimately be bundled into an SDK, making it easier for developers to adopt the protocol. The key takeaway is understanding how location attestation objects are populated with relevant details.
 
 ### 1. Event Check-in using GeoIP
 
