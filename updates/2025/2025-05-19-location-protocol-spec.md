@@ -236,7 +236,7 @@ The following [schema UID](https://sepolia.easscan.org/schema/view/0xedd6b005e27
 
 At it's core, an EAS attestation is a formalized assertion or claim about something, in this case a location. This could be a physical address, a GPS coordinate, or some other [form of location data](#supported-location-types). As mentioned above, the schema string defines the format of the location information (i.e., `locationAttestationObject` below) that will be encoded and subsequently passed into the attestation object. In the example below, latitude and longitude coordinates are assigned to `location`, the type of coordinates (decimal degrees) are assigned to `locationType`, and the specific ESPG code denoting the spatial reference system is assigned to `srs`. The value for `specVersion` represents the version of the Location Protocol specification.
 
-```typscript
+```typescript
 const locationAttestationObject = [
        { name: "location", value: "44.967243, -103.771556", type: "string" },
        { name: "locationType", value: "decimalDegrees", type: "string" },
@@ -339,6 +339,8 @@ Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instan
 ## Patterns and strategies demonstrating the use of the Location Protocol
 
 The following examples demonstrate how geographical information can be recorded, integrated, and attested using the Location Protocol. To simplify the process, we have developed a set of [helper functions](https://github.com/DecentralizedGeo/eas-sandbox) that streamline tasks such as registering a schema, encoding the location attestation object, and preparing an attestation for submission. These capabilities will ultimately be bundled into an SDK, making it easier for developers to build decentralized geospatial applications. Therefore, the focus is on the variations of the location attestation object used in each example.
+=======
+The following examples demonstrate how geographical information can be recorded, integrated, and attested using the Location Protocol. To simplify the process, we have developed a set of [helper functions](https://github.com/DecentralizedGeo/eas-sandbox) that streamline tasks such as schema registration, encoding location attestation objects, and preparing an attestation for submission. These capabilities will ultimately be bundled into an SDK, making it easier for developers to adopt the protocol. The key takeaway is understanding how location attestation objects are populated with relevant details.
 
 ### 1. Event Check-in using GeoIP
 
