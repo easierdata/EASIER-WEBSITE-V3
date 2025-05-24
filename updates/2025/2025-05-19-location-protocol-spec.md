@@ -206,18 +206,16 @@ To use a schema on EAS, it must first be registered. This allows users to levera
 import { SchemaRegistry } from "@ethereum-attestation-service/eas-sdk";
 import { ethers } from 'ethers';
 
-const schemaRegistryContractAddress = ""; // This for sophelia testnet
+const schemaRegistryContractAddress = "0x0a7E2Ff54e76B8E6659aedc9103FB21c038050D0"; // Sepolia Schema Registry v0.26 on testnet
 const schemaRegistry = new SchemaRegistry(schemaRegistryContractAddress);
 
 schemaRegistry.connect(signer);
 
 const schemaString = "string srs, string locationType, string location, uint8 specVersion";
-const resolverAddress = ethers.ZeroAddress; // Default zero address value
 const revocable = true;
 
 const transaction = await schemaRegistry.register({
-  schema,
-  resolverAddress,
+  schemaString,
   revocable,
 });
 
@@ -355,6 +353,7 @@ const schemaString = "string srs, string locationType, string location, uint8 sp
 const schemaUID = await registerSchema(signer, schemaString);
 
 // Grab the IP Address of the mobile device and use GeoIP to get the location
+// then apply to the appropriate fields in the locationAttestationObject
 const ipAddress = await publicIpv4();
 const locationData = geoip.lookup(ipAddress);
 const geoJsonPoint = {
@@ -362,14 +361,7 @@ const geoJsonPoint = {
     coordinates: [locationData.ll[1], locationData.ll[0]]
 };
 const geoJsonPointString = JSON.stringify(geoJsonPoint);
-
-// Create the attestation object
-const attestationObject: OnChainAttestationData = {
-  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
-  revocable: true,
-  schemaUID: schemaUID,
-  schemaString: schemaString,
-  dataToEncode: [
+const locationAttestationObject = [
     { name: "srs", value: "EPSG:4326", type: "string" },
     { name: "locationType", value: "geoJson", type: "string" },
     { name: "location", value: geoJsonPointString, type: "string" },
@@ -378,6 +370,14 @@ const attestationObject: OnChainAttestationData = {
     { name: "eventTimestamp", Math.floor(time.getTime() / 1000), type: "uint64" },
     { name: "ticketId", value: "ticket-1234567890", type: "string" }
   ]
+
+// Create the attestation object
+const attestationObject = {
+  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+  revocable: true,
+  schemaUID: schemaUID,
+  schemaString: schemaString,
+  dataToEncode: locationAttestationObject
 };
 
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
@@ -394,7 +394,7 @@ const { signer } = getProviderSigner();
 const schemaString: "string srs, string locationType, uint40[2][] location, uint40 specVersion, uint64 eventTimestamp, string memo";
 const schemaUID = await registerSchema(signer, schemaString);
 
-// Extract QR code metadata and apply to the appropriate fields in the locationAttestationObject
+// Extract QR code metadata and apply to the appropriate fields in the `locationAttestationObject` variable
 const qrData = await decodeQR(imagePath) // Returns {lat: <latitude coordinate>, long: <longitude coordinate>}
 const locationAttestationObject = [
     { name: "srs", value: "EPSG:4326", type: "string" },
@@ -405,9 +405,8 @@ const locationAttestationObject = [
     { name: "memo", value: qrData.note, type: "string" }
   ]
 
-// Extract QR code metadata and Create the attestation object
-const qrData = await decodeQR(imagePath) // Returns {lat: <latitude coordinate>, long: <longitude coordinate>}
-const attestationObject: OnChainAttestationData = {
+// Create the attestation object
+const attestationObject = {
   recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
   revocable: true,
   schemaUID: schemaUID,
@@ -430,17 +429,10 @@ const { signer } = getProviderSigner();
 const schemaString: "string srs, string locationType, string location, uint40 specVersion, uint40 eventTimestamp, string memo, string mediaType, bytes media";
 const schemaUID = await registerSchema(signer, schemaString);
 
-// Extract the ProofMode zip file and grab the metadata
+// Extract the ProofMode zip file and grab the metadata then apply to the appropriate fields in the locationAttestationObject
 const files = extractZipFile(zipFilePath, extractDir);
 const proofModeData = getProofModeMetadata(files);
-
-// Create the attestation object
-const attestationObject: OnChainAttestationData = {
-  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
-  revocable: true,
-  schemaUID: schemaUID,
-  schemaString: schemaString,
-  dataToEncode: [
+const locationAttestationObject = [
     { name: "srs", value: "EPSG:4326", type: "string" },
     { name: "locationType", value: "decimalDegrees", type: "string" },
     { name: "location", value: proofModeData.location, type: "string" },
@@ -453,6 +445,14 @@ const attestationObject: OnChainAttestationData = {
     { name: "proof", value: proofModeData.fileHash, type: "string" },
     { name: "proofTime", value: proofModeData.proofGenerated, type: "uint64" }
   ]
+
+// Create the attestation object
+const attestationObject = {
+  recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
+  revocable: true,
+  schemaUID: schemaUID,
+  schemaString: schemaString,
+  dataToEncode: locationAttestationObject
 };
 
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
