@@ -334,7 +334,7 @@ The following TypeScript code snippet demonstrates all four steps to create a lo
 36   console.log("New attestation UID:", newAttestationUID);
 ```
 
-Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instance of the EAS class, which is used to interact with the Ethereum Attestation Service. Line 4 connects the EAS instance to a signer, which is used to sign transactions. Lines 7 - 15 defines the schema string that structures our location attestation object. Lines 18-19 generates the schema encoder object that's used to encode the location attestation object.  In lines 23-30, an attestation object is created containing the encoded location attestation object and schema UID of the registered schema string. The attestation object is submitted on line 32 and line 34 returns the UID of the attestation submission once the transaction is complete.
+Line 1 imports the EAS SDK and the SchemaEncoder class. Line 3 creates an instance of the EAS class, which is used to interact with the Ethereum Attestation Service. Line 4 connects the EAS instance to a signer, which is used to sign transactions. Lines 7 - 15 defines the schema string that structures the location attestation object. Lines 18-19 generates the schema encoder object that's used to encode the location attestation object.  In lines 23-30, an attestation object is created containing the encoded location attestation object and schema UID of the registered schema string. The attestation object is submitted on line 32, and line 34 returns the UID of the attestation submission once the transaction is complete.
 
 ## Patterns and strategies demonstrating the use of the Location Protocol
 
