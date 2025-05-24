@@ -76,7 +76,7 @@ A location attestation object can be extended by additional fields that describe
 
 #### Common fields
 
-The location attestation object supports additional fields that may be common to most location attestations but are still optional. These fields provide additional information about the context of an attestation, such as a textual description (i.e., "memo"), when the location information was recorded (i.e., "eventTimeStamp"), or other values associated with the location (i.e., "attributes"). The composable nature of location attestation objects allow for the inclusion of additional arbitrary fields that may be relevant to specific use cases or applications. These "common fields" listed below cover those that are currently recognized by our downstream API but could be expanded based on community feedback and emergent usage patterns.
+The location attestation object supports additional fields that may be common to many location attestations but are nevertheless optional. These fields provide additional information about the context of an attestation, such as a textual description (i.e., "memo"), when the location information was recorded (i.e., "eventTimeStamp"), or other values associated with the location (i.e., "attributes"). The composable nature of location attestation objects allow for the inclusion of additional arbitrary fields that may be relevant to specific use cases or applications. These "common fields" listed below cover those that are currently recognized by our downstream API but could be expanded based on community feedback and emergent usage patterns.
 
 | Field Name | Type | Description |
 |------------|------|-------------|
