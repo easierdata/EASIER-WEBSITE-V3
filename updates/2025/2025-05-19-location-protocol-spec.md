@@ -184,7 +184,7 @@ C4Container
 
 Below is an example of how to create location attestations using the Ethereum Attestation Service (EAS).
 
-### Step 1: Defining a schema
+### Step 1: Define a schema
 
 The first step is to define the schema string that specifies the structure of a location attestation object, which is eventually attached to an attestation object (i.e. the `data` property). A schema outlines the format of the data and is representated as a string containing datatypes and fields. The following is an example of how a schema string is defined:
 
