@@ -108,7 +108,7 @@ The location attestation object can include fields that can incorporate corrobor
 
 ### EAS Properties
 
-The Location Protocol is flexible and can be into the Ethereum Attestation Service (EAS) using the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, and verify location attestations. The following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are therefore also be associated with the location attestation object. Though largely similar, there are a few small differences between the properties available for creating an attestation and those available when retrieving attestations.
+The Location Protocol is flexible and can be integrated into the Ethereum Attestation Service (EAS) using the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, verify, and disseminate location attestations. The following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are therefore may also be associated with the location attestation object. Though largely similar, there are a few small differences between the properties available for creating an attestation and those available when retrieving an attestation.
 
 **Properties for creating attestations**
 
