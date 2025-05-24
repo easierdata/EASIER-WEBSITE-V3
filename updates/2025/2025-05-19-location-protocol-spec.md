@@ -104,8 +104,6 @@ The location attestation object can include fields that can incorporate corrobor
 | prooverAddress | `address` | The address of the prover who generated the proof. |
 | proofTime | `uint64` | The timestamp of when the proof was generated. |
 
-## Working with the Location Protocol on EAS to create location attestations
-
 ### EAS properties
 
 The Location Protocol is flexible and can be integrated into the Ethereum Attestation Service (EAS) using the [EAS SDK](https://github.com/ethereum-attestation-service/eas-sdk) to create, sign, verify, and disseminate location attestations. The following properties are common to all EAS attestations that are stored on the blockchain (onchain) and off the blockchain (offchain) and are therefore may also be associated with the location attestation object. Though largely similar, there are a few small differences between the properties available for creating an attestation and those available when retrieving an attestation.
