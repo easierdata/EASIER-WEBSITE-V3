@@ -182,11 +182,11 @@ C4Container
 
 ## Using the Location Protocol and EAS to create location attestations
 
-Below is an example of how to create location attestations using the Ethereum Attestation Service (EAS).
+Below is an example of how to create location attestations compliant with the Location Protocol specification using the Ethereum Attestation Service (EAS).
 
 ### Step 1: Define a schema
 
-The first step is to define the schema string that specifies the structure of a location attestation object, which is eventually attached to an attestation object (i.e. the `data` property). A schema outlines the format of the data and is representated as a string containing datatypes and fields. The following is an example of how a schema string is defined:
+The first step is to define the schema string that specifies the structure of a location attestation object, which is eventually attached to an attestation object (i.e. via the `data` property). A schema outlines the format of the data and is representated as a string containing datatypes and fields. The following is an example of how a schema string is defined:
 
 ```text
 `<dataType> <fieldName>, <dataType> <fieldName>, ...`
@@ -194,13 +194,13 @@ The first step is to define the schema string that specifies the structure of a 
 
 where `<dataType>` is the type of data (e.g., `string`, `uint8`, `int40[2]`, etc.) and `<fieldName>` is the name of the field.
 
-Schema strings must conform to the [Location Protocol base model](#base-fields), meaning it must contain the following four fields and appropriate data types, but can be expanded as needed.
+Schema strings must conform to the [Location Protocol base model](#base-fields), meaning it must contain the following four fields and have appropriate data types, but can be expanded as needed.
 
 ```typescript
 const schemaString = "string srs, string locationType, string location, uint8 specVersion"
 ```
 
-To use a schema on EAS, it must first be registered. This allows users to leverage preexisting schemas or create new ones as needed. Here is an example of how to register a schema
+To use a schema on EAS, it must first be registered. This allows users to leverage preexisting schemas or create new ones as needed. Here is an example of how to register a schema:
 
 ```typescript
 import { SchemaRegistry } from "@ethereum-attestation-service/eas-sdk";
@@ -226,7 +226,7 @@ console.log("Registered Schema UID:", schemaUid);
 
 Once registered, the scheama can be viewed on the EAS schema registry [here](https://sepolia.easscan.org/schema/). The registration process will generate a schema UID, a unique 32-byte hash of the schema string, which is needed to make attestions. It is also possible to genereate a schema UID independently of registration, though we won't cover that here. 
 
-The following [schema UID](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a) was genereated based on the schema string above.
+The following [schema UID](https://sepolia.easscan.org/schema/view/0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a) was genereated based on the schema string above:
 
 ```text
 "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a"
@@ -247,13 +247,13 @@ const locationAttestationObject = [
 
 ### Step 3: Encode the location attestation object
 
-Before creating an attestation object, a schemaEncoder object is created using the schema string to encode a location attestation object (i.e., `locationAttestationObject`). The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
+Before creating an attestation object, a `schemaEncoder` object is created using the schema string to encode a location attestation object (i.e., `locationAttestationObject`). The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
 
 **On-chain Validation**: Smart contracts rely on structured data to verify the integrity and correctness of an attestation. The SchemaEncoder ensures the data adheres to the schema's format, making it possible for on-chain logic (e.g., verification or revocation) to process the data reliably.
 
 **Consistency and Interoperability**: By encoding data according to a defined schema, different systems and parties can interpret and validate the data uniformly, ensuring compatibility across applications and platforms.
 
-Creating a schemaEncoder object from `schemaString` and encoding `locationAttestationObject` can be done as follows:
+Creating the `schemaEncoder` object based on `schemaString` and encoding `locationAttestationObject` can be done as follows:
 
 ```typescript
 const schemaEncoder = new SchemaEncoder(schemaString)
@@ -266,7 +266,7 @@ which returns the following result:
 0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000009455053473a343332360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e646563696d616c44656772656573000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001634342e3936373234332c202d3130332e37373135353600000000000000000000
 ```
 
-> It is possible to verify this encoding with any ETH ABI Decoder tool such as [this](https://adibas03.github.io/online-ethereum-abi-encoder-decoder/decode). Just paste the encoding into the input box and enter the schema field types in the order they appear in the schema string. For example, for the above encoding, you would enter `string, string, string, uint8` as the types.
+> It is possible to verify this encoding with any ETH ABI Decoder tool such as [this](https://adibas03.github.io/online-ethereum-abi-encoder-decoder/decode). Just paste the encoding into the input box and enter the schema field types in the order they appear in the schema string. For example, for the above encoding, `string, string, string, uint8` would be entered as the types.
 
 The encoded `locationAttestationObject` is then passed into the `data` property of the attestation object.
 
