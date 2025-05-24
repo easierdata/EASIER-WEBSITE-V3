@@ -293,7 +293,7 @@ After the attestation is signed, submitted, and added to the blockchain, a UID i
 
 ### Example of creating an On-Chain Location Attestation with the EAS SDK
 
-The following TypeScript code snippet demonstrates how to create a location attestation object using the EAS SDK.
+The following TypeScript code snippet demonstrates all four steps  to create a location attestation using the EAS SDK.
 
 ```typescript
 1    import { EAS, SchemaEncoder } from "@ethereum-attestation-service/eas-sdk";
