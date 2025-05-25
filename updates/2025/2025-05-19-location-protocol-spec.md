@@ -484,15 +484,12 @@ The [Whiteflag Protocol](https://www.whiteflagprotocol.org/standard/) utilizes b
 
 The Location Protocol specification is a significant step towards creating a standardized framework for storing location data on the decentralized web. By leveraging the Ethereum Attestation Service, it is possible to create, sign, and verify location attestations that can be used across different platforms and applications. This opens up new possibilities for how we produce, share, and value location information on the web.
 
-As a result, we are excited engage with the community and facilitate the use of the framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol specification and contribute to its development and use. We would love feedback on any aspect of this. In particular, do the location protocol specification fields meet your needs and what others should we include? Is there a location component (locationType) that's not included in the spec that you use and would like to see included? What applications or use cases would you like to see supported from the location protocol?
+As a result, we are excited engage with the community and facilitate the use of the framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol specification and contribute to its development and use. We welcome feedback on any aspect of the specification, but in particular would be grateful to hear about the following:
 
-**Notes Captured from the discussion**
+- What others fields or extensions should be considered?
+- Is there a location component (locationType) that's not included in the spec that you use and would like to see included?
+- What applications or use cases would you like to see supported by the location protocol?
 
-Flexibility is core to the Location Protocol, allowing users to extend the base model of a location attestation object with additional fields to suit their needs.
+Flexibility is core to the Location Protocol, allowing the base model to be easily extended and we are excited to learn about how this framework can support your needs!
 
-This is a core element of the the Decentrlized geospatial web, and treating location data as a first class citizen. We are excited to see how the community will use this framework to build innovative applications and services that leverage location data. We encourage developers, researchers, and organizations to explore the Location Protocol Specification and contribute to its evolution. Together, we can create a more open, transparent, and trustworthy ecosystem for location data on the blockchain.
-
-(Reference to other projects that we are working on)
-
-- spatial.sol for performing spatial queries on the blockchain
-- API to query geospatial attestations with an interactive mapping interface
+The Location Protocol treats location data as a first class citizen and represents a core element of the the decentrlized geospatial web. We look forward to fostering a community of stakeholders interested in building on it and shaping its evolution. There is still much to do, including, incorporating decentralized storage for supporting media and attribute tables, an SDK for streamlining the development of innovative applications and services that leverage location data, a comprehensive API for querying location attestations along with an interactive mapping interface, a solidity library for verifiable geocomputation, and more. Together, we can build a more open, transparent, and trustworthy ecosystem for location data on the web.
