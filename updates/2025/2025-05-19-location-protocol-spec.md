@@ -385,7 +385,7 @@ const newAttestationUID = await createOnChainAttestation(signer, attestationData
 
 ### 2. Using a QR code for geocaching
 
-This example demonstrates how a QR codes could be used for geocaching, treasure hunts, or location-based gaming events. The application would first scan a QR code embedded with geospatial metadata, then format the geospatial metadata according to the Location Protocol, and finally trigger the generation of an attestation on EAS. In this case, the QR code metadata is mapped to the base model field `location` as scaled coordinates and and two optional composable fields. The first is the  `memo` field and represents a note or message associated with the geocache while the second is the `eventTimestamp` field and represents the time of when the QR code was scanned.
+This example demonstrates how a QR codes could be used for geocaching, treasure hunts, or location-based gaming events. The application would first scan a QR code embedded with geospatial metadata, then format the geospatial metadata according to the Location Protocol, and finally trigger the generation of an attestation on EAS. In this case, the QR code metadata is mapped to the base model field `location` as scaled coordinates and and two optional composable fields are also used. The first is the  `memo` field, which represents a note or message associated with the geocache, while the second is the `eventTimestamp` field, which represents the time that the QR code was scanned.
 
 ```TypeScript
 const { signer } = getProviderSigner();
