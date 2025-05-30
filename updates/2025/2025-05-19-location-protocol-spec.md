@@ -236,10 +236,10 @@ The following [schema UID](https://sepolia.easscan.org/schema/view/0xedd6b005e27
 
 ### Step 2: Prepare a location payload
 
-At its core, an EAS attestation is a formalized assertion or claim about something, in this case, a location. This could be a physical address, a GPS coordinate, or other [form of location data](#supported-location-types). As mentioned above, the schema string defines the location information format (i.e., `locationAttestationObject` below) that will be encoded and subsequently passed into the attestation object. In the example below, latitude and longitude coordinates are assigned to `location`, the type of coordinates (decimal degrees) is assigned to `locationType`, and the specific ESPG code denoting the spatial reference system is assigned to `srs`. The value for `specVersion` represents the version of the Location Protocol specification.
+At its core, an EAS attestation is a formalized assertion or claim about something, in this case, a location. This could be a physical address, a GPS coordinate, or other [form of location data](#supported-location-types). As mentioned above, the schema string defines the location information format (i.e., `locationPayload` below) that will be encoded and subsequently passed into the attestation object. In the example below, latitude and longitude coordinates are assigned to `location`, the type of coordinates (decimal degrees) is assigned to `locationType`, and the specific ESPG code denoting the spatial reference system is assigned to `srs`. The value for `specVersion` represents the version of the Location Protocol specification.
 
 ```typescript
-const locationAttestationObject = [
+const locationPayload = [
     { name: "location", value: "44.967243, -103.771556", type: "string" },
     { name: "locationType", value: "decimalDegrees", type: "string" },
     { name: "srs", value: "EPSG:4326", type: "string" },
@@ -249,17 +249,17 @@ const locationAttestationObject = [
 
 ### Step 3: Encode the location payload
 
-Before creating an attestation object, a `schemaEncoder` object is instantiated using the schema string to encode a location payload (i.e., `locationAttestationObject`). The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
+Before creating an attestation object, a `schemaEncoder` object is instantiated using the schema string to encode a location payload (i.e., `locationPayload`). The encoding process ensures that the data conforms to the structure defined by the schema associated with the attestation. Why is this encoding necessary?
 
 **On-chain Validation**: Smart contracts rely on structured data to verify the integrity and correctness of an attestation. The SchemaEncoder ensures the data adheres to the schema's format, making it possible for on-chain logic (e.g., verification or revocation) to process the data reliably.
 
 **Consistency and Interoperability**: By encoding data according to a defined schema, different systems and parties can interpret and validate the data uniformly, ensuring compatibility across applications and platforms.
 
-Creating the `schemaEncoder` object based on `schemaString` and encoding `locationAttestationObject` can be done as follows:
+Creating the `schemaEncoder` object based on `schemaString` and encoding `locationPayload` can be done as follows:
 
 ```typescript
 const schemaEncoder = new SchemaEncoder(schemaString);
-const encodedData = schemaEncoder.encodeData(locationAttestationObject);
+const encodedData = schemaEncoder.encodeData(locationPayload);
 ```
 
 which returns the following result:
@@ -270,7 +270,7 @@ which returns the following result:
 
 > It is possible to verify this encoding with any ETH ABI Decoder tool such as [this](https://adibas03.github.io/online-ethereum-abi-encoder-decoder/decode). Just paste the encoding into the input box and enter the schema field types in the order they appear in the schema string. For example, for the above encoding, `string, string, string, uint8` would be entered as the types.
 
-The encoded `locationAttestationObject` is then passed into the `data` property of the attestation object.
+The encoded `locationPayload` is then passed into the `data` property of the attestation object.
 
 ### Step 4: Create the attestation object
 
@@ -307,7 +307,7 @@ The following TypeScript code snippet demonstrates all four steps to create a lo
 7    const schemaString = "string srs, string locationType, string location, uint8 specVersion"
 8
 9    // Create the location payload
-10   const locationAttestationObject = [
+10   const locationPayload = [
 11     { name: "srs", value: "EPSG:4326", type: "string" },
 12     { name: "locationType", value: "decimalDegrees", type: "string" },
 13     { name: "location", value: "44.967243, -103.771556", type: "string" },
@@ -316,7 +316,7 @@ The following TypeScript code snippet demonstrates all four steps to create a lo
 16
 17   // Initialize SchemaEncoder with the schema string
 18   const schemaEncoder = new SchemaEncoder(schemaString);
-19   const encodedData = schemaEncoder.encodeData(locationAttestationObject)
+19   const encodedData = schemaEncoder.encodeData(locationPayload)
 20
 21   const schemaUID = "0xedd6b005e276227690314960c55a3dc6e088611a709b4fbb4d40c32980640b9a";
 22
@@ -355,7 +355,7 @@ const schemaString = "string srs, string locationType, string location, uint8 sp
 const schemaUID = await registerSchema(signer, schemaString);
 
 // Grab the IP Address of the mobile device and use GeoIP to get the location
-// then apply to the appropriate fields in the locationAttestationObject
+// then apply to the appropriate fields in the locationPayload
 const ipAddress = await publicIpv4();
 const locationData = geoip.lookup(ipAddress);
 const geoJsonPoint = {
@@ -363,7 +363,7 @@ const geoJsonPoint = {
     coordinates: [locationData.ll[1], locationData.ll[0]]
 };
 const geoJsonPointString = JSON.stringify(geoJsonPoint);
-const locationAttestationObject = [
+const locationPayload = [
     { name: "srs", value: "EPSG:4326", type: "string" },
     { name: "locationType", value: "geoJson", type: "string" },
     { name: "location", value: geoJsonPointString, type: "string" },
@@ -379,7 +379,7 @@ const attestationObject = {
   revocable: true,
   schemaUID: schemaUID,
   schemaString: schemaString,
-  dataToEncode: locationAttestationObject
+  dataToEncode: locationPayload
 };
 
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
@@ -396,9 +396,9 @@ const { signer } = getProviderSigner();
 const schemaString: "string srs, string locationType, uint40[2][] location, uint40 specVersion, uint64 eventTimestamp, string memo";
 const schemaUID = await registerSchema(signer, schemaString);
 
-// Extract QR code metadata and apply to the appropriate fields in the `locationAttestationObject` variable
+// Extract QR code metadata and apply to the appropriate fields in the `locationPayload` variable
 const qrData = await decodeQR(imagePath) // Returns {lat: <latitude coordinate>, long: <longitude coordinate>}
-const locationAttestationObject = [
+const locationPayload = [
     { name: "srs", value: "EPSG:4326", type: "string" },
     { name: "locationType", value: "scaledCoordinates", type: "string" },
     { name: "location", value: [qrData.lat, qrData.long], type: "uint40[2][]" },
@@ -413,7 +413,7 @@ const attestationObject = {
   revocable: true,
   schemaUID: schemaUID,
   schemaString: schemaString
-  dataToEncode: locationAttestationObject
+  dataToEncode: locationPayload
 };
 
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
@@ -431,10 +431,10 @@ const { signer } = getProviderSigner();
 const schemaString: "string srs, string locationType, string location, uint40 specVersion, uint40 eventTimestamp, string memo, string mediaType, bytes media";
 const schemaUID = await registerSchema(signer, schemaString);
 
-// Extract the ProofMode zip file and grab the metadata, then apply it to the appropriate fields in the locationAttestationObject
+// Extract the ProofMode zip file and grab the metadata, then apply it to the appropriate fields in the locationPayload
 const files = extractZipFile(zipFilePath, extractDir);
 const proofModeData = getProofModeMetadata(files);
-const locationAttestationObject = [
+const locationPayload = [
     { name: "srs", value: "EPSG:4326", type: "string" },
     { name: "locationType", value: "decimalDegrees", type: "string" },
     { name: "location", value: proofModeData.location, type: "string" },
@@ -454,7 +454,7 @@ const attestationObject = {
   revocable: true,
   schemaUID: schemaUID,
   schemaString: schemaString,
-  dataToEncode: locationAttestationObject
+  dataToEncode: locationPayload
 };
 
 const newAttestationUID = await createOnChainAttestation(signer, attestationData);
