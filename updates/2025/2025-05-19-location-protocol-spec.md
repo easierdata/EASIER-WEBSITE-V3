@@ -174,41 +174,7 @@ On EAS, an attestation is retrievable by its UID, a 32-byte hash, to identify th
 
 <br>
 
-Ultimately, the LP payload is part of the more general EAS attestation object, extending the data model to support the Location Protocol while remaining extremely flexible. The following diagram illustrates the composition of an attestation object, including the relationship between the LP payload and the various fields and properties outlined above:
-
-```mermaid
----
-config:
-  theme: mc
----
-C4Container
-    Node(obj, "Attestation Object") {
-      Node(attestationProps, "Attestation Properties") {
-        System(recipient, "Recipient", "The entity receiving the attestation.")
-        System(expirationTime, "Expiration Time", "The time until the attestation remains valid.")
-        System(revocable, "Revocable", "Indicates if the attestation can be revoked.")
-        System(refUID, "Reference UID", "Unique identifier for the attestation reference.")
-        System(schemaUID, "Schema UID", "The schema identifier associated with the attestation")
-        System(schemaString, "Schema String", "A string defining the structure of the data to be attested.")
-
-        Node(data, "Data", "Attestation property for which the LP payload is passed into.") {
-          Node(locationDataContainer, "LP Payload") {
-            System(srs, "srs", "The spatial reference system.")
-            System(locationType, "Location Type", "The type of location data.")
-            System(location, "Location", "The actual location data.")
-            System(specVersion, "Specification Version", "The version of the specification.")
-
-            Node(systemRef, "Optional fields") {
-              System(objectFields, "Common Fields", "Additional commonly supported fields.")
-              System(proofFields, "Proof Fields", "Proofs verifying authenticity and integrity.")
-            }
-          }
-        }
-      }
-    }
-
-    UpdateLayoutConfig($c4ShapeInRow="4")
-```
+Ultimately, the LP payload is part of the more general EAS attestation object, extending the data model to support the Location Protocol while remaining extremely flexible.
 
 ## Using the Location Protocol and EAS to create location attestations
 
