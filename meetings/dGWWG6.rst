@@ -15,4 +15,4 @@ Sixth Decentralized Geospatial Web Working Group Meeting
 
 .. raw:: html
 
-    <strong><a target="_blank" rel="noopener noreferrer" href="http://bit.ly/dGWWG-hivemapper">Register Now!</a></strong>
+    <strong><a target="_blank" rel="noopener noreferrer" href="http://bit.ly/dGWWG-hivemapper">Registration closed.</a></strong>
