@@ -3,7 +3,7 @@ title: Building Verifiable Location Data - Demonstrating the Location Protocol
 
 layout: post
 
-date: 19, May 2025
+date: 15, September 2025
 
 author: Seth Docherty
 
@@ -112,6 +112,16 @@ Here’s a glimpse of how developers and researchers can explore live attestatio
 ![Astral MCP prompt 1](../../_img/posts/2025-09-15/astral-mcp-prompt1.png) ![Astral MCP prompt 2](../../_img/posts/2025-09-15/astral-mcp-prompt2.png)
 
 Want to try it out for yourself? Import our [python package](https://pypi.org/project/astral-mcp-server/) as an [MCP agent in VSCode](https://code.visualstudio.com/docs/copilot/customization/mcp-servers?originUrl=%2Fdocs%2Fcopilot%2Fcustomization%2Fmcp-servers) and check out our [guide](https://github.com/DecentralizedGeo/astral-api-mcp/blob/main/docs/mcp-tools-guide.md) for more details on the available tools and example prompts to test!
+
+## Why Interoperability is the Key
+
+The real magic of the location protocol isn’t just what one app can do—it’s what happens when multiple apps can talk the same language about location.
+
+- A photo from ProofMode can be imported into Logbook, retaining its trusted location stamp.
+- Location claims can be queried with the Astral MCP agent, and the underlying metadata can be used alongside or transferred into other Dapps, keeping the chain of trust intact and valid.
+- Across this ecosystem, people and organizations gain a way to validate where something happened, rather than relying solely on a caption or claim.
+
+As the location protocol ecosystem expands, so does interoperability with other apps in the ecosystem. This shared language of trust builds resilience against misinformation and helps keep our digital world a little more grounded in reality.
 
 ## Wrapping up
 
