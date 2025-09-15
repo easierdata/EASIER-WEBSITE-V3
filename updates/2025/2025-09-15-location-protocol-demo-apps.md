@@ -44,7 +44,19 @@ The [Astral Logbook](https://logbook.astral.global/) is akin to a daily journal 
 
 To use the Astral Logbook, users can connect their [web3 wallet](https://www.miniorange.com/blog/web3-authentication/) and then add an entry to the logbook. Selecting a location on the map opens up an entry form where users can attach media content, add some notes, and then submit.
 
+<!-- <p align="center">
+  <img src="../../_img/posts/2025-09-15/logbook-map-selection.png" alt="Logbook map selection" style="height:480px; width:auto;" />
+</p> -->
+
+![Logbook map selection](../../_img/posts/2025-09-15/logbook-map-selection.png)
+
 Each submitted "location claim" becomes a [location attestation](https://spec.decentralizedgeo.org/introduction/core-concepts/#core-terminology), a cryptographic digital signature, that’s registered on-chain on the [Ethereum Attestation Service (EAS)](https://attest.org/). Once the submission is finalized and registered on EAS, your assertion of the “location claim” is recorded on the blockchain and can be verified by anyone. While the submission is being processed, any attached media content is uploaded and available on IPFS network along with persistent long-term storage provided by Filecoin. Here's a [link to my entry](https://logbook-8uihhlz0c-astralprotocol.vercel.app/attestation/uid/0x042d6a0675583c41f8425cffcd003371578fe824d819e384463cfca2327e8de9) on the Astral Logbook.
+
+<!-- <p align="center">
+  <img src="../../_img/posts/2025-09-15/logbook-entry-submission.png" alt="Logbook entry submission" style="height:480px; width:auto;" />
+</p> -->
+
+![Logbook entry submission](../../_img/posts/2025-09-15/logbook-entry-submission.png)
 
 Here's the link to [my registered entry](https://sepolia.easscan.org/attestation/view/0x042d6a0675583c41f8425cffcd003371578fe824d819e384463cfca2327e8de9) which includes the photo I snapped while hanging out at one of Night Shift’s beer garden locations, conveniently uploaded to decentralized networks.
 
@@ -58,9 +70,22 @@ We’ve been working closely with the [Guardian Project](https://guardianproject
 
 As part of the development effort, we extended the settings menu to let users add their existing wallet IDs, enabling them to submit attestations to EAS. We are currently working on adding support for Privy and streamlining wallet authentication, particularly for new users, to enable them to create wallets and log in using their email or phone number.
 
+<!-- <p align="center">
+  <img src="../../_img/posts/2025-09-15/proofmode-wallet-config.png" alt="Proofmode settings menu" style="height:480px; width:auto;" />
+</p> -->
+
+![Proofmode settings menu](../../_img/posts/2025-09-15/proofmode-wallet-config.png)
+
 Depending on the need and use case, users have an array of proof options that can be enabled within the settings menu. The more options enabled, the more robust the proof metadata will be. In order to create location attestations in the app, the “location” option must be enabled in this menu.
 
 Proofs within the Proofmode app are created by either importing existing media from the gallery or taking a picture within the app, and can then be shared with others. Users have several sharing options to choose from, but if the proofs include the locational component in proof generation, they can create on-chain or off-chain location attestations. Selecting the on-chain option submits it to EAS linked to you through your wallet ID. The off-chain option saves the location attestation payload to a JSON file, giving users the option of where and how to submit, whether that’s through another blockchain solution, a decentralized network, or even a private database.
+
+<!-- <p align="center" style="display:flex; gap:2%; justify-content:center; align-items:stretch;">
+  <img src="_images/proofmode-share-proof.png" alt="Proofmode share proof" style="height:480px; width:auto;" />
+  <img src="_images/proofmode-proof-attestation.png" alt="Proofmode proof attestation" style="height:480px; width:auto;" />
+</p> -->
+
+![Proofmode share proof](../../_img/posts/2025-09-15/proofmode-share-proof.png) ![Proofmode proof attestation](../../_img/posts/2025-09-15/proofmode-proof-attestation.png)
 
 Once the submission is complete, users can view the [resulting location attestation](https://sepolia.easscan.org/attestation/view/0x9fe99608e639afc71e5195c5c065aa0a58a1e23954190ca9523548a39d9456e1) on EAS. From there, they can share this attestation, which serves as:
 
@@ -78,6 +103,13 @@ Searching the blockchain for location claims by place, type, or date, just by us
 Analytical work, such as generating maps or analyzing trends in location data, becomes much easier and can even be automated.
 
 Here’s a glimpse of how developers and researchers can explore live attestation data through familiar AI tools, instead of writing custom programs.
+
+<!-- <p align="center" style="display:flex; gap:2%; justify-content:center; align-items:stretch;">
+  <img src="../../_images/astral-mcp-prompt1.png" alt="Astral MCP prompt 1" style="height:900px; width:auto;" />
+  <img src="../../_images/astral-mcp-prompt2.png" alt="Astral MCP prompt 2" style="height:900px; width:auto;" />
+</p> -->
+
+![Astral MCP prompt 1](../../_img/posts/2025-09-15/astral-mcp-prompt1.png) ![Astral MCP prompt 2](../../_img/posts/2025-09-15/astral-mcp-prompt2.png)
 
 Want to try it out for yourself? Import our [python package](https://pypi.org/project/astral-mcp-server/) as an [MCP agent in VSCode](https://code.visualstudio.com/docs/copilot/customization/mcp-servers?originUrl=%2Fdocs%2Fcopilot%2Fcustomization%2Fmcp-servers) and check out our [guide](https://github.com/DecentralizedGeo/astral-api-mcp/blob/main/docs/mcp-tools-guide.md) for more details on the available tools and example prompts to test!
 
