@@ -47,6 +47,8 @@ Seth Docherty
 Contact
 ~~~~~~~~
 `sdoc@umd.edu <mailto:sdoc@umd.edu>`_
+| `GitHub <https://github.com/sethdocherty>`_
+| `LinkedIn <https://www.linkedin.com/in/sethdocherty/>`_
 
 -----
 
@@ -63,34 +65,6 @@ Contact
 | `GitHub <https://github.com/marquisvictor>`_
 | `Twitter <https://twitter.com/IrekponorVictor>`_
 
-
------
-
-Matthew Nanas
-******************
-.. image:: _img/people/Matthew.jpg
-    :height: 300
-| **Web3 Developer**
-| Matthew is a undergraduate at the University of Maryland studying computer and information science. He has experience in developing client-side apps in both the Ethereum and Solana ecosystem. As a developer for the EASIER Data Initiative, he aims to explore decentralized storage and compute and how they can be used for data-intensive geospatial workflows.
-
-Contact
-~~~~~~~~
-`mnanas@umd.edu <mailto:mnanas@umd.edu>`_
-| `GitHub <https://github.com/matthewnanas>`_
-
------
-
-Adrien Ramsamy
-******************
-.. image:: _img/people/adrien.jpeg
-    :height: 300
-| **Web3 Developer**
-| Adrien is pursuing a Master's in Computer Science at the University of Maryland. He is interested in applications of decentralized systems to geospatial challenges. At the EASIER Data Initiative, he leads the development of the decentralized proof of location application.
-
-Contact
-~~~~~~~~
-`aramsamy@umd.edu <mailto:aramsamy@umd.edu>`_
-
 -----
 
 John Hoopes
@@ -102,7 +76,8 @@ John Hoopes
 
 Contact
 ~~~~~~~~
-`LinkedIn <https://linkedin.com/in/johnx25bd>`_
+`john.r.hoopes@gmail.com <mailto:john.r.hoopes@gmail.com>`_
+| `LinkedIn <https://linkedin.com/in/johnx25bd>`_
 
 Alumni
 =========
@@ -136,7 +111,6 @@ Contact
 
 -----
 
-
 Zheng Liu
 ******************
 .. image:: _img/people/zheng.jpg
@@ -148,3 +122,32 @@ Zheng Liu
 Contact
 ~~~~~~~~
 | `GitHub <https://github.com/leonardzh>`_
+
+-----
+
+Matthew Nanas
+******************
+.. image:: _img/people/Matthew.jpg
+    :height: 300
+| **Web3 Developer**
+| Matthew is a undergraduate at the University of Maryland studying computer and information science. He has experience in developing client-side apps in both the Ethereum and Solana ecosystem. As a developer for the EASIER Data Initiative, he aims to explore decentralized storage and compute and how they can be used for data-intensive geospatial workflows.
+
+Contact
+~~~~~~~~
+`mnanas@umd.edu <mailto:mnanas@umd.edu>`_
+| `GitHub <https://github.com/matthewnanas>`_
+
+-----
+
+Adrien Ramsamy
+******************
+.. image:: _img/people/adrien.jpeg
+    :height: 300
+| **Web3 Developer**
+| Adrien is pursuing a Master's in Computer Science at the University of Maryland. He is interested in applications of decentralized systems to geospatial challenges. At the EASIER Data Initiative, he leads the development of the decentralized proof of location application.
+
+Contact
+~~~~~~~~
+`aramsamy@umd.edu <mailto:aramsamy@umd.edu>`_
+
+-----
