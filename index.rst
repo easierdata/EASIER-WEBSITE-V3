@@ -18,20 +18,27 @@ Efficient, Accessible, and Sustainable Infrastructure for Extracting Reliable (E
 Partners
 =============
 
-.. image:: /_img/partners/umd.svg
-   :target: https://www.umd.edu/
-   :width: 200px
-   :class: spacing
+.. container:: partners
 
-.. image:: /_img/partners/textile.svg
-   :target: https://www.textile.io/
-   :width: 100px
-   :class: spacing
+   .. image:: _img/partners/umd.svg
+      :target: https://www.umd.edu/
+      :width: 250px
+      :class: partners-item
+      :align: center
 
-.. image:: /_img/partners/ffdw.svg
-   :target: https://ffdweb.org/
-   :width: 200px
-   :class: spacing
+   .. image:: _img/partners/textile.svg
+      :target: https://www.textile.io/
+      :width: 100px
+      :class: partners-item
+      :align: center
+
+
+   .. image:: _img/partners/ffdw.svg
+      :target: https://ffdweb.org/
+      :width: 250px
+      :class: partners-item
+      :align: center
+
 
 Updates
 =============
