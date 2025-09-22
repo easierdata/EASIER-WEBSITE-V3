@@ -49,7 +49,6 @@ pydata-sphinx-theme==0.16.1
 Pygments==2.19.2
 pypandoc==1.15
 python-dateutil==2.9.0.post0
-pywin32==311
 PyYAML==6.0.2
 pyzmq==27.1.0
 referencing==0.36.2
