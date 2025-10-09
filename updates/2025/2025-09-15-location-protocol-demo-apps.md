@@ -44,8 +44,6 @@ The [Astral Logbook](https://logbook.astral.global/) is akin to a journal for ph
 
 Once logged in, selecting a location on the map opens an entry form where users can attach media, add notes, and then submit. Each submitted “location claim becomes a [location attestation](https://spec.decentralizedgeo.org/introduction/core-concepts/#core-terminology), a digital artifact associated with a cryptographic signature, that’s registered on-chain on the [Ethereum Attestation Service (EAS)](https://attest.org/). Once the submission is finalized and registered on EAS, your assertion of the “location claim” is recorded on a blockchain, and any attached media is stored on Storacha and retrievable on IPFS by its content identifier (CID).
 
-The inherent transparency of the location claim enables anyone to review the details, and the immutable nature of CIDs ensures data integrity of the media file referenced in the location claim. To illustrate this, here's a [link to a sample previously registered entry](https://logbook.astral.global/attestation/uid/0x042d6a0675583c41f8425cffcd003371578fe824d819e384463cfca2327e8de9) and the [attached photo](https://bafybeiaefdbedsgtxltubh35kwxjfrpfgjzjeuzcaolzh6ifewgtmklrhq.ipfs.w3s.link/), conveniently retrievable from IPFS, that was snapped while hanging out at one of [Night Shift’s](https://nightshiftbrewing.com/locations/beer-gardens/) beer garden locations. One can verify the location claim by cross-referencing the EXIF data of the image.
-
 :::{image} ../../_img/posts/2025-09-15/logbook-entry-submission.png
   :alt: Logbook entry submission
   :align: center
@@ -53,7 +51,7 @@ The inherent transparency of the location claim enables anyone to review the det
 
 :::
 
-Here's the link to [my registered entry](https://sepolia.easscan.org/attestation/view/0x042d6a0675583c41f8425cffcd003371578fe824d819e384463cfca2327e8de9) which includes the photo I snapped while hanging out at one of Night Shift’s beer garden locations, conveniently uploaded to decentralized networks.
+The inherent transparency of the location claim enables anyone to review the details, and the immutable nature of CIDs ensures data integrity of the media file referenced in the location claim. To illustrate this, here's a [link to a sample previously registered entry](https://logbook.astral.global/attestation/uid/0x042d6a0675583c41f8425cffcd003371578fe824d819e384463cfca2327e8de9) and the [attached photo](https://bafybeiaefdbedsgtxltubh35kwxjfrpfgjzjeuzcaolzh6ifewgtmklrhq.ipfs.w3s.link/), conveniently retrievable from IPFS, that was snapped while hanging out at one of [Night Shift’s](https://nightshiftbrewing.com/locations/beer-gardens/) beer garden locations. One can verify the location claim by cross-referencing the EXIF data of the image.
 
 ## 2. Proofmode Android App
 
