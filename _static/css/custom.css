@@ -15,6 +15,7 @@ div.logo img {
     max-width: 250px;
 }
 
+
 .title {
     font-size: 1.42em;
 }
@@ -29,10 +30,15 @@ div.logo img {
 }
 
 /* Override colors */
-html {
-    --pst-color-primary: #8b2004 !important;
+html [data-theme="light"] {
+    --pst-color-primary: white;
 }
 
+/* --pst-color-primary: #8b2004; */
+/* general override for all modes
+:root {
+    --pst-color-primary: #8b2004;
+} */
 html .search-button {
     opacity: 0 !important;
     display: none !important;
@@ -47,6 +53,23 @@ html .theme-switch-button {
     display: none !important;
 }
 
+/* Overriding the classes to ensure article takes up the entire width  */
+.bd-page-width {
+    max-width: 100%;
+    /* default is 88rem */
+}
+
+/* Next, ensure the internal contaiers stretch to extent of .bd-page-width */
+.bd-main .bd-content .bd-article-container {
+    max-width: 100%;
+    /* default is 60em */
+}
+
+/* Setting max width of primary sidecar */
+.bd-sidebar-primary {
+    width: 340px;
+    max-width: 400px;
+}
 @media screen and (min-width: 992px) {
     html #navbar-main {
         display: none !important;
@@ -61,7 +84,138 @@ html .theme-switch-button {
     }
 }
 
+@media screen and (min-width: 960px) {
+    .easier-hidden-top {
+        display: none !important;
+    }
+}
 .links a {
     font-size: 1.25em;
     margin-bottom: 25px !important;
+}
+/* Override properties of the search bar: reset positioning of the search icon */
+.bd-search {
+    /* ensure the container uses the normal flow */
+    position: static !important;
+}
+
+/* The theme sets the icon itself to absolute; reset that here */
+.bd-search .icon,
+.bd-search .fa,
+.bd-search .fas,
+.bd-search .svg-inline--fa {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+/* Remove underline from all links by default, show underline on hover/focus */
+a,
+a:link,
+a:visited {
+    text-decoration: none !important;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline !important;
+}
+
+/* Brand icon color override: force icons to gray-black */
+.svg-inline--fa {
+    color: #585858 !important;
+    /* set icon color */
+    fill: currentColor !important;
+    /* ensure SVG path uses the color */
+    stroke: none !important;
+}
+
+/* Slightly lighter on hover for affordance */
+/* .nav-container a:hover svg,
+.bd-sidebar-primary a:hover svg,
+.sidebar-primary-items a:hover svg, */
+.svg-inline--fa:hover {
+    color: #9b9b9b !important;
+}
+
+/* Container for partners row */
+.container.partners,
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Sphinx wraps images with .image-reference / .reference.external.image-reference */
+.partners .image-reference,
+.partners a.reference.external.image-reference {
+    display: flex;
+    align-items: center;
+    /* ensure bottoms align inside each cell */
+    justify-content: space-between;
+    flex: 1 1 30%;
+    max-width: 32%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.partners img.partners-item,
+.partners img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .partners .image-reference {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 420px) {
+    .partners .image-reference {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* side-by-side images: keep single row, equal heights, responsive scaling */
+.side-by-side-images {
+    display: flex;
+    flex-wrap: nowrap;
+    /* keep images on one row */
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+    /* align bottoms */
+    overflow-x: auto;
+    /* allow horizontal scroll on very small screens */
+    padding: 0.5rem 0;
+    /* -webkit-overflow-scrolling: touch; */
+    background-color: unset !important;
+}
+
+.side-by-side-images img {
+    /* flex: 0 0 auto; */
+    /* match surrounding background */
+    /* background-color: unset !important; */
+    /* don't stretch; keep intrinsic ratio */
+    display: block;
+    width: auto;
+    height: clamp(120px, 18vw, 320px);
+    /* same height for all images, scales with viewport */
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* optional: remove default link/image spacing inside Sphinx image wrappers */
+.side-by-side-images .image-reference,
+.side-by-side-images a.reference.external.image-reference {
+    display: inline-flex;
+    align-items: flex-end;
+    /* background-color: unset !important; */
 }
