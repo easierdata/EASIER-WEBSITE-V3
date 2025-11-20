@@ -1,5 +1,5 @@
 Seventh Decentralized Geospatial Web Working Group Meeting
-*********************************************************
+***********************************************************
 **Featuring The DGC**
 
 | Please join us for the next Decentralized Geospatial Web Working Group (dGWWG) meeting!
