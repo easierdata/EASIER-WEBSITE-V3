@@ -58,7 +58,7 @@ dependencies = [
     "sphinxcontrib-serializinghtml>=2.0.0",
     "sphinxcontrib-images>=1.0.1",
     "sphinxcontrib-extdevhelper-kasane>=0.2.0",
-    "sphinxcontib.mermaid>=1.0.0",
+    "sphinxcontrib-mermaid>=1.0.0",
     
     # Content processing and markup
     "docutils>=0.21.2",
