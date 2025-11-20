@@ -48,6 +48,36 @@ html .search-button {
     display: inline-block;
 }
 
+/* Interactive Mermaid Diagrams */
+.mermaid {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Enhanced styling for interactive Mermaid diagrams */
+.mermaid svg {
+    transition: all 0.2s ease;
+}
+
+.mermaid svg:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Caption styling for diagram instructions */
+.diagram-caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 1em;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Ensure diagrams are responsive on mobile */
+@media (max-width: 768px) {
+    .mermaid {
+        overflow-x: auto;
+    }
+}
 html .theme-switch-button {
     opacity: 0 !important;
     display: none !important;
