@@ -56,6 +56,7 @@ Victor Irekponor
 ******************
 .. image:: _img/people/victor.jpeg
     :height: 300
+
 | **Geospatial Developer**
 | Victor is a Ph.D. student at the Center for Geospatial Information Science, University of Maryland. He has a broad interest in spatial data science, smart cities, artificial intelligence, and decentralized ecosystems. With a strong background as a machine learning software engineer and data scientist, he possesses expertise in Python and JavaScript programming languages. Committed to making a meaningful impact, Victor aims to advance knowledge and drive positive change through cutting-edge research and the application of emerging technologies in our interconnected world.
 
@@ -71,6 +72,7 @@ John Hoopes
 ******************
 .. image:: _img/people/JohnHoopes.jpeg
     :height: 300
+
 | **Web3 Consultant**
 | John's background is in spatial data science and visualization, with a specialization in geospatial data, deep learning systems, and smart contracts — remote sensing, web mapping, and spatial data science along with consensus networks, blockchains, and decentralized identity. 
 
@@ -78,6 +80,8 @@ Contact
 ~~~~~~~~
 `john.r.hoopes@gmail.com <mailto:john.r.hoopes@gmail.com>`_
 | `LinkedIn <https://linkedin.com/in/johnx25bd>`_
+
+
 
 Alumni
 =========
@@ -102,6 +106,7 @@ Jack Rickey
 ******************
 .. image:: _img/people/jack.jpg
     :height: 300
+
 | **Web3 Consultant**
 | Jack is a Master of Quantitative Finance student at the Robert H. Smith School of Business and he graduated in 2021 from the University of Maryland with a Bachelor's Degree in Mathematics. He is interested in exploring the economic and organizational implications of decentralized web technology on the geospatial data ecosystem. He also runs a consulting business, providing modeling and analytics services in token economics for web3 startups and companies.
 
@@ -121,7 +126,7 @@ Zheng Liu
 
 Contact
 ~~~~~~~~
-| `GitHub <https://github.com/leonardzh>`_
+`GitHub <https://github.com/leonardzh>`_
 
 -----
 
@@ -129,6 +134,7 @@ Matthew Nanas
 ******************
 .. image:: _img/people/Matthew.jpg
     :height: 300
+
 | **Web3 Developer**
 | Matthew is a undergraduate at the University of Maryland studying computer and information science. He has experience in developing client-side apps in both the Ethereum and Solana ecosystem. As a developer for the EASIER Data Initiative, he aims to explore decentralized storage and compute and how they can be used for data-intensive geospatial workflows.
 
@@ -143,11 +149,10 @@ Adrien Ramsamy
 ******************
 .. image:: _img/people/adrien.jpeg
     :height: 300
+
 | **Web3 Developer**
 | Adrien is pursuing a Master's in Computer Science at the University of Maryland. He is interested in applications of decentralized systems to geospatial challenges. At the EASIER Data Initiative, he leads the development of the decentralized proof of location application.
 
 Contact
 ~~~~~~~~
 `aramsamy@umd.edu <mailto:aramsamy@umd.edu>`_
-
------
