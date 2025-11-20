@@ -265,7 +265,7 @@ const encodedData = schemaEncoder.encodeData(locationPayload);
 
 which returns the following result:
 
-```string
+```text
 0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000009455053473a343332360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e646563696d616c44656772656573000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001634342e3936373234332c202d3130332e37373135353600000000000000000000
 ```
 
@@ -403,7 +403,7 @@ In this case, the QR code metadata is mapped to the base model field `location` 
 const { signer } = getProviderSigner(); //
 
 // Register schema if not already registered. Will return the schema UID if already registered
-const schemaString: "string srs, string locationType, uint40[2][] location, uint40 specVersion, uint64 eventTimestamp, string memo";
+const schemaString = "string srs, string locationType, uint40[2][] location, uint40 specVersion, uint64 eventTimestamp, string memo";
 const schemaUID = await registerSchema(signer, schemaString);
 
 // Extract QR code metadata and apply to the appropriate fields in the `locationPayload` variable
@@ -414,7 +414,7 @@ const locationPayload = [
     { name: "srs", value: "EPSG:4326", type: "string" },
     { name: "locationType", value: "scaledCoordinates", type: "string" },
     { name: "location", value: [qrData.lat, qrData.long], type: "uint40[2][]" },
-    { name: “recipeType”, value: [“geocache-secret-v1.0”], type: “string[]” },
+    { name: "recipeType", value: ["geocache-secret-v1.0"], type: "string[]" },
     { name: "recipePayload", value: [proof], type: "bytes[]" },
     { name: "specVersion", value: 1, type: "uint8" },
     { name: "eventTimestamp", value: Math.floor(time.getTime() / 1000), type: "uint64" },
@@ -426,7 +426,7 @@ const attestationObject = {
   recipient: "0xFD50b031E778fAb33DfD2Fc3Ca66a1EeF0652165",
   revocable: true,
   schemaUID: schemaUID,
-  schemaString: schemaString
+  schemaString: schemaString,
   dataToEncode: locationPayload
 };
 
