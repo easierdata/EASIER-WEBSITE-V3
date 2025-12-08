@@ -32,4 +32,4 @@ Using the astral-sdk, we will wire the Location Protocol framework into each of 
 
 The tutorial is designed for developers who want a concrete, reproducible reference for integrating verifiable location into existing systems or prototypes, rather than a high-level overview. If you follow along in the notebook, you will finish with a working example that connects data ingestion, location payload construction, attestation creation, and basic verification into a single, coherent flow.
 
-[Exlore more with our notebook](../../notebooks/integrating_the_location_protocol_framework.ipynb)
+[Explore more with our notebook](../../notebooks/integrating_the_location_protocol_framework.ipynb)
